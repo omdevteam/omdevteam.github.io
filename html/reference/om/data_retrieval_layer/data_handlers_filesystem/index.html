@@ -1,0 +1,2443 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>data_handlers_filesystem - OnDA Monitor</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#om.data_retrieval_layer.data_handlers_filesystem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="OnDA Monitor" class="md-header__button md-logo" aria-label="OnDA Monitor" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OnDA Monitor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              data_handlers_filesystem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omdevteam/om
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="OnDA Monitor" class="md-nav__button md-logo" aria-label="OnDA Monitor" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    OnDA Monitor
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omdevteam/om
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        What is OM?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installing_om/" class="md-nav__link">
+        Installing OM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_om/" class="md-nav__link">
+        Running OM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../configuring_om/" class="md-nav__link">
+        Configuring OM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../advanced_documentation/" class="md-nav__link">
+        Advanced Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../the_om_development_team/" class="md-nav__link">
+        The OM Development Team
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Code Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Code Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Code Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" checked>
+      
+      <label class="md-nav__link" for="__nav_7_1">
+        om
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="om" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          om
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_2" type="checkbox" id="__nav_7_1_2" >
+      
+      <label class="md-nav__link" for="__nav_7_1_2">
+        algorithms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="algorithms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/calibration/" class="md-nav__link">
+        calibration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/crystallography/" class="md-nav__link">
+        crystallography
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/generic/" class="md-nav__link">
+        generic
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_3" type="checkbox" id="__nav_7_1_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_1_3">
+        data_retrieval_layer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="data_retrieval_layer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          data_retrieval_layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          data_handlers_filesystem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        data_handlers_filesystem
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler" class="md-nav__link">
+    FilesBaseDataEventHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="FilesBaseDataEventHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler.initialize_event_handling_on_collecting_node" class="md-nav__link">
+    initialize_event_handling_on_collecting_node()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler" class="md-nav__link">
+    Jungfrau1MFilesDataEventHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="Jungfrau1MFilesDataEventHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.data_extraction_funcs" class="md-nav__link">
+    data_extraction_funcs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.close_event" class="md-nav__link">
+    close_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.event_generator" class="md-nav__link">
+    event_generator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.get_num_frames_in_event" class="md-nav__link">
+    get_num_frames_in_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.initialize_event_handling_on_processing_node" class="md-nav__link">
+    initialize_event_handling_on_processing_node()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.open_event" class="md-nav__link">
+    open_event()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler" class="md-nav__link">
+    PilatusFilesDataEventHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="PilatusFilesDataEventHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.data_extraction_funcs" class="md-nav__link">
+    data_extraction_funcs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.close_event" class="md-nav__link">
+    close_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.event_generator" class="md-nav__link">
+    event_generator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.get_num_frames_in_event" class="md-nav__link">
+    get_num_frames_in_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.initialize_event_handling_on_processing_node" class="md-nav__link">
+    initialize_event_handling_on_processing_node()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.open_event" class="md-nav__link">
+    open_event()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_handlers_hidra/" class="md-nav__link">
+        data_handlers_hidra
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_handlers_psana/" class="md-nav__link">
+        data_handlers_psana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_cspad/" class="md-nav__link">
+        functions_cspad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_epix10ka/" class="md-nav__link">
+        functions_epix10ka
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_jungfrau1M/" class="md-nav__link">
+        functions_jungfrau1M
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_jungfrau4M/" class="md-nav__link">
+        functions_jungfrau4M
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_pilatus/" class="md-nav__link">
+        functions_pilatus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_rayonix/" class="md-nav__link">
+        functions_rayonix
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions_psana/" class="md-nav__link">
+        functions_psana
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_4" type="checkbox" id="__nav_7_1_4" >
+      
+      <label class="md-nav__link" for="__nav_7_1_4">
+        graphical_interfaces
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="graphical_interfaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          graphical_interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/crystallography_frame_viewer/" class="md-nav__link">
+        crystallography_frame_viewer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/crystallography_gui/" class="md-nav__link">
+        crystallography_gui
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/crystallography_parameter_tweaker/" class="md-nav__link">
+        crystallography_parameter_tweaker
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_5" type="checkbox" id="__nav_7_1_5" >
+      
+      <label class="md-nav__link" for="__nav_7_1_5">
+        lib
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="lib" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          lib
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lib/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lib/peakfinder8_extension/" class="md-nav__link">
+        peakfinder8_extension
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_6" type="checkbox" id="__nav_7_1_6" >
+      
+      <label class="md-nav__link" for="__nav_7_1_6">
+        parallelization_layer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="parallelization_layer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          parallelization_layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallelization_layer/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallelization_layer/base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallelization_layer/mpi/" class="md-nav__link">
+        mpi
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_7" type="checkbox" id="__nav_7_1_7" >
+      
+      <label class="md-nav__link" for="__nav_7_1_7">
+        processing_layer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="processing_layer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          processing_layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/crystallography/" class="md-nav__link">
+        crystallography
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_8" type="checkbox" id="__nav_7_1_8" >
+      
+      <label class="md-nav__link" for="__nav_7_1_8">
+        utils
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="utils" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          utils
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/crystfel_geometry/" class="md-nav__link">
+        crystfel_geometry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/exceptions/" class="md-nav__link">
+        exceptions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/parameters/" class="md-nav__link">
+        parameters
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/zmq_gui/" class="md-nav__link">
+        zmq_gui
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/zmq_monitor/" class="md-nav__link">
+        zmq_monitor
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitor/" class="md-nav__link">
+        monitor
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler" class="md-nav__link">
+    FilesBaseDataEventHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="FilesBaseDataEventHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler.initialize_event_handling_on_collecting_node" class="md-nav__link">
+    initialize_event_handling_on_collecting_node()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler" class="md-nav__link">
+    Jungfrau1MFilesDataEventHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="Jungfrau1MFilesDataEventHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.data_extraction_funcs" class="md-nav__link">
+    data_extraction_funcs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.close_event" class="md-nav__link">
+    close_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.event_generator" class="md-nav__link">
+    event_generator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.get_num_frames_in_event" class="md-nav__link">
+    get_num_frames_in_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.initialize_event_handling_on_processing_node" class="md-nav__link">
+    initialize_event_handling_on_processing_node()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.open_event" class="md-nav__link">
+    open_event()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler" class="md-nav__link">
+    PilatusFilesDataEventHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="PilatusFilesDataEventHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.data_extraction_funcs" class="md-nav__link">
+    data_extraction_funcs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.close_event" class="md-nav__link">
+    close_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.event_generator" class="md-nav__link">
+    event_generator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.get_num_frames_in_event" class="md-nav__link">
+    get_num_frames_in_event()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.initialize_event_handling_on_processing_node" class="md-nav__link">
+    initialize_event_handling_on_processing_node()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.open_event" class="md-nav__link">
+    open_event()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="doc doc-object doc-module">
+
+
+
+<h1 id="om.data_retrieval_layer.data_handlers_filesystem" class="doc doc-heading">
+        <code>data_handlers_filesystem</code>
+
+
+
+</h1>
+
+    <div class="doc doc-contents first">
+
+      <p>Retrieval and handling of data events from a filesystem.</p>
+<p>This module contains Data Event Handlers for files saved in a filesystem (on a physical
+or virtual disk).</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler" class="doc doc-heading">
+        <code>FilesBaseDataEventHandler</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>See documentation of the <code>__init__</code> function.</p>
+<p>Base class: <a href="../base/#om.data_retrieval_layer.base.OmDataEventHandler"><code>OmDataEventHandler</code></a></p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monitor_parameters</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Base Data Event Handler class for events retrieved from files.</p>
+<p>This is the base class for Data Event Handlers that deal with files. It is a
+subclass of the more generic <a href="../base/#om.data_retrieval_layer.base.OmDataEventHandler">OmDataEventHandler</a> base class, and should in
+turn be subclassed to implement Data Event Handlers for specific file types.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>monitor_parameters</code></td>
+        <td><code>MonitorParams</code></td>
+        <td><p>A <a href="../../utils/parameters/#om.utils.parameters.MonitorParams">MonitorParams</a> object storing the OM monitor
+parameters from the configuration file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>source</code></td>
+        <td><code>str</code></td>
+        <td><p>A string describing the data source.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler.initialize_event_handling_on_collecting_node" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_event_handling_on_collecting_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_rank</span><span class="p">,</span> <span class="n">node_pool_size</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initializes file event handling on the collecting node.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>There is usually no need to initialize a file-based data source on the
+collecting node, so this function actually does nothing.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>node_rank</code></td>
+        <td><code>int</code></td>
+        <td><p>The rank, in the OM pool, of the processing node calling the
+function.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>node_pool_size</code></td>
+        <td><code>int</code></td>
+        <td><p>The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Any</code></td>
+      <td><p>An optional initialization token.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler" class="doc doc-heading">
+        <code>Jungfrau1MFilesDataEventHandler</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>See documentation of the <code>__init__</code> function.</p>
+<p>Base class: <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler"><code>FilesBaseDataEventHandler</code></a></p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.data_extraction_funcs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">data_extraction_funcs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span> <span class="n">Any</span><span class="p">]]</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Retrieves the Data Extraction Functions for Jungfrau 1M file events.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Dict[str, Callable[[Dict[str, Dict[str, Any]]], Any]]</code></td>
+      <td><p>A dictionary storing the Data Extraction functions available to the current
+Data Event Handler.</p>
+<ul>
+<li>
+<p>Each dictionary key defines the name of a function.</p>
+</li>
+<li>
+<p>The corresponding dictionary value stores the function implementation.</p>
+</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monitor_parameters</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Data Event Handler for Jungfrau 1M files.</p>
+<p>This Data Event Handler deals with files written by a Jungfrau 1M detector in
+HDF5 format. It is a subclass of the <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler"><code>FilesBaseDataEventHandler</code></a>
+class.</p>
+<p>The source string for this Data Event Handler is a path to a file containing a
+list of HDF5 files to process, one per line, with their absolute or relative
+path. Each file stores multiple detector data frames. Each retrieved event
+corresponds to a single frame from a file.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>monitor_parameters</code></td>
+        <td><code>MonitorParams</code></td>
+        <td><p>A <a href="../../utils/parameters/#om.utils.parameters.MonitorParams">MonitorParams</a> object storing the OM monitor
+parameters from the configuration file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>source</code></td>
+        <td><code>str</code></td>
+        <td><p>A string describing the data source.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.close_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">close_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Closes a Jungfrau 1M file event.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>Since each detector frame in a file is considered a separate event, the event
+generator, which splits the frames across the processing nodes, takes care of
+opening and closing the files. This function therefore does nothing.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>event</code></td>
+        <td><code>Dict[str, Any]</code></td>
+        <td><p>A dictionary storing the event data.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.event_generator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">event_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_rank</span><span class="p">,</span> <span class="n">node_pool_size</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Retrieves Jungfrau 1M file events.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>This Event Data Handler considers each detector frame, not each file, a
+separate event. The frames retrieved from the data source are split as evenly
+as possible across all the processing nodes. Each node ideally retrieves the
+same number of frames from the source. Only the last node might retrieve fewer
+frames, depending on how evenly the total number can be split.</p>
+<p>This generator function yields a dictionary storing the data for the current
+event.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>node_rank</code></td>
+        <td><code>int</code></td>
+        <td><p>The rank, in the OM pool, of the processing node calling the
+function.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>node_pool_size</code></td>
+        <td><code>int</code></td>
+        <td><p>The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.get_num_frames_in_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_num_frames_in_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the number of frames in a Jungfrau 1M file event.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>Since each frame in a file is considered a separate event, this function always
+returns 1.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>event</code></td>
+        <td><code>Dict[str, Any]</code></td>
+        <td><p>A dictionary storing the event data.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>int</code></td>
+      <td><p>The number of frames in the event.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.initialize_event_handling_on_processing_node" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_event_handling_on_processing_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_rank</span><span class="p">,</span> <span class="n">node_pool_size</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initializes Jungfrau 1M file event handling on the processing nodes.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>node_rank</code></td>
+        <td><code>int</code></td>
+        <td><p>The rank, in the OM pool, of the processing node calling the
+function.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>node_pool_size</code></td>
+        <td><code>int</code></td>
+        <td><p>The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Any</code></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>      <p>An optional initialization token.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.Jungfrau1MFilesDataEventHandler.open_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">open_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Opens a Jungfrau 1M file event.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>Since each detector frame in a file is considered a separate event, the event
+generator, which splits the frames across the processing nodes, takes care of
+opening and closing the files. This function therefore does nothing.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>event</code></td>
+        <td><code>Dict[str, Any]</code></td>
+        <td><p>A dictionary storing the event data.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler" class="doc doc-heading">
+        <code>PilatusFilesDataEventHandler</code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>See documentation of the <code>__init__</code> function.</p>
+<p>Base class: <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler"><code>FilesBaseDataEventHandler</code></a></p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.data_extraction_funcs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">data_extraction_funcs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span> <span class="n">Any</span><span class="p">]]</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Retrieves the Data Extraction Functions for Pilatus file events.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Dict[str, Callable[[Dict[str, Dict[str, Any]]], Any]]</code></td>
+      <td><p>A dictionary storing the Data Extraction functions available to the current
+Data Event Handler.</p>
+<ul>
+<li>
+<p>Each dictionary key defines the name of a function.</p>
+</li>
+<li>
+<p>The corresponding dictionary value stores the function implementation.</p>
+</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">monitor_parameters</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Data Event Handler for Pilatus files.</p>
+<p>This Data Event Handler deals with files written by a 1M Pilatus detector in
+CBF format. It is a subclass of the <a href="#om.data_retrieval_layer.data_handlers_filesystem.FilesBaseDataEventHandler">FilesBaseDataEventHandler</a>
+class.</p>
+<p>The source string for this Data Event Handler is a path to a file containing a
+list of CBF files to process, one per line, with their absolute or relative
+path. Each retrieved event corresponds to the content of one CBF file, which
+usually stores a single detector data frame.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>monitor_parameters</code></td>
+        <td><code>MonitorParams</code></td>
+        <td><p>A <a href="../../utils/parameters/#om.utils.parameters.MonitorParams">MonitorParams</a> object storing the OM monitor
+parameters from the configuration file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>source</code></td>
+        <td><code>str</code></td>
+        <td><p>A string describing the data source.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.close_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">close_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Closes a Pilatus file event.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>CBF files don't need to be closed, therefore this function does nothing.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>event</code></td>
+        <td><code>Dict[str, Any]</code></td>
+        <td><p>A dictionary storing the event data.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.event_generator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">event_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_rank</span><span class="p">,</span> <span class="n">node_pool_size</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Retrieves Pilatus file events.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>This Data Event Handler distributes the files from the data source as evenly as
+possible across all the processing nodes. Each node ideally retrieves the same
+number of files from the source. Only the last node might retrieve fewer files,
+depending on how evenly the total number can be split.</p>
+<p>This generator function yields a dictionary storing the data for the current
+event.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>node_rank</code></td>
+        <td><code>int</code></td>
+        <td><p>The rank, in the OM pool, of the processing node calling the
+function.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>node_pool_size</code></td>
+        <td><code>int</code></td>
+        <td><p>The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.get_num_frames_in_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_num_frames_in_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the number of frames in a Pilatus file  event.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>Since a Pilatus detector usually writes only one frame per file, this function
+always returns 1.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>event</code></td>
+        <td><code>Dict[str, Any]</code></td>
+        <td><p>A dictionary storing the event data.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>int</code></td>
+      <td><p>The number of frames in the event.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.initialize_event_handling_on_processing_node" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_event_handling_on_processing_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node_rank</span><span class="p">,</span> <span class="n">node_pool_size</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initializes Pilatus file event handling on the processing nodes.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>node_rank</code></td>
+        <td><code>int</code></td>
+        <td><p>The rank, in the OM pool, of the processing node calling the
+function.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>node_pool_size</code></td>
+        <td><code>int</code></td>
+        <td><p>The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Any</code></td>
+      <td><p>An optional initialization token.</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="om.data_retrieval_layer.data_handlers_filesystem.PilatusFilesDataEventHandler.open_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">open_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Opens a Pilatus file event.</p>
+<p>This method overrides the corresponding method of the base class: please also
+refer to the documentation of that class for more information.</p>
+<p>This function opens each CBF file and associates its content with the 'data'
+key of the 'event' dictionary.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>event</code></td>
+        <td><code>Dict[str, Any]</code></td>
+        <td><p>A dictionary storing the event data.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../base/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              base
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../data_handlers_hidra/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              data_handlers_hidra
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020-2021 OM Development Team
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>
