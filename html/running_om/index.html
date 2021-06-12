@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -1392,11 +1392,11 @@ be created with the following content:</p>
 <span class="nb">echo</span> <span class="s1">&#39;# File automatically created by the&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
 <span class="nb">echo</span> <span class="s1">&#39;# run_om.sh script, please do not&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
 <span class="nb">echo</span> <span class="s1">&#39;# edit directly.&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s1">&#39;source &lt;OM&gt; &gt;&gt; $(pwd)/monitor_wrapper.sh</span>
-<span class="s1">echo &quot;om_monitor.py &#39;</span><span class="nv">shmem</span><span class="o">=</span>psana.0:stop<span class="o">=</span>no<span class="err">&#39;</span><span class="s2">&quot; &gt;&gt; </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/monitor_wrapper.sh</span>
-<span class="s2">chmod +x </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/monitor_wrapper.sh</span>
-<span class="k">$(</span>which mpirun<span class="k">)</span><span class="s2"> --oversubscribe --map-by ppr:X:node \</span>
-<span class="s2">                --host Y </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/monitor_wrapper.sh</span>
+<span class="nb">echo</span> <span class="s1">&#39;source /cds/sw/package/om/setup.sh&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
+<span class="nb">echo</span> <span class="s2">&quot;om_monitor.py &#39;shmem=psana.0:stop=no&#39;&quot;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
+chmod +x <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
+<span class="k">$(</span>which mpirun<span class="k">)</span> --oversubscribe --map-by ppr:X:node <span class="se">\</span>
+                --host Y <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
 </code></pre></div>
 <p>In the last two lines, <code>X</code> must be replaced with the number of processes that OM should
 start on each monitoring node, and <code>Y</code> with a comma-separated list of hostnames or IP
@@ -1641,7 +1641,8 @@ mitigate them, can be found at the following link:</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../installing_om/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../installing_om/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installing OM" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1656,7 +1657,8 @@ mitigate them, can be found at the following link:</p>
         </a>
       
       
-        <a href="../configuring_om/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../configuring_om/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuring OM" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1695,10 +1697,10 @@ mitigate them, can be found at the following link:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
