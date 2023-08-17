@@ -8,40 +8,44 @@
       
       
       
-      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Running OM - OnDA Monitor - v21.5.0</title>
+        <title>Running OM - OnDA Monitor - v23.8.0</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../assets/css/extra.css">
     
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
+    
     
     
   </head>
@@ -52,10 +56,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -72,22 +75,25 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OnDA Monitor - v21.5.0" class="md-header__button md-logo" aria-label="OnDA Monitor - v21.5.0" data-md-component="logo">
+    <a href=".." title="OnDA Monitor - v23.8.0" class="md-header__button md-logo" aria-label="OnDA Monitor - v23.8.0" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m6 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2m0 2v6h2V9h-2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m6 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2m0 2v6h2V9h-2Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            OnDA Monitor - v21.5.0
+            OnDA Monitor - v23.8.0
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -103,21 +109,24 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -134,11 +143,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     omdevteam/om
@@ -147,11 +155,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -167,21 +178,20 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OnDA Monitor - v21.5.0" class="md-nav__button md-logo" aria-label="OnDA Monitor - v21.5.0" data-md-component="logo">
+    <a href=".." title="OnDA Monitor - v23.8.0" class="md-nav__button md-logo" aria-label="OnDA Monitor - v23.8.0" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m6 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2m0 2v6h2V9h-2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m6 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2m0 2v6h2V9h-2Z"/></svg>
 
     </a>
-    OnDA Monitor - v21.5.0
+    OnDA Monitor - v23.8.0
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     omdevteam/om
@@ -248,6 +258,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -262,124 +273,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-om-at-the-lcls-facility-mfx-and-cxi-beamlines" class="md-nav__link">
-    Running OM at the LCLS Facility (MFX and CXI Beamlines)
+  <a href="#running-om-at-the-lcls-facility-and-other-facilities-in-the-usa" class="md-nav__link">
+    Running OM at the LCLS facility and other facilities in the USA
   </a>
-  
-    <nav class="md-nav" aria-label="Running OM at the LCLS Facility (MFX and CXI Beamlines)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-run_omsh-file" class="md-nav__link">
-    The run_om.sh File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-monitoryaml-file" class="md-nav__link">
-    The monitor.yaml File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-geometry-file" class="md-nav__link">
-    The Geometry File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-om_1" class="md-nav__link">
-    Running OM
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-om-on-a-laptopdesktop" class="md-nav__link">
-    Running OM on a Laptop/Desktop
+  <a href="#running-om-at-the-desy-facility-and-other-facilities-in-europe" class="md-nav__link">
+    Running OM at the DESY facility and other facilities in Europe
   </a>
-  
-    <nav class="md-nav" aria-label="Running OM on a Laptop/Desktop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-data-files" class="md-nav__link">
-    The Data Files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-monitoryaml-file_1" class="md-nav__link">
-    The monitor.yaml file
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-geometry-file_1" class="md-nav__link">
-    The Geometry File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-om_2" class="md-nav__link">
-    Running OM
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-oms-graphical-interfaces" class="md-nav__link">
-    Running OM's Graphical Interfaces
-  </a>
-  
-    <nav class="md-nav" aria-label="Running OM's Graphical Interfaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#broadcasting-url" class="md-nav__link">
-    Broadcasting URL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-the-graphical-interfaces" class="md-nav__link">
-    Launching the Graphical Interfaces
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-messages" class="md-nav__link">
-    Error Messages
+  <a href="#running-om-for-xes-and-swaxs-experiments" class="md-nav__link">
+    Running OM for XES and SWAXS experiments
   </a>
   
 </li>
@@ -450,10 +359,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      <label class="md-nav__link" for="__nav_7">
-        Code Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Code Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Code Reference" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
@@ -462,6 +375,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -471,10 +385,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
       
-      <label class="md-nav__link" for="__nav_7_1">
-        om
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          om
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="om" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_1">
           <span class="md-nav__icon md-icon"></span>
@@ -483,6 +401,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -493,8 +412,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -504,10 +425,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_2" type="checkbox" id="__nav_7_1_2" >
       
-      <label class="md-nav__link" for="__nav_7_1_2">
-        algorithms
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_2">
+          algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="algorithms" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_2">
           <span class="md-nav__icon md-icon"></span>
@@ -516,6 +441,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -526,8 +452,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -538,8 +466,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -550,8 +480,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -562,14 +494,31 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/algorithms/xes/" class="md-nav__link">
+        xes
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -579,10 +528,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_3" type="checkbox" id="__nav_7_1_3" >
       
-      <label class="md-nav__link" for="__nav_7_1_3">
-        data_retrieval_layer
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_3">
+          data_retrieval_layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="data_retrieval_layer" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_3">
           <span class="md-nav__icon md-icon"></span>
@@ -591,6 +544,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -601,146 +555,255 @@
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/base/" class="md-nav__link">
-        base
+      <a href="../reference/om/data_retrieval_layer/data_event_handlers_asapo/" class="md-nav__link">
+        data_event_handlers_asapo
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/data_handlers_filesystem/" class="md-nav__link">
-        data_handlers_filesystem
+      <a href="../reference/om/data_retrieval_layer/data_event_handlers_files/" class="md-nav__link">
+        data_event_handlers_files
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/data_handlers_hidra/" class="md-nav__link">
-        data_handlers_hidra
+      <a href="../reference/om/data_retrieval_layer/data_event_handlers_http/" class="md-nav__link">
+        data_event_handlers_http
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/data_handlers_psana/" class="md-nav__link">
-        data_handlers_psana
+      <a href="../reference/om/data_retrieval_layer/data_event_handlers_psana/" class="md-nav__link">
+        data_event_handlers_psana
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_cspad/" class="md-nav__link">
-        functions_cspad
+      <a href="../reference/om/data_retrieval_layer/data_event_handlers_zmq/" class="md-nav__link">
+        data_event_handlers_zmq
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_epix10ka/" class="md-nav__link">
-        functions_epix10ka
+      <a href="../reference/om/data_retrieval_layer/data_retrieval_asapo/" class="md-nav__link">
+        data_retrieval_asapo
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_jungfrau1M/" class="md-nav__link">
-        functions_jungfrau1M
+      <a href="../reference/om/data_retrieval_layer/data_retrieval_files/" class="md-nav__link">
+        data_retrieval_files
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_jungfrau4M/" class="md-nav__link">
-        functions_jungfrau4M
+      <a href="../reference/om/data_retrieval_layer/data_retrieval_http/" class="md-nav__link">
+        data_retrieval_http
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_pilatus/" class="md-nav__link">
-        functions_pilatus
+      <a href="../reference/om/data_retrieval_layer/data_retrieval_psana/" class="md-nav__link">
+        data_retrieval_psana
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_rayonix/" class="md-nav__link">
-        functions_rayonix
+      <a href="../reference/om/data_retrieval_layer/data_retrieval_zmq/" class="md-nav__link">
+        data_retrieval_zmq
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/data_retrieval_layer/functions_psana/" class="md-nav__link">
-        functions_psana
+      <a href="../reference/om/data_retrieval_layer/data_sources_asapo/" class="md-nav__link">
+        data_sources_asapo
       </a>
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/data_retrieval_layer/data_sources_files/" class="md-nav__link">
+        data_sources_files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/data_retrieval_layer/data_sources_psana/" class="md-nav__link">
+        data_sources_psana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/data_retrieval_layer/data_sources_generic/" class="md-nav__link">
+        data_sources_generic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/data_retrieval_layer/data_sources_http/" class="md-nav__link">
+        data_sources_http
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/data_retrieval_layer/data_sources_zmq/" class="md-nav__link">
+        data_sources_zmq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/data_retrieval_layer/event_retrieval/" class="md-nav__link">
+        event_retrieval
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -750,10 +813,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_4" type="checkbox" id="__nav_7_1_4" >
       
-      <label class="md-nav__link" for="__nav_7_1_4">
-        graphical_interfaces
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_4">
+          graphical_interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="graphical_interfaces" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_4">
           <span class="md-nav__icon md-icon"></span>
@@ -762,6 +829,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -772,32 +840,24 @@
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/graphical_interfaces/base/" class="md-nav__link">
-        base
+      <a href="../reference/om/graphical_interfaces/common/" class="md-nav__link">
+        common
       </a>
     </li>
   
 
+            
           
             
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/om/graphical_interfaces/crystallography_frame_viewer/" class="md-nav__link">
-        crystallography_frame_viewer
-      </a>
-    </li>
-  
-
-          
-            
+              
   
   
   
@@ -808,8 +868,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -820,14 +882,45 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/graphical_interfaces/frame_viewer/" class="md-nav__link">
+        frame_viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/graphical_interfaces/xes_gui/" class="md-nav__link">
+        xes_gui
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -837,10 +930,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_5" type="checkbox" id="__nav_7_1_5" >
       
-      <label class="md-nav__link" for="__nav_7_1_5">
-        lib
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_5">
+          lib
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="lib" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_5">
           <span class="md-nav__icon md-icon"></span>
@@ -849,6 +946,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -859,26 +957,185 @@
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/lib/peakfinder8_extension/" class="md-nav__link">
-        peakfinder8_extension
+      <a href="../reference/om/lib/cheetah/" class="md-nav__link">
+        cheetah
       </a>
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/crystallography/" class="md-nav__link">
+        crystallography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/event_management/" class="md-nav__link">
+        event_management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/exceptions/" class="md-nav__link">
+        exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/geometry/" class="md-nav__link">
+        geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/hdf5/" class="md-nav__link">
+        hdf5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/layer_management/" class="md-nav__link">
+        layer_management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/parameters/" class="md-nav__link">
+        parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/rich_console/" class="md-nav__link">
+        rich_console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/xes/" class="md-nav__link">
+        xes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/zmq_qt/" class="md-nav__link">
+        zmq_qt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/lib/zmq/" class="md-nav__link">
+        zmq
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -888,10 +1145,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_6" type="checkbox" id="__nav_7_1_6" >
       
-      <label class="md-nav__link" for="__nav_7_1_6">
-        parallelization_layer
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_6">
+          parallelization_layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="parallelization_layer" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_6">
           <span class="md-nav__icon md-icon"></span>
@@ -900,6 +1161,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -910,20 +1172,10 @@
     </li>
   
 
+            
           
             
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/om/parallelization_layer/base/" class="md-nav__link">
-        base
-      </a>
-    </li>
-  
-
-          
-            
+              
   
   
   
@@ -934,14 +1186,31 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/parallelization_layer/multiprocessing/" class="md-nav__link">
+        multiprocessing
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -951,10 +1220,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_7" type="checkbox" id="__nav_7_1_7" >
       
-      <label class="md-nav__link" for="__nav_7_1_7">
-        processing_layer
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_7">
+          processing_layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="processing_layer" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_7">
           <span class="md-nav__icon md-icon"></span>
@@ -963,6 +1236,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -973,20 +1247,38 @@
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/processing_layer/base/" class="md-nav__link">
-        base
+      <a href="../reference/om/processing_layer/cheetah_streaming/" class="md-nav__link">
+        cheetah_streaming
       </a>
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/processing_layer/cheetah/" class="md-nav__link">
+        cheetah
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -997,14 +1289,45 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/processing_layer/testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/om/processing_layer/xes/" class="md-nav__link">
+        xes
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1014,96 +1337,86 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_8" type="checkbox" id="__nav_7_1_8" >
       
-      <label class="md-nav__link" for="__nav_7_1_8">
-        utils
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="utils" data-md-level="3">
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_8">
+          protocols
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="protocols" data-md-level="3">
         <label class="md-nav__title" for="__nav_7_1_8">
           <span class="md-nav__icon md-icon"></span>
-          utils
+          protocols
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/utils/" class="md-nav__link">
+      <a href="../reference/om/protocols/" class="md-nav__link">
         __init__
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/utils/crystfel_geometry/" class="md-nav__link">
-        crystfel_geometry
+      <a href="../reference/om/protocols/data_retrieval_layer/" class="md-nav__link">
+        data_retrieval_layer
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/utils/exceptions/" class="md-nav__link">
-        exceptions
+      <a href="../reference/om/protocols/parallelization_layer/" class="md-nav__link">
+        parallelization_layer
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../reference/om/utils/parameters/" class="md-nav__link">
-        parameters
+      <a href="../reference/om/protocols/processing_layer/" class="md-nav__link">
+        processing_layer
       </a>
     </li>
   
 
-          
             
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/om/utils/zmq_gui/" class="md-nav__link">
-        zmq_gui
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/om/utils/zmq_monitor/" class="md-nav__link">
-        zmq_monitor
-      </a>
-    </li>
-  
-
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1114,90 +1427,14 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
-      
-      <label class="md-nav__link" for="__nav_8">
-        Quick Links
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Quick Links" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Quick Links
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
             
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../parameters/" class="md-nav__link">
-        OM's Configuration Parameters
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../errors/" class="md-nav__link">
-        OM's Error Messages
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/" class="md-nav__link">
-        Available Data Types For Each Data Event Handler
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../geometry/" class="md-nav__link">
-        Example Geometry Files
-      </a>
-    </li>
-  
-
           
         </ul>
       </nav>
@@ -1217,6 +1454,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1231,124 +1469,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-om-at-the-lcls-facility-mfx-and-cxi-beamlines" class="md-nav__link">
-    Running OM at the LCLS Facility (MFX and CXI Beamlines)
+  <a href="#running-om-at-the-lcls-facility-and-other-facilities-in-the-usa" class="md-nav__link">
+    Running OM at the LCLS facility and other facilities in the USA
   </a>
-  
-    <nav class="md-nav" aria-label="Running OM at the LCLS Facility (MFX and CXI Beamlines)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-run_omsh-file" class="md-nav__link">
-    The run_om.sh File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-monitoryaml-file" class="md-nav__link">
-    The monitor.yaml File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-geometry-file" class="md-nav__link">
-    The Geometry File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-om_1" class="md-nav__link">
-    Running OM
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-om-on-a-laptopdesktop" class="md-nav__link">
-    Running OM on a Laptop/Desktop
+  <a href="#running-om-at-the-desy-facility-and-other-facilities-in-europe" class="md-nav__link">
+    Running OM at the DESY facility and other facilities in Europe
   </a>
-  
-    <nav class="md-nav" aria-label="Running OM on a Laptop/Desktop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-data-files" class="md-nav__link">
-    The Data Files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-monitoryaml-file_1" class="md-nav__link">
-    The monitor.yaml file
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-geometry-file_1" class="md-nav__link">
-    The Geometry File
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-om_2" class="md-nav__link">
-    Running OM
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-oms-graphical-interfaces" class="md-nav__link">
-    Running OM's Graphical Interfaces
-  </a>
-  
-    <nav class="md-nav" aria-label="Running OM's Graphical Interfaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#broadcasting-url" class="md-nav__link">
-    Broadcasting URL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-the-graphical-interfaces" class="md-nav__link">
-    Launching the Graphical Interfaces
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-messages" class="md-nav__link">
-    Error Messages
+  <a href="#running-om-for-xes-and-swaxs-experiments" class="md-nav__link">
+    Running OM for XES and SWAXS experiments
   </a>
   
 </li>
@@ -1361,290 +1497,59 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                <h1 id="running-om">Running OM</h1>
-<h2 id="running-om-at-the-lcls-facility-mfx-and-cxi-beamlines">Running OM at the LCLS Facility (MFX and CXI Beamlines)</h2>
-<h3 id="the-run_omsh-file">The <code>run_om.sh</code> File</h3>
-<p>At the MFX and CXI beamlines of the LCLS facility, OM must be run on a specific set of
-machines known as <em>monitoring nodes</em>. Only on these machines the data stream can be
-accessed in real time. The monitoring nodes have hostnames that match the following
-scheme:</p>
-<ul>
-<li>Monitoring nodes at the CXI beamline: <code>daq-cxi-mon&lt;XX&gt;</code></li>
-<li>Monitoring nodes at the MFX beamline: <code>daq-mfx-mon&lt;XX&gt;</code></li>
-</ul>
-<p>In these hostnames, <code>&lt;XX&gt;</code> is a zero-padded integer number. The specific monitoring
-nodes that should be used to run OM can change for each experiment and sometimes even
-within the same experiment. The beamline scientists can usually provide information
-about the nodes that should be used at any given time.</p>
-<p>Once access to the monitoring nodes has been obtained, a file called <code>run_om.sh</code> should
-be created with the following content:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># In the last lines, replace X with the number of OM nodes</span>
-<span class="c1"># to run on each machine and Y with a comma-separated list</span>
-<span class="c1"># of hostnames for machines on which OM should be launched.</span>
-<span class="nb">source</span> /cds/sw/ds/ana/conda1/manage/bin/psconda.sh -py3
-<span class="nb">echo</span> Creating and Running <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s1">&#39;#!/bin/bash&#39;</span> &gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s1">&#39;# File automatically created by the&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s1">&#39;# run_om.sh script, please do not&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s1">&#39;# edit directly.&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s1">&#39;source /cds/sw/package/om/setup.sh&#39;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="nb">echo</span> <span class="s2">&quot;om_monitor.py &#39;shmem=psana.0:stop=no&#39;&quot;</span> &gt;&gt; <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-chmod +x <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-<span class="k">$(</span>which mpirun<span class="k">)</span> --oversubscribe --map-by ppr:X:node <span class="se">\</span>
-                --host Y <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/monitor_wrapper.sh
-</code></pre></div>
-<p>In the last two lines, <code>X</code> must be replaced with the number of processes that OM should
-start on each monitoring node, and <code>Y</code> with a comma-separated list of hostnames or IP
-addresses of machines on which OM should be launched (This information is usually
-provided by the beamline scientists).</p>
-<p>Examples of <code>run_om.sh</code> files for the MFX and CXI beamlines can be found at the
-following links:</p>
-<ul>
-<li><a href="../files/lcls/mfx/run_om.sh">Example <code>run_om.sh</code> script for the MFX beamline</a></li>
-<li><a href="../files/lcls/cxi/run_om.sh">Example <code>run_om.sh</code> script for the CXI beamline</a></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please note that these files aree <em>just examples</em>. They might need to be modified
-before being used for specific experiments.</p>
-</div>
-<h3 id="the-monitoryaml-file">The <code>monitor.yaml</code> File</h3>
-<p>In the same folder as the previous script, a <code>monitor.yaml</code> configuration file should
-be created. (See <a href="../configuring_om/#the-configuration-file">this section</a> for a full
-discussion of the format and content of the configuration file).</p>
-<p>Example configuration files for the MFX and CXI beamlines can be found at the following
-links:</p>
-<ul>
-<li><a href="../files/lcls/mfx/monitor.yaml">Example <code>monitor.yaml</code> file for the MFX beamline</a></li>
-<li><a href="../files/lcls/cxi/monitor.yaml">Example <code>monitor.yaml</code> file for the CXI beamline</a></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please note that these files are <em>just examples</em>. They might need to be modified
-before being used for specific experiments. This is particularly true for the
-entries in the file that define the <em>calibration directory</em> and the <em>detector
-name</em>, and for the ones that define the <em>epics variables</em> associated with beam
-energy and detector distance. These are usually all experiment-dependent.</p>
-</div>
-<h3 id="the-geometry-file">The Geometry File</h3>
-<p>In most cases, the <code>monitor.yaml</code> file will instruct OM to look for a
-<a href="https://www.desy.de/~twhite/crystfel/manual-crystfel_geometry.html">CrystFEL geometry</a>
-file for the x-ray detector used at the beamline.</p>
-<p>Example geometry files for several x-ray detectors can be found at the following link:</p>
-<ul>
-<li><a href="../geometry/">Example geometry files for x-ray detectors</a></li>
-</ul>
-<p>In their default setup, the MFX and CXI beamlines use the Epix10ka and Jungfrau1M
-detectors. Example geometry files for these detectors can be found here:</p>
-<ul>
-<li><a href="../files/lcls/mfx/epix10k2M.geom">Example Epix10ka@M geometry file for the MFX beamline</a></li>
-<li><a href="../files/lcls/cxi/jungfrau4M.geom">Example Jungfrau4M geometry file for the CXI beamline</a></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please note that these files are <em>just examples</em>. They might need to be modified
-before being used for specific experiments.</p>
-</div>
-<h3 id="running-om_1">Running OM</h3>
-<p>Once everything is setup, OM can be launched by simply running the <code>run_om.sh</code> script
-from a terminal. Please note that the script should be launched from a monitoring node
-machine, or from a computer that has a direct connection to all the monitoring nodes.
-At the MFX beamline, for example, <code>mfx-daq</code> and <code>mfx-monitor</code> are suitable hosts, as are
-<code>cxi-daq</code> and <code>cxi-monitor</code> at the CXI beamline.</p>
-<p>After OM has been started, please see
-<a href="#running-oms-graphical-interfaces">this paragraph</a> on how to run OM's graphical
-interfaces.</p>
-<h2 id="running-om-on-a-laptopdesktop">Running OM on a Laptop/Desktop</h2>
-<h3 id="introduction">Introduction</h3>
-<p>When OM is launched on an a standalone computer, it is often very hard or impossible to
-connect to a facility's framework to retrieve data. Therefore, in the following
-example, OM will process data coming from files stored on disk, rather than real-time
-data from a facility. Specifically, this example will deal with files written by a
-Pilatus x-ray detector in CBF format. These files have been chosen because they are
-relatively small in size and easy to copy from one machine to the other.</p>
-<p>This setup, where OM processes data coming from files rather than from a facility's
-framework, is a very good solution for testing and debugging purposes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although it is possible to run OM on a small standalone computer, it should be
-noted that OM is not designed or optimized for the limited resources of a laptop or
-a small desktop computer.</p>
-</div>
-<h3 id="the-data-files">The Data Files</h3>
-<p>This example uses data files from an experiment performed by Ti-Yen Lan's research
-group at the APS facility, part of the Argonne National Laboratory in the USA. These
-files have been deposited in the
-<a href="http://cxidb.org/id-82.html">Coherent X-ray Imaging Data Bank</a>, an online database of
-data from Serial Crystallography experiments.</p>
-<p>The following paragraphs assume that the file <code>data8.tar.gz</code> has been downloaded from
-<a href="http://portal.nersc.gov/archive/home/projects/cxidb/www/82/raw-data/data8.tar.gz">here</a>
-and unpacked in a folder on the local computer.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Beware of storage space limitation and long download times: the data, even
-compressed, has a size  24Gb !</p>
-</div>
-<h3 id="the-monitoryaml-file_1">The <code>monitor.yaml</code> file</h3>
-<p>In oder to run OM, a <code>monitor.yaml</code> configuration file should be created on the local
-computer (See <a href="../configuring_om/#the-configuration-file">this section</a> for a full
-discussion of the format and content of the configuration file). The following
-file can be used for the dataset in this example:</p>
-<ul>
-<li><a href="../files/local/pilatus/monitor.yaml">Example <code>monitor.yaml</code> file for Ti-Yen Lan's dataset</a></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This configuration file has been adapted to the dataset in this example. Please
-note that a completely different configuration file might be needed for other
-datasets. Please consult the documentation linked above for a detailed explanation
-of each entry in the file. Also note that all the files mentioned in the
-configuration file (geometry file, masks, etc.) must be present and readable on
-the local computer for OM to work properly.</p>
-</div>
-<h3 id="the-geometry-file_1">The Geometry File</h3>
-<p>The <code>monitor.yaml</code> file linked above instructs OM to load a CrystFEL geometry file for
-the x-ray detector used during the experiment.</p>
-<p>Examples geometry files for several detectors used at various facilities and
-beamlines can be found at the following link:</p>
-<ul>
-<li><a href="../geometry/">Example geometry files for x-ray detectors</a></li>
-</ul>
-<p>However, for the current example, just a Pilatus detector geometry file is needed:</p>
-<ul>
-<li><a href="../files/local/pilatus/pilatus.geom">Example Pilatus geometry file</a></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please note that this files is  <em>just an example</em>. It works well for this example
-but might need to be modified to process data from another experiment, even if the
-same detector was used.</p>
-</div>
-<h3 id="running-om_2">Running OM</h3>
-<p>In order to have OM work on data from files, it is necessary to let the program know
-which files should be processed, and where to find them on the local computer. A list
-of files that OM must process needs to be generated. Each file must be listed on a
-separate line, each with its own full absolute or relative path. The list must then be
-saved into yet another file. </p>
-<p>For this example, the list file can easily be created using the UNIX <code>find</code> command:</p>
-<div class="highlight"><pre><span></span><code>find &lt;PATH TO DATA&gt; -name <span class="s2">&quot;*cbf&quot;</span> &gt; files.lst
-</code></pre></div>
-<p>In this command, <code>&lt;PATH TO DATA&gt;</code> should point to the folder where the previously
-downloaded data file has been unpacked.</p>
-<p>Assuming that the files are in the <code>data8</code> subdirectory of the current working folder,
-for example, the <code>files.lst</code> file should read:</p>
-<div class="highlight"><pre><span></span><code>data8/lysozyme2_test_000437.cbf
-data8/lysozyme2_test_005699.cbf
-data8/lysozyme2_test_001000.cbf
-data8/lysozyme2_test_006581.cbf
-data8/lysozyme2_test_006410.cbf
-...
-</code></pre></div>
-<p>OM can finally be started from the folder where the <code>monitor.toml</code>, <code>pilatus.geom</code> and
-<code>files.lst</code> files are located, using the following command:</p>
-<div class="highlight"><pre><span></span><code>mpirun -n &lt;NUM NODES&gt; om_monitor.py files.lst
-</code></pre></div>
-<p>In this command, <code>&lt;NUM NODES&gt;</code> must be replaced with the total number of nodes that
-OM should use (several processing nodes and a collecting node). For a standalone
-computer, and for testing purposes, a value of 3 (just 2 processing + 1 collecting
-nodes) is recommended.</p>
-<p>After OM has been started, please see
-<a href="#running-oms-graphical-interfaces">this paragraph</a> on how to run OM's graphical
-interfaces.</p>
-<h2 id="running-oms-graphical-interfaces">Running OM's Graphical Interfaces</h2>
-<h3 id="broadcasting-url">Broadcasting URL</h3>
-<p>As the monitor starts, it prints on the console a line that contains the following
-string:</p>
-<div class="highlight"><pre><span></span><code>Broadcasting data at &lt;URL&gt;
-</code></pre></div>
-<p>In this message, <code>&lt;URL&gt;</code> is a string of the form <code>protocol://location</code>, and it
-describes the protocol used by OM to broadcast the data (TCP or IPC), in addition to
-the location where the data is being broadcast. With the TCP protocol, the location is
-usually an IP address plus a port separated by a colon (<code>XXX.XXX.XXX.XXX:port</code>). When
-the IPC protocol is used, the location is usually the absolute path to a filesystem
-socket (<code>/path/to/socket</code>). </p>
-<h3 id="launching-the-graphical-interfaces">Launching the Graphical Interfaces</h3>
-<p>The broadcasting protocol and location are the only pieces of information needed to
-launch most of OM's graphical interfaces. The GUIs can be started using a command with
-the following format:</p>
-<div class="highlight"><pre><span></span><code>&lt;GUI COMMAND&gt; &lt;URL&gt;
-</code></pre></div>
-<p>Where <code>&lt;GUI COMMAND&gt;</code> is the name of the GUI script, and <code>&lt;URL&gt;</code> is the string printed
-out by OM at start up. For example, the Crystallography GUI and the Crystallography
-Frame Viewer, could be launched with the following commands:</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">TCP Protocol</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>om_crystallography_gui.py tcp://127.0.0.1:12321
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">IPC Protocol</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>om_crystallography_gui.py ipc://mfxopr/om_socket
-</code></pre></div>
-</div>
-</div>
-<p>and</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">TCP Protocol</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>om_crystallography_frame_viewer.py tcp://127.0.0.1:12321
-</code></pre></div>
-</div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">IPC Protocol</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>om_crystallography_frame_viewer.py ipc://mfxopr/om_socket
-</code></pre></div>
-</div>
-</div>
-<p>In general OM's graphical interfaces do not need to be launched on the same computer
-where OM is running. However, the location where the data is broadcast should be
-visible and reachable from the computer where the GUIs are running. Furthermore, some
-specific graphical interfaces might need access to files or information that is only
-present on the machine where OM is running. For example, OM's Crystallography Parameter
-Tweaker needs to access the <code>monitor.yaml</code> file, so it must either be run from the same
-computer and folder as OM, or the file must be copied over to the machine where the GUI
-is running.</p>
-<h2 id="error-messages">Error Messages</h2>
-<p>When something does not work as expected, OM emits error messages.  Errors can be
-fatal, in which case the monitor stops, or not, in which case OM just reports the error
-and continues processing data.</p>
-<p>OM errors are not reported as normal Python errors. They are clearly labelled as coming
-from the monitor, and their traceback information is removed. The <code>--debug</code> option to 
-the <code>om_monitor.py</code> script disables this behavior and forces OM to report all errors as
-normal Python errors.</p>
-<p>When the OM's Parallelization Engine is used, OM fatal errors are often reported
-multiple times before the monitor finishes operating: it can happen that multiple nodes
-report the same error independently before the MPI engine can stop.</p>
-<p>A brief description of the most common error messages, and the measures needed to
-mitigate them, can be found at the following link:</p>
-<ul>
-<li><a href="../errors/">Most common error messages from OM</a></li>
-</ul>
-                
-              
-              
-                
+                  
 
 
-              
-            </article>
-          </div>
+<h1 id="running-om">Running OM</h1>
+<p>Although OM is installed and available at several synchrotron and free electron laser
+facilities, special machines and network arrangements are often needed to run it
+efficiently at the various beamlines where it is available.</p>
+<p>Tools and graphical interfaces that will allow users to comfortably start, stop and run
+OM at several facilities are currently under development.</p>
+<p>For now, if someone is interested in using OM for an experiment, the best strategy is
+to contact one of the core developers. The core development team will be happy to help
+setting up and running OM.</p>
+<h3 id="running-om-at-the-lcls-facility-and-other-facilities-in-the-usa">Running OM at the LCLS facility and other facilities in the USA</h3>
+<p>Please contact <strong>Valerio Mariani</strong>
+(<a href="mailto:valmar@slac.stanford.edu">valmar@slac.stanford.edu</a>)</p>
+<h3 id="running-om-at-the-desy-facility-and-other-facilities-in-europe">Running OM at the DESY facility and other facilities in Europe</h3>
+<p>Please contact <strong>Alexandra Tolstikova</strong>
+(<a href="mailto:alexandra.tolstikova@desy.de">alexandra.tolstikova@desy.de</a>)</p>
+<h3 id="running-om-for-xes-and-swaxs-experiments">Running OM for XES and SWAXS experiments</h3>
+<p>Please contact <strong>Thomas D. Grant</strong>
+(<a href="mailto:alexandra.tolstikova@desy.de">tdgrant@buffalo.edu</a>)</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
           </a>
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../installing_om/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installing OM" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -1668,7 +1573,7 @@ mitigate them, can be found at the following link:</p>
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -1676,18 +1581,19 @@ mitigate them, can be found at the following link:</p>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020-2021 OM Development Team
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020-2023 OM Development Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1697,11 +1603,13 @@ mitigate them, can be found at the following link:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
+    
     
   </body>
 </html>

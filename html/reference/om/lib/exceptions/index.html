@@ -1,0 +1,2336 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>exceptions - OnDA Monitor - v23.8.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#om.lib.exceptions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="OnDA Monitor - v23.8.0" class="md-header__button md-logo" aria-label="OnDA Monitor - v23.8.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m6 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2m0 2v6h2V9h-2Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OnDA Monitor - v23.8.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              exceptions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omdevteam/om
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="OnDA Monitor - v23.8.0" class="md-nav__button md-logo" aria-label="OnDA Monitor - v23.8.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m6 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2m0 2v6h2V9h-2Z"/></svg>
+
+    </a>
+    OnDA Monitor - v23.8.0
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/omdevteam/om" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omdevteam/om
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        What is OM?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installing_om/" class="md-nav__link">
+        Installing OM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_om/" class="md-nav__link">
+        Running OM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../configuring_om/" class="md-nav__link">
+        Configuring OM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../advanced_documentation/" class="md-nav__link">
+        Advanced Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../the_om_development_team/" class="md-nav__link">
+        The OM Development Team
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Code Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Code Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Code Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          om
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="om" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          om
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_2" type="checkbox" id="__nav_7_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_2">
+          algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="algorithms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/calibration/" class="md-nav__link">
+        calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/crystallography/" class="md-nav__link">
+        crystallography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/generic/" class="md-nav__link">
+        generic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/xes/" class="md-nav__link">
+        xes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_3" type="checkbox" id="__nav_7_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_3">
+          data_retrieval_layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="data_retrieval_layer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          data_retrieval_layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_event_handlers_asapo/" class="md-nav__link">
+        data_event_handlers_asapo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_event_handlers_files/" class="md-nav__link">
+        data_event_handlers_files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_event_handlers_http/" class="md-nav__link">
+        data_event_handlers_http
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_event_handlers_psana/" class="md-nav__link">
+        data_event_handlers_psana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_event_handlers_zmq/" class="md-nav__link">
+        data_event_handlers_zmq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_retrieval_asapo/" class="md-nav__link">
+        data_retrieval_asapo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_retrieval_files/" class="md-nav__link">
+        data_retrieval_files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_retrieval_http/" class="md-nav__link">
+        data_retrieval_http
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_retrieval_psana/" class="md-nav__link">
+        data_retrieval_psana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_retrieval_zmq/" class="md-nav__link">
+        data_retrieval_zmq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_sources_asapo/" class="md-nav__link">
+        data_sources_asapo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_sources_files/" class="md-nav__link">
+        data_sources_files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_sources_psana/" class="md-nav__link">
+        data_sources_psana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_sources_generic/" class="md-nav__link">
+        data_sources_generic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_sources_http/" class="md-nav__link">
+        data_sources_http
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/data_sources_zmq/" class="md-nav__link">
+        data_sources_zmq
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_retrieval_layer/event_retrieval/" class="md-nav__link">
+        event_retrieval
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_4" type="checkbox" id="__nav_7_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_4">
+          graphical_interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="graphical_interfaces" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          graphical_interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/common/" class="md-nav__link">
+        common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/crystallography_gui/" class="md-nav__link">
+        crystallography_gui
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/crystallography_parameter_tweaker/" class="md-nav__link">
+        crystallography_parameter_tweaker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/frame_viewer/" class="md-nav__link">
+        frame_viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphical_interfaces/xes_gui/" class="md-nav__link">
+        xes_gui
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_5" type="checkbox" id="__nav_7_1_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_5">
+          lib
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="lib" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          lib
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheetah/" class="md-nav__link">
+        cheetah
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crystallography/" class="md-nav__link">
+        crystallography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event_management/" class="md-nav__link">
+        event_management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          exceptions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        exceptions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmException" class="md-nav__link">
+    OmException
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmConfigurationFileReadingError" class="md-nav__link">
+    OmConfigurationFileReadingError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmConfigurationFileSyntaxError" class="md-nav__link">
+    OmConfigurationFileSyntaxError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmDataExtractionError" class="md-nav__link">
+    OmDataExtractionError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHttpInterfaceInitializationError" class="md-nav__link">
+    OmHttpInterfaceInitializationError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmGeometryError" class="md-nav__link">
+    OmGeometryError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHdf5FileReadingError" class="md-nav__link">
+    OmHdf5FileReadingError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHdf5UnsupportedDataFormat" class="md-nav__link">
+    OmHdf5UnsupportedDataFormat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHdf5PathError" class="md-nav__link">
+    OmHdf5PathError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmInvalidSourceError" class="md-nav__link">
+    OmInvalidSourceError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmInvalidZmqUrl" class="md-nav__link">
+    OmInvalidZmqUrl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingLayerClassError" class="md-nav__link">
+    OmMissingLayerClassError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingDataEventError" class="md-nav__link">
+    OmMissingDataEventError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingDataSourceClassError" class="md-nav__link">
+    OmMissingDataSourceClassError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingDependencyError" class="md-nav__link">
+    OmMissingDependencyError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingLayerModuleError" class="md-nav__link">
+    OmMissingLayerModuleError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingParameterError" class="md-nav__link">
+    OmMissingParameterError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingParameterGroupError" class="md-nav__link">
+    OmMissingParameterGroupError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmWrongArrayShape" class="md-nav__link">
+    OmWrongArrayShape
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmWrongParameterTypeError" class="md-nav__link">
+    OmWrongParameterTypeError
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hdf5/" class="md-nav__link">
+        hdf5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer_management/" class="md-nav__link">
+        layer_management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters/" class="md-nav__link">
+        parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rich_console/" class="md-nav__link">
+        rich_console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xes/" class="md-nav__link">
+        xes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zmq_qt/" class="md-nav__link">
+        zmq_qt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zmq/" class="md-nav__link">
+        zmq
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_6" type="checkbox" id="__nav_7_1_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_6">
+          parallelization_layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="parallelization_layer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          parallelization_layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallelization_layer/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallelization_layer/mpi/" class="md-nav__link">
+        mpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallelization_layer/multiprocessing/" class="md-nav__link">
+        multiprocessing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_7" type="checkbox" id="__nav_7_1_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_7">
+          processing_layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="processing_layer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          processing_layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/cheetah_streaming/" class="md-nav__link">
+        cheetah_streaming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/cheetah/" class="md-nav__link">
+        cheetah
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/crystallography/" class="md-nav__link">
+        crystallography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing_layer/xes/" class="md-nav__link">
+        xes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1_8" type="checkbox" id="__nav_7_1_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1_8">
+          protocols
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="protocols" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          protocols
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocols/" class="md-nav__link">
+        __init__
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocols/data_retrieval_layer/" class="md-nav__link">
+        data_retrieval_layer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocols/parallelization_layer/" class="md-nav__link">
+        parallelization_layer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocols/processing_layer/" class="md-nav__link">
+        processing_layer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitor/" class="md-nav__link">
+        monitor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmException" class="md-nav__link">
+    OmException
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmConfigurationFileReadingError" class="md-nav__link">
+    OmConfigurationFileReadingError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmConfigurationFileSyntaxError" class="md-nav__link">
+    OmConfigurationFileSyntaxError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmDataExtractionError" class="md-nav__link">
+    OmDataExtractionError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHttpInterfaceInitializationError" class="md-nav__link">
+    OmHttpInterfaceInitializationError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmGeometryError" class="md-nav__link">
+    OmGeometryError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHdf5FileReadingError" class="md-nav__link">
+    OmHdf5FileReadingError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHdf5UnsupportedDataFormat" class="md-nav__link">
+    OmHdf5UnsupportedDataFormat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmHdf5PathError" class="md-nav__link">
+    OmHdf5PathError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmInvalidSourceError" class="md-nav__link">
+    OmInvalidSourceError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmInvalidZmqUrl" class="md-nav__link">
+    OmInvalidZmqUrl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingLayerClassError" class="md-nav__link">
+    OmMissingLayerClassError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingDataEventError" class="md-nav__link">
+    OmMissingDataEventError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingDataSourceClassError" class="md-nav__link">
+    OmMissingDataSourceClassError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingDependencyError" class="md-nav__link">
+    OmMissingDependencyError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingLayerModuleError" class="md-nav__link">
+    OmMissingLayerModuleError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingParameterError" class="md-nav__link">
+    OmMissingParameterError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmMissingParameterGroupError" class="md-nav__link">
+    OmMissingParameterGroupError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmWrongArrayShape" class="md-nav__link">
+    OmWrongArrayShape
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#om.lib.exceptions.OmWrongParameterTypeError" class="md-nav__link">
+    OmWrongParameterTypeError
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h1 id="om.lib.exceptions" class="doc doc-heading">
+            <code>exceptions</code>
+
+
+</h1>
+
+  <div class="doc doc-contents first">
+  
+      <p>OM-specific exceptions and exception handling.</p>
+<p>This module contains a set of python exceptions that are specific to OM.</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmException" class="doc doc-heading">
+          <code>OmException</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code>Exception</code></p>
+
+  
+      <p>Base class for OM's exceptions.</p>
+<p>All other OM-specific exceptions should inherit from this exception.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmConfigurationFileReadingError" class="doc doc-heading">
+          <code>OmConfigurationFileReadingError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if an error happens while OM is reading its configuration file.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmConfigurationFileSyntaxError" class="doc doc-heading">
+          <code>OmConfigurationFileSyntaxError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if there is a syntax error in OM's configuration file.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmDataExtractionError" class="doc doc-heading">
+          <code>OmDataExtractionError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if an error happens during data extraction.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmHttpInterfaceInitializationError" class="doc doc-heading">
+          <code>OmHttpInterfaceInitializationError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if an error happens while OM is accessing an HTTP/REST interface.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmGeometryError" class="doc doc-heading">
+          <code>OmGeometryError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if there is syntax error in a geometry file read by OM.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmHdf5FileReadingError" class="doc doc-heading">
+          <code>OmHdf5FileReadingError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if there is an error while reading an HDF5 data file.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmHdf5UnsupportedDataFormat" class="doc doc-heading">
+          <code>OmHdf5UnsupportedDataFormat</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised when trying to write an unsupported data format into an HDF5 data file.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmHdf5PathError" class="doc doc-heading">
+          <code>OmHdf5PathError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if an internal HDF5 path cannot be found.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmInvalidSourceError" class="doc doc-heading">
+          <code>OmInvalidSourceError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if the format of the source string or file is not valid.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmInvalidZmqUrl" class="doc doc-heading">
+          <code>OmInvalidZmqUrl</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if the format of a ZMQ socket's URL is not valid.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingLayerClassError" class="doc doc-heading">
+          <code>OmMissingLayerClassError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if a class that defines one of OM's layers cannot be found.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingDataEventError" class="doc doc-heading">
+          <code>OmMissingDataEventError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if a data event cannot be retrieved from a data source.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingDataSourceClassError" class="doc doc-heading">
+          <code>OmMissingDataSourceClassError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if a Data Source class cannot be found in the Data Retrieval Layer.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingDependencyError" class="doc doc-heading">
+          <code>OmMissingDependencyError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if one of the python module dependencies is not found on the system.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingLayerModuleError" class="doc doc-heading">
+          <code>OmMissingLayerModuleError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if the python implementation of one of OM's layer cannot be found.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingParameterError" class="doc doc-heading">
+          <code>OmMissingParameterError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if a parameter is missing from OM's configuration file.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmMissingParameterGroupError" class="doc doc-heading">
+          <code>OmMissingParameterGroupError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if a parameter group is missing from OM's configuration file.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmWrongArrayShape" class="doc doc-heading">
+          <code>OmWrongArrayShape</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if the shape of an array does not fit the data it should contain.</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="om.lib.exceptions.OmWrongParameterTypeError" class="doc doc-heading">
+          <code>OmWrongParameterTypeError</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="om.lib.exceptions.OmException" href="#om.lib.exceptions.OmException">OmException</a></code></p>
+
+  
+      <p>Raised if the type of an OM's configuration parameter is not correct.</p>
+
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../event_management/" class="md-footer__link md-footer__link--prev" aria-label="Previous: event_management" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              event_management
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../geometry/" class="md-footer__link md-footer__link--next" aria-label="Next: geometry" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              geometry
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020-2023 OM Development Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
