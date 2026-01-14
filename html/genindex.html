@@ -1,0 +1,2930 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="reference/index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reference/index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#Symbols"><strong>Symbols</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ | <a href="#Y"><strong>Y</strong></a>
+ | <a href="#Z"><strong>Z</strong></a>
+ 
+</div>
+<h2 id="Symbols">Symbols</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --config
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#cmdoption-om_crystallography_parameter_tweaker-c">om_crystallography_parameter_tweaker command line option</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-c">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --event-list
+
+      <ul>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-l">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --node-pool-size
+
+      <ul>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-n">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --start-time
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-s">jungfrau_dark command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --time-resolved
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#cmdoption-om_xes-_gui-t">om_xes`_gui command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    -c
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#cmdoption-om_crystallography_parameter_tweaker-c">om_crystallography_parameter_tweaker command line option</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-c">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -l
+
+      <ul>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-l">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -n
+
+      <ul>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-n">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -s
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-s">jungfrau_dark command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -t
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#cmdoption-om_xes-_gui-t">om_xes`_gui command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AcqirisPsana">AcqirisPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.adc_threshold">adc_threshold (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahClassSumsAccumulator.add_frame">add_frame() (CheetahClassSumsAccumulator method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahlistFilesWriter.add_frame">(CheetahlistFilesWriter method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.add_hit_event">add_hit_event() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.add_non_hit_event">add_non_hit_event() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahClassSumsCollector.add_sums">add_sums() (CheetahClassSumsCollector method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.adu_per_eV">adu_per_eV (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.adu_per_photon">adu_per_photon (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/radial_profile.html#om.lib.radial_profile.RadialProfileAnalysis.analyze_radial_profile">analyze_radial_profile() (RadialProfileAnalysis method)</a>
+</li>
+      <li><a href="reference/om/algorithms/calibration.html#om.algorithms.calibration.Jungfrau1MCalibration.apply_calibration">apply_calibration() (Jungfrau1MCalibration method)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana">AreaDetectorPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.AreaDetectorPsana2">AreaDetectorPsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.ArrayFromHdf5File">ArrayFromHdf5File (class in om.data_retrieval_layer.data_sources_common)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.asapo_data_source">asapo_data_source (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.asapo_group_id">asapo_group_id (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.asapo_has_filesystem">asapo_has_filesystem (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.asapo_path">asapo_path (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.asapo_token">asapo_token (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.asapo_url">asapo_url (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler">AsapoDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_asapo)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DetectorLayoutInformation.asic_nx">asic_nx (DetectorLayoutInformation attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DetectorLayoutInformation.asic_ny">asic_ny (DetectorLayoutInformation attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana">AssembledDetectorPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.AssembledDetectorPsana2">AssembledDetectorPsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.average_intensity">average_intensity (FramelistData attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.background_profile_filename">background_profile_filename (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.background_profile_hdf5_path">background_profile_hdf5_path (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.background_subtraction">background_subtraction (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.background_subtraction_max_fit_bin">background_subtraction_max_fit_bin (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.background_subtraction_min_fit_bin">background_subtraction_min_fit_bin (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.bad">bad (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.bad_pixel_map_filename">bad_pixel_map_filename (BinningParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_filename">(Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.bad_pixel_map_filename">(RadialProfileParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.bad_pixel_map_hdf5_path">bad_pixel_map_hdf5_path (BinningParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_hdf5_path">(Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.bad_pixel_map_hdf5_path">(RadialProfileParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.bad_pixel_value">bad_pixel_value (BinningParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion">BadRegion (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.badrow">badrow (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Beam">Beam (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.BeamEnergyAsapo">BeamEnergyAsapo (class in om.data_retrieval_layer.data_sources_asapo)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana">BeamEnergyFromEpicsVariablePsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.BeamEnergyFromEpicsVariablePsana2">BeamEnergyFromEpicsVariablePsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana">BeamEnergyPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.BeamEnergyPsana2">BeamEnergyPsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.bin_bad_pixel_map">bin_bad_pixel_map() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.bin_bad_pixel_map">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.bin_detector_data">bin_detector_data() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.bin_detector_data">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.bin_peak_positions">bin_peak_positions() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.bin_peak_positions">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.bin_pixel_maps">bin_pixel_maps() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.bin_pixel_maps">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.bin_size">bin_size (BinningParameters attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning">Binning (class in om.algorithms.generic)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.binning">binning (MonitorParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters">BinningParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough">BinningPassthrough (class in om.algorithms.generic)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Hdf5Compression.bitshuffle_with_zstd">bitshuffle_with_zstd (Hdf5Compression attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.buffer_size">buffer_size (DataRetrievalLayerParameters attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.RadialProfile.calculate_profile">calculate_profile() (RadialProfile method)</a>
+</li>
+      <li><a href="reference/om/algorithms/xes.html#om.algorithms.xes.EnergySpectrumRetrieval.calculate_spectrum">calculate_spectrum() (EnergySpectrumRetrieval method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.check_background_subtraction">check_background_subtraction() (RadialProfileParameters method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.check_binning_parameters">check_binning_parameters() (MonitorParameters method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.check_hd5_path">check_hd5_path() (BinningParameters method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.check_hd5_path">(Peakfinder8PeakDetectionParameters method)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.check_hd5_path">(RadialProfileParameters method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.check_particle_size_estimation">check_particle_size_estimation() (RadialProfileParameters method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.check_peakfinder8_peak_detection_parameters">check_peakfinder8_peak_detection_parameters() (MonitorParameters method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.check_sample_detection">check_sample_detection() (RadialProfileParameters method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.check_status_file_update_interval">check_status_file_update_interval() (CheetahParameters class method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.check_sums_update_interval">check_sums_update_interval() (CheetahParameters method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.cheetah">cheetah (MonitorParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahClassSumsAccumulator">CheetahClassSumsAccumulator (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahClassSumsCollector">CheetahClassSumsCollector (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahlistFilesWriter">CheetahlistFilesWriter (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters">CheetahParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing">CheetahProcessing (class in om.processing_layer.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahStatusFileWriter">CheetahStatusFileWriter (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.class_sums_filename_prefix">class_sums_filename_prefix (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.class_sums_sending_interval">class_sums_sending_interval (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.class_sums_update_interval">class_sums_update_interval (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.ClassSumData">ClassSumData (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/crystallography.html#om.lib.crystallography.CrystallographyPlots.clear_plots">clear_plots() (CrystallographyPlots method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/radial_profile.html#om.lib.radial_profile.RadialProfileAnalysisPlots.clear_plots">(RadialProfileAnalysisPlots method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.clen">clen (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.clen_for_centering">clen_for_centering (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.clen_from">clen_from (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.HDF5Writer.close">close() (HDF5Writer method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.cnx">cnx (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.cny">cny (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.coffset">coffset (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.collect_data">collect_data() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.collect_data">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.collect_data">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.collect_data">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.collect_data">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.collect_data">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.collect_data">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.collect_data">(XesProcessing method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.OmCheetahMixin.common_process_data">common_process_data() (OmCheetahMixin method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters.configuration_file">configuration_file (OmParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.crystallography">crystallography (MonitorParameters attribute)</a>
+</li>
+      <li><a href="reference/om/graphical_interfaces/crystallography_gui.html#om.graphical_interfaces.crystallography_gui.CrystallographyGui">CrystallographyGui (class in om.graphical_interfaces.crystallography_gui)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters">CrystallographyParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#om.graphical_interfaces.crystallography_parameter_tweaker.CrystallographyParameterTweaker">CrystallographyParameterTweaker (class in om.graphical_interfaces.crystallography_parameter_tweaker)</a>
+</li>
+      <li><a href="reference/om/lib/crystallography.html#om.lib.crystallography.CrystallographyPeakFinding">CrystallographyPeakFinding (class in om.lib.crystallography)</a>
+</li>
+      <li><a href="reference/om/lib/crystallography.html#om.lib.crystallography.CrystallographyPlots">CrystallographyPlots (class in om.lib.crystallography)</a>
+</li>
+      <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing">CrystallographyProcessing (class in om.processing_layer.crystallography)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.CspadPsana">CspadPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CustomBaseModel">CustomBaseModel (class in om.lib.parameters)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiTags.data">data (MpiTags attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.data">(Panel attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.data_broadcast_interval">data_broadcast_interval (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.data_broadcast_interval">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.data_broadcast_interval">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.data_broadcast_url">data_broadcast_url (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.data_broadcast_url">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.data_broadcast_url">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.data_retrieval_layer">data_retrieval_layer (MonitorParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters.data_retrieval_layer">(OmParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.data_sources">data_sources (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters">DataRetrievalLayerParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataSourceParameters">DataSourceParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DataVisualizer">DataVisualizer (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiTags.dead">dead (MpiTags attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.designated_collector_rank">designated_collector_rank() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.designated_collector_rank">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.designated_collector_rank">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.designated_collector_rank">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.OmBaseFileDataEventHandlerMixin.designated_collector_rank">(OmBaseFileDataEventHandlerMixin method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.designated_collector_rank">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.designated_collector_rank">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.designated_collector_rank">(PsanaDataEventHandler method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector">Detector (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.DetectorDataAsapo">DetectorDataAsapo (class in om.data_retrieval_layer.data_sources_asapo)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.DetectorDistanceAsapo">DetectorDistanceAsapo (class in om.data_retrieval_layer.data_sources_asapo)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DetectorLayoutInformation">DetectorLayoutInformation (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiTags.die">die (MpiTags attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.dim_structure">dim_structure (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana">DiodeTotalIntensityPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.Eiger16MFiles">Eiger16MFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.Eiger16MHttp">Eiger16MHttp (class in om.data_retrieval_layer.data_sources_http)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.EigerFilesDataEventHandler">EigerFilesDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler">EigerHttpDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_http)</a>
+</li>
+      <li><a href="reference/om/lib/logging.html#om.lib.logging.RichHandlerWithAggregation.emit">emit() (RichHandlerWithAggregation method)</a>
+</li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.end_processing_on_collecting_node">end_processing_on_collecting_node() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.end_processing_on_collecting_node">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.end_processing_on_collecting_node">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_collecting_node">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.end_processing_on_collecting_node">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.end_processing_on_collecting_node">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.end_processing_on_collecting_node">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.end_processing_on_collecting_node">(XesProcessing method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.end_processing_on_processing_node">end_processing_on_processing_node() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.end_processing_on_processing_node">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.end_processing_on_processing_node">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_processing_node">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.end_processing_on_processing_node">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.end_processing_on_processing_node">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.end_processing_on_processing_node">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.end_processing_on_processing_node">(XesProcessing method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/xes.html#om.algorithms.xes.EnergySpectrumRetrieval">EnergySpectrumRetrieval (class in om.algorithms.xes)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana">EpicsVariablePsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EpicsVariablePsana2">EpicsVariablePsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.Epix100aPsana">Epix100aPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.estimate_particle_size">estimate_particle_size (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.event_generator">event_generator() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.EigerFilesDataEventHandler.event_generator">(EigerFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.event_generator">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.event_generator">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Jungfrau1MFilesDataEventHandler.event_generator">(Jungfrau1MFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.event_generator">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Lambda1M5FilesDataEventHandler.event_generator">(Lambda1M5FilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.event_generator">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.PilatusFilesEventHandler.event_generator">(PilatusFilesEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.event_generator">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.event_generator">(PsanaDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.RayonixMccdFilesEventHandler.event_generator">(RayonixMccdFilesEventHandler method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.event_id">event_id (FramelistData attribute)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter">EventCounter (class in om.lib.event_management)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.EventIdAsapo">EventIdAsapo (class in om.data_retrieval_layer.data_sources_asapo)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdEiger16MFiles">EventIdEiger16MFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.EventIdEiger16MHttp">EventIdEiger16MHttp (class in om.data_retrieval_layer.data_sources_http)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdFromFilePath">EventIdFromFilePath (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdJungfrau1MFiles">EventIdJungfrau1MFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.EventIdJungfrau1MZmq">EventIdJungfrau1MZmq (class in om.data_retrieval_layer.data_sources_zmq)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdLambda1M5Files">EventIdLambda1M5Files (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EventIdPsana">EventIdPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EventIdPsana2">EventIdPsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler">EventListDataEventHandler (class in om.data_retrieval_layer.event_retrieval)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana">EvrCodelistPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EvrCodelistPsana2">EvrCodelistPsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana">EvrCodesPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.external_data_request_list_size">external_data_request_list_size (CheetahParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.external_data_request_list_size">(CrystallographyParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.extract_data">extract_data() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.EigerFilesDataEventHandler.extract_data">(EigerFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.extract_data">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.extract_data">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Jungfrau1MFilesDataEventHandler.extract_data">(Jungfrau1MFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.extract_data">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Lambda1M5FilesDataEventHandler.extract_data">(Lambda1M5FilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.extract_data">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.PilatusFilesEventHandler.extract_data">(PilatusFilesEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.extract_data">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.extract_data">(PsanaDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.RayonixMccdFilesEventHandler.extract_data">(RayonixMccdFilesEventHandler method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.fast_mode">fast_mode (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiTags.feedback">feedback (MpiTags attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.Jungfrau1MFrameInfo.file_timestamp">file_timestamp (Jungfrau1MFrameInfo attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.filename">filename (FramelistData attribute)</a>
+</li>
+      <li><a href="reference/om/lib/crystallography.html#om.lib.crystallography.CrystallographyPeakFinding.find_peaks">find_peaks() (CrystallographyPeakFinding method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmPeakDetectionProtocol.find_peaks">(OmPeakDetectionProtocol method)</a>
+</li>
+        <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.find_peaks">(Peakfinder8PeakDetection method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.FloatValueFromConfiguration">FloatValueFromConfiguration (class in om.data_retrieval_layer.data_sources_common)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahlistFilesWriter.flush_files">flush_files() (CheetahlistFilesWriter method)</a>
+</li>
+      <li><a href="reference/om/lib/logging.html#om.lib.logging.RichHandlerWithAggregation.format">format() (RichHandlerWithAggregation method)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.frame_is_hit">frame_is_hit (FramelistData attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData">FramelistData (class in om.lib.cheetah)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/graphical_interfaces/frame_viewer.html#om.graphical_interfaces.frame_viewer.FrameViewer">FrameViewer (class in om.graphical_interfaces.frame_viewer)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.GeometryInformation.from_file">from_file() (GeometryInformation class method)</a>
+</li>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.fs">fs (PeakList attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.fsx">fsx (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.fsy">fsy (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.fsz">fsz (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.furthest_in_fs">furthest_in_fs (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.furthest_in_panel">furthest_in_panel (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.furthest_in_ss">furthest_in_ss (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.furthest_out_fs">furthest_out_fs (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.furthest_out_panel">furthest_out_panel (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.furthest_out_ss">furthest_out_ss (Detector attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.geometry_file">geometry_file (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.geometry_file">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.geometry_file">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.geometry_is_optimized">geometry_is_optimized (CrystallographyParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.GeometryInformation">GeometryInformation (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_adc_thresh">get_adc_thresh() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_bad_pixel_map">get_bad_pixel_map() (Peakfinder8PeakDetection method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.RadialProfile.get_bad_pixel_map">(RadialProfile method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.get_bin_size">get_bin_size() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.get_bin_size">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.get_binned_layout_info">get_binned_layout_info() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.get_binned_layout_info">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.HDF5Writer.get_current_filename">get_current_filename() (HDF5Writer method)</a>
+</li>
+      <li><a href="reference/om/lib/zmq.html#om.lib.zmq.get_current_machine_ip">get_current_machine_ip() (in module om.lib.zmq)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AcqirisPsana.get_data">get_data() (AcqirisPsana method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.get_data">(AreaDetectorPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.AreaDetectorPsana2.get_data">(AreaDetectorPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.ArrayFromHdf5File.get_data">(ArrayFromHdf5File method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana.get_data">(AssembledDetectorPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.AssembledDetectorPsana2.get_data">(AssembledDetectorPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.BeamEnergyAsapo.get_data">(BeamEnergyAsapo method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.get_data">(BeamEnergyFromEpicsVariablePsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.BeamEnergyFromEpicsVariablePsana2.get_data">(BeamEnergyFromEpicsVariablePsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.get_data">(BeamEnergyPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.BeamEnergyPsana2.get_data">(BeamEnergyPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.CspadPsana.get_data">(CspadPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.DetectorDataAsapo.get_data">(DetectorDataAsapo method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.DetectorDistanceAsapo.get_data">(DetectorDistanceAsapo method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana.get_data">(DiodeTotalIntensityPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.Eiger16MFiles.get_data">(Eiger16MFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.Eiger16MHttp.get_data">(Eiger16MHttp method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana.get_data">(EpicsVariablePsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EpicsVariablePsana2.get_data">(EpicsVariablePsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.Epix100aPsana.get_data">(Epix100aPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.EventIdAsapo.get_data">(EventIdAsapo method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdEiger16MFiles.get_data">(EventIdEiger16MFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.EventIdEiger16MHttp.get_data">(EventIdEiger16MHttp method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdFromFilePath.get_data">(EventIdFromFilePath method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdJungfrau1MFiles.get_data">(EventIdJungfrau1MFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.EventIdJungfrau1MZmq.get_data">(EventIdJungfrau1MZmq method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.EventIdLambda1M5Files.get_data">(EventIdLambda1M5Files method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EventIdPsana.get_data">(EventIdPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EventIdPsana2.get_data">(EventIdPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.get_data">(EvrCodelistPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EvrCodelistPsana2.get_data">(EvrCodelistPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.get_data">(EvrCodesPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.FloatValueFromConfiguration.get_data">(FloatValueFromConfiguration method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.IntValueFromConfiguration.get_data">(IntValueFromConfiguration method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.Jungfrau1MFiles.get_data">(Jungfrau1MFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.Jungfrau1MZmq.get_data">(Jungfrau1MZmq method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.Lambda1M5Files.get_data">(Lambda1M5Files method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.get_data">(LclsExtraPsana method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataSourceProtocol.get_data">(OmDataSourceProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.OpalPsana.get_data">(OpalPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.PilatusSingleFrameFiles.get_data">(PilatusSingleFrameFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.RayonixMccdSingleFrameFiles.get_data">(RayonixMccdSingleFrameFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.RayonixPsana.get_data">(RayonixPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.TimestampAsapo.get_data">(TimestampAsapo method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.TimestampEiger16MHttp.get_data">(TimestampEiger16MHttp method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.TimestampFromEvent.get_data">(TimestampFromEvent method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.TimestampFromFileModificationTime.get_data">(TimestampFromFileModificationTime method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.TimestampJungfrau1MFiles.get_data">(TimestampJungfrau1MFiles method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.TimestampJungfrau1MZmq.get_data">(TimestampJungfrau1MZmq method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.TimestampPsana.get_data">(TimestampPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.TimestampPsana2.get_data">(TimestampPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana.get_data">(Wave8TotalIntensityPsana method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.GeometryInformation.get_detector_distance_offset">get_detector_distance_offset() (GeometryInformation method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.GeometryInformation.get_layout_info">get_layout_info() (GeometryInformation method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_local_bg_radius">get_local_bg_radius() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_max_pixel_count">get_max_pixel_count() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_max_res">get_max_res() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DataVisualizer.get_min_array_shape_for_visualization">get_min_array_shape_for_visualization() (DataVisualizer method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_min_pixel_count">get_min_pixel_count() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_min_res">get_min_res() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.get_minimum_snr">get_minimum_snr() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.get_num_events">get_num_events() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.get_num_hits">get_num_hits() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.HDF5Writer.get_num_written_frames">get_num_written_frames() (HDF5Writer method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DataVisualizer.get_pixel_maps">get_pixel_maps() (DataVisualizer method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/geometry.html#om.lib.geometry.GeometryInformation.get_pixel_maps">(GeometryInformation method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.GeometryInformation.get_pixel_size">get_pixel_size() (GeometryInformation method)</a>
+</li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.RadialProfile.get_radial_bin_labels">get_radial_bin_labels() (RadialProfile method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.get_rank_for_frame_request">get_rank_for_frame_request() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/zmq.html#om.lib.zmq.ZmqResponder.get_request">get_request() (ZmqResponder method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.get_start_timestamp">get_start_timestamp() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahClassSumsAccumulator.get_sums_for_sending">get_sums_for_sending() (CheetahClassSumsAccumulator method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DataVisualizer.get_visualization_pixel_maps">get_visualization_pixel_maps() (DataVisualizer method)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.guinier_qmax">guinier_qmax (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.guinier_qmin">guinier_qmin (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Hdf5Compression.gzip">gzip (Hdf5Compression attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.h">h (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.Jungfrau1MFrameInfo.h5file">h5file (Jungfrau1MFrameInfo attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_fields">hdf5_fields (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_file_compression">hdf5_file_compression (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_file_compression_shuffle">hdf5_file_compression_shuffle (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_file_data_type">hdf5_file_data_type (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_file_gzip_compression_level">hdf5_file_gzip_compression_level (CheetahParameters attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_file_max_num_peaks">hdf5_file_max_num_peaks (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.hdf5_file_zstd_compression_level">hdf5_file_zstd_compression_level (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Hdf5Compression">Hdf5Compression (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.HDF5Writer">HDF5Writer (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.hit_frame_sending_interval">hit_frame_sending_interval (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.hit_frame_sending_interval">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.hit_frame_sending_interval">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/layer_management.html#om.lib.layer_management.import_class_from_layer">import_class_from_layer() (in module om.lib.layer_management)</a>
+</li>
+      <li><a href="reference/om/lib/layer_management.html#om.lib.layer_management.import_data_source_class">import_data_source_class() (in module om.lib.layer_management)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.Jungfrau1MFrameInfo.index">index (Jungfrau1MFrameInfo attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.index_in_file">index_in_file (FramelistData attribute)</a>
+</li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.initialize_collecting_node">initialize_collecting_node() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.initialize_collecting_node">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.initialize_collecting_node">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_collecting_node">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.initialize_collecting_node">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.initialize_collecting_node">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.initialize_collecting_node">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.initialize_collecting_node">(XesProcessing method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.initialize_data_source">initialize_data_source() (AreaDetectorPsana method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.AreaDetectorPsana2.initialize_data_source">(AreaDetectorPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.ArrayFromHdf5File.initialize_data_source">(ArrayFromHdf5File method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.initialize_data_source">(BeamEnergyFromEpicsVariablePsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.BeamEnergyFromEpicsVariablePsana2.initialize_data_source">(BeamEnergyFromEpicsVariablePsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.initialize_data_source">(BeamEnergyPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.BeamEnergyPsana2.initialize_data_source">(BeamEnergyPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.CspadPsana.initialize_data_source">(CspadPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EventIdPsana.initialize_data_source">(EventIdPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EventIdPsana2.initialize_data_source">(EventIdPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.initialize_data_source">(EvrCodelistPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.EvrCodelistPsana2.initialize_data_source">(EvrCodelistPsana2 method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.initialize_data_source">(EvrCodesPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.FloatValueFromConfiguration.initialize_data_source">(FloatValueFromConfiguration method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.IntValueFromConfiguration.initialize_data_source">(IntValueFromConfiguration method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.initialize_data_source">(LclsExtraPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.OmBaseAsapoDataSourceMixin.initialize_data_source">(OmBaseAsapoDataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.OmBaseFileDataSourceMixin.initialize_data_source">(OmBaseFileDataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.OmBaseGenericDataSourceMixin.initialize_data_source">(OmBaseGenericDataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.OmBaseZmqDataSourceMixin.initialize_data_source">(OmBaseZmqDataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataSourceProtocol.initialize_data_source">(OmDataSourceProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.OmDetectorInterfacePsana2DataSourceMixin.initialize_data_source">(OmDetectorInterfacePsana2DataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin.initialize_data_source">(OmDetectorInterfacePsanaDataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.OmJungfrau1MDataSourceMixin.initialize_data_source">(OmJungfrau1MDataSourceMixin method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.TimestampAsapo.initialize_data_source">(TimestampAsapo method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.TimestampFromEvent.initialize_data_source">(TimestampFromEvent method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.TimestampPsana.initialize_data_source">(TimestampPsana method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.TimestampPsana2.initialize_data_source">(TimestampPsana2 method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.initialize_event_data_retrieval">initialize_event_data_retrieval() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.EigerFilesDataEventHandler.initialize_event_data_retrieval">(EigerFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.initialize_event_data_retrieval">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.initialize_event_data_retrieval">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Jungfrau1MFilesDataEventHandler.initialize_event_data_retrieval">(Jungfrau1MFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.initialize_event_data_retrieval">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Lambda1M5FilesDataEventHandler.initialize_event_data_retrieval">(Lambda1M5FilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.initialize_event_data_retrieval">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.PilatusFilesEventHandler.initialize_event_data_retrieval">(PilatusFilesEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.initialize_event_data_retrieval">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.initialize_event_data_retrieval">(PsanaDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.RayonixMccdFilesEventHandler.initialize_event_data_retrieval">(RayonixMccdFilesEventHandler method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.initialize_event_handling_on_collecting_node">initialize_event_handling_on_collecting_node() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.initialize_event_handling_on_collecting_node">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.initialize_event_handling_on_collecting_node">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.initialize_event_handling_on_collecting_node">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.OmBaseFileDataEventHandlerMixin.initialize_event_handling_on_collecting_node">(OmBaseFileDataEventHandlerMixin method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.initialize_event_handling_on_collecting_node">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.initialize_event_handling_on_collecting_node">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.initialize_event_handling_on_collecting_node">(PsanaDataEventHandler method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.initialize_event_handling_on_processing_node">initialize_event_handling_on_processing_node() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.EigerFilesDataEventHandler.initialize_event_handling_on_processing_node">(EigerFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.initialize_event_handling_on_processing_node">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.initialize_event_handling_on_processing_node">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Jungfrau1MFilesDataEventHandler.initialize_event_handling_on_processing_node">(Jungfrau1MFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.initialize_event_handling_on_processing_node">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Lambda1M5FilesDataEventHandler.initialize_event_handling_on_processing_node">(Lambda1M5FilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.initialize_event_handling_on_processing_node">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.PilatusFilesEventHandler.initialize_event_handling_on_processing_node">(PilatusFilesEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.initialize_event_handling_on_processing_node">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.initialize_event_handling_on_processing_node">(PsanaDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.RayonixMccdFilesEventHandler.initialize_event_handling_on_processing_node">(RayonixMccdFilesEventHandler method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.initialize_processing_node">initialize_processing_node() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.initialize_processing_node">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.initialize_processing_node">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_processing_node">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.initialize_processing_node">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.initialize_processing_node">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.initialize_processing_node">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.initialize_processing_node">(XesProcessing method)</a>
+</li>
+      </ul></li>
+      <li>
+    INPUT
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-arg-INPUT">jungfrau_dark command line option</a>
+</li>
+      </ul></li>
+      <li>
+    INPUT_URL
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#cmdoption-jungfrau_zmq_receiver-arg-INPUT_URL">jungfrau_zmq_receiver command line option</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_common.html#om.data_retrieval_layer.data_event_handlers_common.instantiate_data_sources">instantiate_data_sources() (in module om.data_retrieval_layer.data_event_handlers_common)</a>
+</li>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.intensity">intensity (PeakList attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.intensity_threshold">intensity_threshold (XesParameters attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.IntValueFromConfiguration">IntValueFromConfiguration (class in om.data_retrieval_layer.data_sources_common)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.is_fsss">is_fsss (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.Binning.is_passthrough">is_passthrough() (Binning method)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.BinningPassthrough.is_passthrough">(BinningPassthrough method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/algorithms/calibration.html#om.algorithms.calibration.Jungfrau1MCalibration">Jungfrau1MCalibration (class in om.algorithms.calibration)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.Jungfrau1MFiles">Jungfrau1MFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Jungfrau1MFilesDataEventHandler">Jungfrau1MFilesDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.Jungfrau1MFrameInfo">Jungfrau1MFrameInfo (class in om.data_retrieval_layer.data_sources_common)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.Jungfrau1MZmq">Jungfrau1MZmq (class in om.data_retrieval_layer.data_sources_zmq)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler">Jungfrau1MZmqDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_zmq)</a>
+</li>
+      <li>
+    jungfrau_dark command line option
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-s">--start-time</a>
+</li>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-s">-s</a>
+</li>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-arg-INPUT">INPUT</a>
+</li>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-arg-OUTPUT">OUTPUT</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    jungfrau_zmq_receiver command line option
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#cmdoption-jungfrau_zmq_receiver-arg-INPUT_URL">INPUT_URL</a>
+</li>
+        <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#cmdoption-jungfrau_zmq_receiver-arg-OUTPUT_URL">OUTPUT_URL</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.Lambda1M5Files">Lambda1M5Files (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Lambda1M5FilesDataEventHandler">Lambda1M5FilesDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana">LclsExtraPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#om.tools.jungfrau_zmq_receiver.listen">listen() (in module om.tools.jungfrau_zmq_receiver)</a>
+</li>
+      <li><a href="reference/om/lib/files.html#om.lib.files.load_configuration_parameters">load_configuration_parameters() (in module om.lib.files)</a>
+</li>
+      <li><a href="reference/om/lib/files.html#om.lib.files.load_hdf5_data">load_hdf5_data() (in module om.lib.files)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.local_bg_radius">local_bg_radius (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.mask">mask (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.mask_bad">mask_bad (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.mask_file">mask_file (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.mask_good">mask_good (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.max_adu">max_adu (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.max_fs">max_fs (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_num_peaks">max_num_peaks (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.max_num_peaks_for_hit">max_num_peaks_for_hit (CrystallographyParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_pixel_count">max_pixel_count (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.max_pixel_intensity">max_pixel_intensity (PeakList attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_res">max_res (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.max_row_in_pix_for_integration">max_row_in_pix_for_integration (XesParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.max_ss">max_ss (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.max_x">max_x (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.max_y">max_y (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.maximum_roi1_to_roi2_intensity_ratio_for_sample">maximum_roi1_to_roi2_intensity_ratio_for_sample (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.min_fs">min_fs (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.min_good_pix_count">min_good_pix_count (BinningParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.min_num_peaks_for_hit">min_num_peaks_for_hit (CrystallographyParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.min_pixel_count">min_pixel_count (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.min_res">min_res (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.min_row_in_pix_for_integration">min_row_in_pix_for_integration (XesParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.min_ss">min_ss (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.min_x">min_x (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.min_y">min_y (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.minimum_roi1_to_roi2_intensity_ratio_for_sample">minimum_roi1_to_roi2_intensity_ratio_for_sample (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.minimum_snr">minimum_snr (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.BinningParameters.model_config">model_config (BinningParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.model_config">(CheetahParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.model_config">(CrystallographyParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CustomBaseModel.model_config">(CustomBaseModel attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.model_config">(DataRetrievalLayerParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataSourceParameters.model_config">(DataSourceParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.model_config">(MonitorParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters.model_config">(OmParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.model_config">(Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.model_config">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.model_config">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="reference/om/index.html#module-om">om</a>
+</li>
+        <li><a href="reference/om/algorithms/index.html#module-om.algorithms">om.algorithms</a>
+</li>
+        <li><a href="reference/om/algorithms/calibration.html#module-om.algorithms.calibration">om.algorithms.calibration</a>
+</li>
+        <li><a href="reference/om/algorithms/common.html#module-om.algorithms.common">om.algorithms.common</a>
+</li>
+        <li><a href="reference/om/algorithms/crystallography.html#module-om.algorithms.crystallography">om.algorithms.crystallography</a>
+</li>
+        <li><a href="reference/om/algorithms/generic.html#module-om.algorithms.generic">om.algorithms.generic</a>
+</li>
+        <li><a href="reference/om/algorithms/xes.html#module-om.algorithms.xes">om.algorithms.xes</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/index.html#module-om.data_retrieval_layer">om.data_retrieval_layer</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#module-om.data_retrieval_layer.data_event_handlers_asapo">om.data_retrieval_layer.data_event_handlers_asapo</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_common.html#module-om.data_retrieval_layer.data_event_handlers_common">om.data_retrieval_layer.data_event_handlers_common</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#module-om.data_retrieval_layer.data_event_handlers_files">om.data_retrieval_layer.data_event_handlers_files</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#module-om.data_retrieval_layer.data_event_handlers_http">om.data_retrieval_layer.data_event_handlers_http</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#module-om.data_retrieval_layer.data_event_handlers_psana">om.data_retrieval_layer.data_event_handlers_psana</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#module-om.data_retrieval_layer.data_event_handlers_psana2">om.data_retrieval_layer.data_event_handlers_psana2</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#module-om.data_retrieval_layer.data_event_handlers_zmq">om.data_retrieval_layer.data_event_handlers_zmq</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#module-om.data_retrieval_layer.data_sources_asapo">om.data_retrieval_layer.data_sources_asapo</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#module-om.data_retrieval_layer.data_sources_common">om.data_retrieval_layer.data_sources_common</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#module-om.data_retrieval_layer.data_sources_files">om.data_retrieval_layer.data_sources_files</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#module-om.data_retrieval_layer.data_sources_http">om.data_retrieval_layer.data_sources_http</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#module-om.data_retrieval_layer.data_sources_psana">om.data_retrieval_layer.data_sources_psana</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#module-om.data_retrieval_layer.data_sources_psana2">om.data_retrieval_layer.data_sources_psana2</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#module-om.data_retrieval_layer.data_sources_zmq">om.data_retrieval_layer.data_sources_zmq</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#module-om.data_retrieval_layer.event_retrieval">om.data_retrieval_layer.event_retrieval</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/index.html#module-om.graphical_interfaces">om.graphical_interfaces</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/common.html#module-om.graphical_interfaces.common">om.graphical_interfaces.common</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/crystallography_gui.html#module-om.graphical_interfaces.crystallography_gui">om.graphical_interfaces.crystallography_gui</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#module-om.graphical_interfaces.crystallography_parameter_tweaker">om.graphical_interfaces.crystallography_parameter_tweaker</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/frame_viewer.html#module-om.graphical_interfaces.frame_viewer">om.graphical_interfaces.frame_viewer</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/swaxs_gui.html#module-om.graphical_interfaces.swaxs_gui">om.graphical_interfaces.swaxs_gui</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#module-om.graphical_interfaces.xes_gui">om.graphical_interfaces.xes_gui</a>
+</li>
+        <li><a href="reference/om/lib/index.html#module-om.lib">om.lib</a>
+</li>
+        <li><a href="reference/om/lib/cheetah.html#module-om.lib.cheetah">om.lib.cheetah</a>
+</li>
+        <li><a href="reference/om/lib/crystallography.html#module-om.lib.crystallography">om.lib.crystallography</a>
+</li>
+        <li><a href="reference/om/lib/event_management.html#module-om.lib.event_management">om.lib.event_management</a>
+</li>
+        <li><a href="reference/om/lib/exceptions.html#module-om.lib.exceptions">om.lib.exceptions</a>
+</li>
+        <li><a href="reference/om/lib/files.html#module-om.lib.files">om.lib.files</a>
+</li>
+        <li><a href="reference/om/lib/geometry.html#module-om.lib.geometry">om.lib.geometry</a>
+</li>
+        <li><a href="reference/om/lib/layer_management.html#module-om.lib.layer_management">om.lib.layer_management</a>
+</li>
+        <li><a href="reference/om/lib/logging.html#module-om.lib.logging">om.lib.logging</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#module-om.lib.parameters">om.lib.parameters</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#module-om.lib.protocols">om.lib.protocols</a>
+</li>
+        <li><a href="reference/om/lib/radial_profile.html#module-om.lib.radial_profile">om.lib.radial_profile</a>
+</li>
+        <li><a href="reference/om/lib/xes.html#module-om.lib.xes">om.lib.xes</a>
+</li>
+        <li><a href="reference/om/lib/zmq.html#module-om.lib.zmq">om.lib.zmq</a>
+</li>
+        <li><a href="reference/om/lib/zmq_qt.html#module-om.lib.zmq_qt">om.lib.zmq_qt</a>
+</li>
+        <li><a href="reference/om/parallelization_layer/index.html#module-om.parallelization_layer">om.parallelization_layer</a>
+</li>
+        <li><a href="reference/om/parallelization_layer/mpi.html#module-om.parallelization_layer.mpi">om.parallelization_layer.mpi</a>
+</li>
+        <li><a href="reference/om/parallelization_layer/multiprocessing.html#module-om.parallelization_layer.multiprocessing">om.parallelization_layer.multiprocessing</a>
+</li>
+        <li><a href="reference/om/processing_layer/index.html#module-om.processing_layer">om.processing_layer</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#module-om.processing_layer.cheetah">om.processing_layer.cheetah</a>
+</li>
+        <li><a href="reference/om/processing_layer/crystallography.html#module-om.processing_layer.crystallography">om.processing_layer.crystallography</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#module-om.processing_layer.swaxs">om.processing_layer.swaxs</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#module-om.processing_layer.testing">om.processing_layer.testing</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#module-om.processing_layer.xes">om.processing_layer.xes</a>
+</li>
+        <li><a href="reference/om/tools/index.html#module-om.tools">om.tools</a>
+</li>
+        <li><a href="reference/om/tools/jungfrau_dark.html#module-om.tools.jungfrau_dark">om.tools.jungfrau_dark</a>
+</li>
+        <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#module-om.tools.jungfrau_zmq_receiver">om.tools.jungfrau_zmq_receiver</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters">MonitorParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiParallelization">MpiParallelization (class in om.parallelization_layer.mpi)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiTags">MpiTags (class in om.parallelization_layer.mpi)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/multiprocessing.html#om.parallelization_layer.multiprocessing.MultiprocessingParallelization">MultiprocessingParallelization (class in om.parallelization_layer.multiprocessing)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DetectorLayoutInformation.nasics_x">nasics_x (DetectorLayoutInformation attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DetectorLayoutInformation.nasics_y">nasics_y (DetectorLayoutInformation attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.no_index">no_index (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.node_pool_size">node_pool_size (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.non_hit_frame_sending_interval">non_hit_frame_sending_interval (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.non_hit_frame_sending_interval">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.non_hit_frame_sending_interval">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Hdf5Compression.none">none (Hdf5Compression attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.ClassSumData.num_frames">num_frames (ClassSumData attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.num_hits_in_cum_radial_avg">num_hits_in_cum_radial_avg (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.num_peaks">num_peaks (FramelistData attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.num_peaks">(PeakList attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters.num_pixel_per_bin_in_radial_statistics">num_pixel_per_bin_in_radial_statistics (Peakfinder8PeakDetectionParameters attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.num_pixels">num_pixels (PeakList attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.num_radials_to_send">num_radials_to_send (RadialProfileParameters attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    om
+
+      <ul>
+        <li><a href="reference/om/index.html#module-om">module</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.om">om (MonitorParameters attribute)</a>
+</li>
+      <li>
+    om.algorithms
+
+      <ul>
+        <li><a href="reference/om/algorithms/index.html#module-om.algorithms">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.algorithms.calibration
+
+      <ul>
+        <li><a href="reference/om/algorithms/calibration.html#module-om.algorithms.calibration">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.algorithms.common
+
+      <ul>
+        <li><a href="reference/om/algorithms/common.html#module-om.algorithms.common">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.algorithms.crystallography
+
+      <ul>
+        <li><a href="reference/om/algorithms/crystallography.html#module-om.algorithms.crystallography">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.algorithms.generic
+
+      <ul>
+        <li><a href="reference/om/algorithms/generic.html#module-om.algorithms.generic">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.algorithms.xes
+
+      <ul>
+        <li><a href="reference/om/algorithms/xes.html#module-om.algorithms.xes">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/index.html#module-om.data_retrieval_layer">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_asapo
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#module-om.data_retrieval_layer.data_event_handlers_asapo">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_common
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_common.html#module-om.data_retrieval_layer.data_event_handlers_common">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_files
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#module-om.data_retrieval_layer.data_event_handlers_files">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_http
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#module-om.data_retrieval_layer.data_event_handlers_http">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_psana
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#module-om.data_retrieval_layer.data_event_handlers_psana">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_psana2
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#module-om.data_retrieval_layer.data_event_handlers_psana2">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_event_handlers_zmq
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#module-om.data_retrieval_layer.data_event_handlers_zmq">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_asapo
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#module-om.data_retrieval_layer.data_sources_asapo">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_common
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#module-om.data_retrieval_layer.data_sources_common">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_files
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#module-om.data_retrieval_layer.data_sources_files">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_http
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#module-om.data_retrieval_layer.data_sources_http">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_psana
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#module-om.data_retrieval_layer.data_sources_psana">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_psana2
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#module-om.data_retrieval_layer.data_sources_psana2">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.data_sources_zmq
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#module-om.data_retrieval_layer.data_sources_zmq">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.data_retrieval_layer.event_retrieval
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#module-om.data_retrieval_layer.event_retrieval">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/index.html#module-om.graphical_interfaces">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces.common
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/common.html#module-om.graphical_interfaces.common">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces.crystallography_gui
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_gui.html#module-om.graphical_interfaces.crystallography_gui">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces.crystallography_parameter_tweaker
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#module-om.graphical_interfaces.crystallography_parameter_tweaker">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces.frame_viewer
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/frame_viewer.html#module-om.graphical_interfaces.frame_viewer">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces.swaxs_gui
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/swaxs_gui.html#module-om.graphical_interfaces.swaxs_gui">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.graphical_interfaces.xes_gui
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#module-om.graphical_interfaces.xes_gui">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib
+
+      <ul>
+        <li><a href="reference/om/lib/index.html#module-om.lib">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.cheetah
+
+      <ul>
+        <li><a href="reference/om/lib/cheetah.html#module-om.lib.cheetah">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.crystallography
+
+      <ul>
+        <li><a href="reference/om/lib/crystallography.html#module-om.lib.crystallography">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.event_management
+
+      <ul>
+        <li><a href="reference/om/lib/event_management.html#module-om.lib.event_management">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.exceptions
+
+      <ul>
+        <li><a href="reference/om/lib/exceptions.html#module-om.lib.exceptions">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.files
+
+      <ul>
+        <li><a href="reference/om/lib/files.html#module-om.lib.files">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.geometry
+
+      <ul>
+        <li><a href="reference/om/lib/geometry.html#module-om.lib.geometry">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.layer_management
+
+      <ul>
+        <li><a href="reference/om/lib/layer_management.html#module-om.lib.layer_management">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.logging
+
+      <ul>
+        <li><a href="reference/om/lib/logging.html#module-om.lib.logging">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.parameters
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#module-om.lib.parameters">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.protocols
+
+      <ul>
+        <li><a href="reference/om/lib/protocols.html#module-om.lib.protocols">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.radial_profile
+
+      <ul>
+        <li><a href="reference/om/lib/radial_profile.html#module-om.lib.radial_profile">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.xes
+
+      <ul>
+        <li><a href="reference/om/lib/xes.html#module-om.lib.xes">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.zmq
+
+      <ul>
+        <li><a href="reference/om/lib/zmq.html#module-om.lib.zmq">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.lib.zmq_qt
+
+      <ul>
+        <li><a href="reference/om/lib/zmq_qt.html#module-om.lib.zmq_qt">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    om.parallelization_layer
+
+      <ul>
+        <li><a href="reference/om/parallelization_layer/index.html#module-om.parallelization_layer">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.parallelization_layer.mpi
+
+      <ul>
+        <li><a href="reference/om/parallelization_layer/mpi.html#module-om.parallelization_layer.mpi">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.parallelization_layer.multiprocessing
+
+      <ul>
+        <li><a href="reference/om/parallelization_layer/multiprocessing.html#module-om.parallelization_layer.multiprocessing">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.processing_layer
+
+      <ul>
+        <li><a href="reference/om/processing_layer/index.html#module-om.processing_layer">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.processing_layer.cheetah
+
+      <ul>
+        <li><a href="reference/om/processing_layer/cheetah.html#module-om.processing_layer.cheetah">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.processing_layer.crystallography
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#module-om.processing_layer.crystallography">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.processing_layer.swaxs
+
+      <ul>
+        <li><a href="reference/om/processing_layer/swaxs.html#module-om.processing_layer.swaxs">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.processing_layer.testing
+
+      <ul>
+        <li><a href="reference/om/processing_layer/testing.html#module-om.processing_layer.testing">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.processing_layer.xes
+
+      <ul>
+        <li><a href="reference/om/processing_layer/xes.html#module-om.processing_layer.xes">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.tools
+
+      <ul>
+        <li><a href="reference/om/tools/index.html#module-om.tools">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.tools.jungfrau_dark
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_dark.html#module-om.tools.jungfrau_dark">module</a>
+</li>
+      </ul></li>
+      <li>
+    om.tools.jungfrau_zmq_receiver
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#module-om.tools.jungfrau_zmq_receiver">module</a>
+</li>
+      </ul></li>
+      <li>
+    om_crystallography_gui command line option
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_gui.html#cmdoption-om_crystallography_gui-arg-URL">URL</a>
+</li>
+      </ul></li>
+      <li>
+    om_crystallography_parameter_tweaker command line option
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#cmdoption-om_crystallography_parameter_tweaker-c">--config</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#cmdoption-om_crystallography_parameter_tweaker-c">-c</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#cmdoption-om_crystallography_parameter_tweaker-arg-URL">URL</a>
+</li>
+      </ul></li>
+      <li>
+    om_frame_viewer command line option
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/frame_viewer.html#cmdoption-om_frame_viewer-arg-URL">URL</a>
+</li>
+      </ul></li>
+      <li>
+    om_monitor command line option
+
+      <ul>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-c">--config</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-l">--event-list</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-n">--node-pool-size</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-c">-c</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-l">-l</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-n">-n</a>
+</li>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-arg-SOURCE">SOURCE</a>
+</li>
+      </ul></li>
+      <li>
+    om_swaxs_gui command line option
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/swaxs_gui.html#cmdoption-om_swaxs_gui-arg-URL">URL</a>
+</li>
+      </ul></li>
+      <li>
+    om_xes`_gui command line option
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#cmdoption-om_xes-_gui-t">--time-resolved</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#cmdoption-om_xes-_gui-t">-t</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#cmdoption-om_xes-_gui-arg-URL">URL</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.OmBaseAsapoDataSourceMixin">OmBaseAsapoDataSourceMixin (class in om.data_retrieval_layer.data_sources_asapo)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.OmBaseFileDataEventHandlerMixin">OmBaseFileDataEventHandlerMixin (class in om.data_retrieval_layer.data_event_handlers_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.OmBaseFileDataSourceMixin">OmBaseFileDataSourceMixin (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.OmBaseGenericDataSourceMixin">OmBaseGenericDataSourceMixin (class in om.data_retrieval_layer.data_sources_http)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.OmBaseZmqDataSourceMixin">OmBaseZmqDataSourceMixin (class in om.data_retrieval_layer.data_sources_zmq)</a>
+</li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.OmCheetahMixin">OmCheetahMixin (class in om.processing_layer.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmConfigurationFileReadingError">OmConfigurationFileReadingError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmConfigurationFileSyntaxError">OmConfigurationFileSyntaxError</a>
+</li>
+      <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol">OmDataEventHandlerProtocol (class in om.lib.protocols)</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmDataExtractionError">OmDataExtractionError</a>
+</li>
+      <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataSourceProtocol">OmDataSourceProtocol (class in om.lib.protocols)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.OmDetectorInterfacePsana2DataSourceMixin">OmDetectorInterfacePsana2DataSourceMixin (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin">OmDetectorInterfacePsanaDataSourceMixin (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.OmEventDataRetrieval">OmEventDataRetrieval (class in om.data_retrieval_layer.event_retrieval)</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmException">OmException</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmGeometryError">OmGeometryError</a>
+</li>
+      <li><a href="reference/om/graphical_interfaces/common.html#om.graphical_interfaces.common.OmGuiBase">OmGuiBase (class in om.graphical_interfaces.common)</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmHdf5FileReadingError">OmHdf5FileReadingError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmHdf5PathError">OmHdf5PathError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmHdf5UnsupportedDataFormat">OmHdf5UnsupportedDataFormat</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmHttpInterfaceInitializationError">OmHttpInterfaceInitializationError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmInvalidSourceError">OmInvalidSourceError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmInvalidZmqUrl">OmInvalidZmqUrl</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.OmJungfrau1MDataSourceMixin">OmJungfrau1MDataSourceMixin (class in om.data_retrieval_layer.data_sources_common)</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingDataEventError">OmMissingDataEventError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingDataSourceClassError">OmMissingDataSourceClassError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingDependencyError">OmMissingDependencyError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingLayerClassError">OmMissingLayerClassError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingLayerModuleError">OmMissingLayerModuleError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingParameterError">OmMissingParameterError</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmMissingParameterGroupError">OmMissingParameterGroupError</a>
+</li>
+      <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmParallelizationProtocol">OmParallelizationProtocol (class in om.lib.protocols)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters">OmParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmPeakDetectionProtocol">OmPeakDetectionProtocol (class in om.lib.protocols)</a>
+</li>
+      <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol">OmProcessingProtocol (class in om.lib.protocols)</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmWrongArrayShape">OmWrongArrayShape</a>
+</li>
+      <li><a href="reference/om/lib/exceptions.html#om.lib.exceptions.OmWrongParameterTypeError">OmWrongParameterTypeError</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.OpalPsana">OpalPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.orig_max_fs">orig_max_fs (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.orig_max_ss">orig_max_ss (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.orig_min_fs">orig_min_fs (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.orig_min_ss">orig_min_ss (Panel attribute)</a>
+</li>
+      <li>
+    OUTPUT
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_dark.html#cmdoption-jungfrau_dark-arg-OUTPUT">jungfrau_dark command line option</a>
+</li>
+      </ul></li>
+      <li>
+    OUTPUT_URL
+
+      <ul>
+        <li><a href="reference/om/tools/jungfrau_zmq_receiver.html#cmdoption-jungfrau_zmq_receiver-arg-OUTPUT_URL">jungfrau_zmq_receiver command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.BadRegion.panel">panel (BadRegion attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel">Panel (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.panels">panels (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters.parallelization_layer">parallelization_layer (OmParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.ClassSumData.peak_powder">peak_powder (ClassSumData attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.peakfinder8_peak_detection">peakfinder8_peak_detection (MonitorParameters attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection">Peakfinder8PeakDetection (class in om.algorithms.crystallography)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.Peakfinder8PeakDetectionParameters">Peakfinder8PeakDetectionParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.peakfinding_algorithm">peakfinding_algorithm (CrystallographyParameters attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList">PeakList (class in om.algorithms.common)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.peakogram_intensity_bin_size">peakogram_intensity_bin_size (CrystallographyParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.peakogram_radius_bin_size">peakogram_radius_bin_size (CrystallographyParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.PixelMaps.phi">phi (PixelMaps attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Beam.photon_energy">photon_energy (Beam attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Beam.photon_energy_from">photon_energy_from (Beam attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Beam.photon_energy_scale">photon_energy_scale (Beam attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.PilatusFilesEventHandler">PilatusFilesEventHandler (class in om.data_retrieval_layer.data_event_handlers_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.PilatusSingleFrameFiles">PilatusSingleFrameFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.PixelMaps">PixelMaps (class in om.lib.geometry)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.post_processing_binning">post_processing_binning (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.post_processing_binning">(RadialProfileParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.process_data">process_data() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.process_data">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.process_data">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.process_data">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.process_data">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.process_data">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.process_data">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.process_data">(XesProcessing method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.processed_directory">processed_directory (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.processed_filename_extension">processed_filename_extension (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.processed_filename_prefix">processed_filename_prefix (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters.processing_layer">processing_layer (OmParameters attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler">Psana2DataEventHandler (class in om.data_retrieval_layer.data_event_handlers_psana2)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataRetrievalLayerParameters.psana_calibration_directory">psana_calibration_directory (DataRetrievalLayerParameters attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler">PsanaDataEventHandler (class in om.data_retrieval_layer.data_event_handlers_psana)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.pump_probe_experiment">pump_probe_experiment (CrystallographyParameters attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.radial_profile">radial_profile (MonitorParameters attribute)</a>
+</li>
+      <li><a href="reference/om/algorithms/generic.html#om.algorithms.generic.RadialProfile">RadialProfile (class in om.algorithms.generic)</a>
+</li>
+      <li><a href="reference/om/lib/radial_profile.html#om.lib.radial_profile.RadialProfileAnalysis">RadialProfileAnalysis (class in om.lib.radial_profile)</a>
+</li>
+      <li><a href="reference/om/lib/radial_profile.html#om.lib.radial_profile.RadialProfileAnalysisPlots">RadialProfileAnalysisPlots (class in om.lib.radial_profile)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters">RadialProfileParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.PixelMaps.radius">radius (PixelMaps attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.radius_bin_size">radius_bin_size (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.rail_x">rail_x (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.rail_y">rail_y (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.rail_z">rail_z (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.RayonixMccdFilesEventHandler">RayonixMccdFilesEventHandler (class in om.data_retrieval_layer.data_event_handlers_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.RayonixMccdSingleFrameFiles">RayonixMccdSingleFrameFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.RayonixPsana">RayonixPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.report_speed">report_speed() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.res">res (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.responding_url">responding_url (CheetahParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.responding_url">(CrystallographyParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.retrieve_event_data">retrieve_event_data() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.EigerFilesDataEventHandler.retrieve_event_data">(EigerFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.retrieve_event_data">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.retrieve_event_data">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Jungfrau1MFilesDataEventHandler.retrieve_event_data">(Jungfrau1MFilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.retrieve_event_data">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.Lambda1M5FilesDataEventHandler.retrieve_event_data">(Lambda1M5FilesDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.retrieve_event_data">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.OmEventDataRetrieval.retrieve_event_data">(OmEventDataRetrieval method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.PilatusFilesEventHandler.retrieve_event_data">(PilatusFilesEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.retrieve_event_data">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.retrieve_event_data">(PsanaDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.RayonixMccdFilesEventHandler.retrieve_event_data">(RayonixMccdFilesEventHandler method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/logging.html#om.lib.logging.RichHandlerWithAggregation">RichHandlerWithAggregation (class in om.lib.logging)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.rigid_group_collections">rigid_group_collections (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Detector.rigid_groups">rigid_groups (Detector attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.roi1_qmax">roi1_qmax (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.roi1_qmin">roi1_qmin (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.roi2_qmax">roi2_qmax (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.roi2_qmin">roi2_qmin (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.rotation_in_degrees">rotation_in_degrees (XesParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.running_average_window_size">running_average_window_size (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.running_average_window_size">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.running_average_window_size">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.sample_detection">sample_detection (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.satmap">satmap (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.satmap_file">satmap_file (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahClassSumsCollector.save_sums">save_sums() (CheetahClassSumsCollector method)</a>
+</li>
+      <li><a href="reference/om/lib/zmq.html#om.lib.zmq.ZmqDataBroadcaster.send_data">send_data() (ZmqDataBroadcaster method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/zmq.html#om.lib.zmq.ZmqResponder.send_data">(ZmqResponder method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_adc_thresh">set_adc_thresh() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_bad_pixel_map">set_bad_pixel_map() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_layout_info">set_layout_info() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_local_bg_radius">set_local_bg_radius() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_max_pixel_count">set_max_pixel_count() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_max_res">set_max_res() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_min_pixel_count">set_min_pixel_count() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_min_res">set_min_res() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_minimum_snr">set_minimum_snr() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection.set_radius_pixel_map">set_radius_pixel_map() (Peakfinder8PeakDetection method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.should_broadcast_data">should_broadcast_data() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.should_send_hit_frame">should_send_hit_frame() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/lib/event_management.html#om.lib.event_management.EventCounter.should_send_non_hit_frame">should_send_non_hit_frame() (EventCounter method)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiParallelization.shutdown">shutdown() (MpiParallelization method)</a>
+
+      <ul>
+        <li><a href="reference/om/parallelization_layer/multiprocessing.html#om.parallelization_layer.multiprocessing.MultiprocessingParallelization.shutdown">(MultiprocessingParallelization method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmParallelizationProtocol.shutdown">(OmParallelizationProtocol method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.size_estimation_method">size_estimation_method (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_event_handlers_asapo.html#om.data_retrieval_layer.data_event_handlers_asapo.AsapoDataEventHandler.skip_rank_finalization">skip_rank_finalization() (AsapoDataEventHandler method)</a>
+
+      <ul>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_http.html#om.data_retrieval_layer.data_event_handlers_http.EigerHttpDataEventHandler.skip_rank_finalization">(EigerHttpDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/event_retrieval.html#om.data_retrieval_layer.event_retrieval.EventListDataEventHandler.skip_rank_finalization">(EventListDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_zmq.html#om.data_retrieval_layer.data_event_handlers_zmq.Jungfrau1MZmqDataEventHandler.skip_rank_finalization">(Jungfrau1MZmqDataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_files.html#om.data_retrieval_layer.data_event_handlers_files.OmBaseFileDataEventHandlerMixin.skip_rank_finalization">(OmBaseFileDataEventHandlerMixin method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmDataEventHandlerProtocol.skip_rank_finalization">(OmDataEventHandlerProtocol method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana2.html#om.data_retrieval_layer.data_event_handlers_psana2.Psana2DataEventHandler.skip_rank_finalization">(Psana2DataEventHandler method)</a>
+</li>
+        <li><a href="reference/om/data_retrieval_layer/data_event_handlers_psana.html#om.data_retrieval_layer.data_event_handlers_psana.PsanaDataEventHandler.skip_rank_finalization">(PsanaDataEventHandler method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.snr">snr (PeakList attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahlistFilesWriter.sort_frames_and_close_files">sort_frames_and_close_files() (CheetahlistFilesWriter method)</a>
+</li>
+      <li>
+    SOURCE
+
+      <ul>
+        <li><a href="reference/om/monitor.html#cmdoption-om_monitor-arg-SOURCE">om_monitor command line option</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.OmParameters.source">source (OmParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CrystallographyParameters.speed_report_interval">speed_report_interval (CrystallographyParameters attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.speed_report_interval">(RadialProfileParameters attribute)</a>
+</li>
+        <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.speed_report_interval">(XesParameters attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/algorithms/common.html#om.algorithms.common.PeakList.ss">ss (PeakList attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.ssx">ssx (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.ssy">ssy (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.ssz">ssz (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/parallelization_layer/mpi.html#om.parallelization_layer.mpi.MpiParallelization.start">start() (MpiParallelization method)</a>
+
+      <ul>
+        <li><a href="reference/om/parallelization_layer/multiprocessing.html#om.parallelization_layer.multiprocessing.MultiprocessingParallelization.start">(MultiprocessingParallelization method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmParallelizationProtocol.start">(OmParallelizationProtocol method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/graphical_interfaces/common.html#om.graphical_interfaces.common.OmGuiBase.start_listening">start_listening() (OmGuiBase method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/zmq_qt.html#om.lib.zmq_qt.ZmqDataListener.start_listening">(ZmqDataListener method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.status_file_update_interval">status_file_update_interval (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/graphical_interfaces/common.html#om.graphical_interfaces.common.OmGuiBase.stop_listening">stop_listening() (OmGuiBase method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/zmq_qt.html#om.lib.zmq_qt.ZmqDataListener.stop_listening">(ZmqDataListener method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing">StreamingCheetahProcessing (class in om.processing_layer.cheetah)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.ClassSumData.sum_frames">sum_frames (ClassSumData attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.SumHDF5Writer">SumHDF5Writer (class in om.lib.cheetah)</a>
+</li>
+      <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing">SwaxsCheetahProcessing (class in om.processing_layer.swaxs)</a>
+</li>
+      <li><a href="reference/om/graphical_interfaces/swaxs_gui.html#om.graphical_interfaces.swaxs_gui.SwaxsGui">SwaxsGui (class in om.graphical_interfaces.swaxs_gui)</a>
+</li>
+      <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing">SwaxsProcessing (class in om.processing_layer.swaxs)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing">TestProcessing (class in om.processing_layer.testing)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters.time_resolved">time_resolved (XesParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.FramelistData.timestamp">timestamp (FramelistData attribute)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_asapo.html#om.data_retrieval_layer.data_sources_asapo.TimestampAsapo">TimestampAsapo (class in om.data_retrieval_layer.data_sources_asapo)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_http.html#om.data_retrieval_layer.data_sources_http.TimestampEiger16MHttp">TimestampEiger16MHttp (class in om.data_retrieval_layer.data_sources_http)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_common.html#om.data_retrieval_layer.data_sources_common.TimestampFromEvent">TimestampFromEvent (class in om.data_retrieval_layer.data_sources_common)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.TimestampFromFileModificationTime">TimestampFromFileModificationTime (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_files.html#om.data_retrieval_layer.data_sources_files.TimestampJungfrau1MFiles">TimestampJungfrau1MFiles (class in om.data_retrieval_layer.data_sources_files)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_zmq.html#om.data_retrieval_layer.data_sources_zmq.TimestampJungfrau1MZmq">TimestampJungfrau1MZmq (class in om.data_retrieval_layer.data_sources_zmq)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.TimestampPsana">TimestampPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana2.html#om.data_retrieval_layer.data_sources_psana2.TimestampPsana2">TimestampPsana2 (class in om.data_retrieval_layer.data_sources_psana2)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.RadialProfileParameters.total_intensity_jet_threshold">total_intensity_jet_threshold (RadialProfileParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.DataSourceParameters.type">type (DataSourceParameters attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/graphical_interfaces/crystallography_gui.html#om.graphical_interfaces.crystallography_gui.CrystallographyGui.update_gui">update_gui() (CrystallographyGui method)</a>
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#om.graphical_interfaces.crystallography_parameter_tweaker.CrystallographyParameterTweaker.update_gui">(CrystallographyParameterTweaker method)</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/frame_viewer.html#om.graphical_interfaces.frame_viewer.FrameViewer.update_gui">(FrameViewer method)</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/common.html#om.graphical_interfaces.common.OmGuiBase.update_gui">(OmGuiBase method)</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/swaxs_gui.html#om.graphical_interfaces.swaxs_gui.SwaxsGui.update_gui">(SwaxsGui method)</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#om.graphical_interfaces.xes_gui.XesGui.update_gui">(XesGui method)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/crystallography.html#om.lib.crystallography.CrystallographyPlots.update_plots">update_plots() (CrystallographyPlots method)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/radial_profile.html#om.lib.radial_profile.RadialProfileAnalysisPlots.update_plots">(RadialProfileAnalysisPlots method)</a>
+</li>
+        <li><a href="reference/om/lib/xes.html#om.lib.xes.XesAnalysisAndPlots.update_plots">(XesAnalysisAndPlots method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.CheetahStatusFileWriter.update_status">update_status() (CheetahStatusFileWriter method)</a>
+</li>
+      <li>
+    URL
+
+      <ul>
+        <li><a href="reference/om/graphical_interfaces/crystallography_gui.html#cmdoption-om_crystallography_gui-arg-URL">om_crystallography_gui command line option</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/crystallography_parameter_tweaker.html#cmdoption-om_crystallography_parameter_tweaker-arg-URL">om_crystallography_parameter_tweaker command line option</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/frame_viewer.html#cmdoption-om_frame_viewer-arg-URL">om_frame_viewer command line option</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/swaxs_gui.html#cmdoption-om_swaxs_gui-arg-URL">om_swaxs_gui command line option</a>
+</li>
+        <li><a href="reference/om/graphical_interfaces/xes_gui.html#cmdoption-om_xes-_gui-arg-URL">om_xes`_gui command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.VisualizationPixelMaps">VisualizationPixelMaps (class in om.lib.geometry)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.DataVisualizer.visualize_data">visualize_data() (DataVisualizer method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.w">w (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.CheetahProcessing.wait_for_data">wait_for_data() (CheetahProcessing method)</a>
+
+      <ul>
+        <li><a href="reference/om/processing_layer/crystallography.html#om.processing_layer.crystallography.CrystallographyProcessing.wait_for_data">(CrystallographyProcessing method)</a>
+</li>
+        <li><a href="reference/om/lib/protocols.html#om.lib.protocols.OmProcessingProtocol.wait_for_data">(OmProcessingProtocol method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/cheetah.html#om.processing_layer.cheetah.StreamingCheetahProcessing.wait_for_data">(StreamingCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsCheetahProcessing.wait_for_data">(SwaxsCheetahProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/swaxs.html#om.processing_layer.swaxs.SwaxsProcessing.wait_for_data">(SwaxsProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/testing.html#om.processing_layer.testing.TestProcessing.wait_for_data">(TestProcessing method)</a>
+</li>
+        <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing.wait_for_data">(XesProcessing method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/data_retrieval_layer/data_sources_psana.html#om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana">Wave8TotalIntensityPsana (class in om.data_retrieval_layer.data_sources_psana)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.CheetahParameters.write_class_sums">write_class_sums (CheetahParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.HDF5Writer.write_frame">write_frame() (HDF5Writer method)</a>
+</li>
+      <li><a href="reference/om/lib/cheetah.html#om.lib.cheetah.SumHDF5Writer.write_sums">write_sums() (SumHDF5Writer method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.PixelMaps.x">x (PixelMaps attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/geometry.html#om.lib.geometry.VisualizationPixelMaps.x">(VisualizationPixelMaps attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.MonitorParameters.xes">xes (MonitorParameters attribute)</a>
+</li>
+      <li><a href="reference/om/lib/xes.html#om.lib.xes.XesAnalysisAndPlots">XesAnalysisAndPlots (class in om.lib.xes)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/graphical_interfaces/xes_gui.html#om.graphical_interfaces.xes_gui.XesGui">XesGui (class in om.graphical_interfaces.xes_gui)</a>
+</li>
+      <li><a href="reference/om/lib/parameters.html#om.lib.parameters.XesParameters">XesParameters (class in om.lib.parameters)</a>
+</li>
+      <li><a href="reference/om/processing_layer/xes.html#om.processing_layer.xes.XesProcessing">XesProcessing (class in om.processing_layer.xes)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.xfs">xfs (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.xss">xss (Panel attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Y">Y</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.PixelMaps.y">y (PixelMaps attribute)</a>
+
+      <ul>
+        <li><a href="reference/om/lib/geometry.html#om.lib.geometry.VisualizationPixelMaps.y">(VisualizationPixelMaps attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.yfs">yfs (Panel attribute)</a>
+</li>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.Panel.yss">yss (Panel attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Z">Z</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/geometry.html#om.lib.geometry.PixelMaps.z">z (PixelMaps attribute)</a>
+</li>
+      <li><a href="reference/om/lib/zmq.html#om.lib.zmq.ZmqDataBroadcaster">ZmqDataBroadcaster (class in om.lib.zmq)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/om/lib/zmq_qt.html#om.lib.zmq_qt.ZmqDataListener">ZmqDataListener (class in om.lib.zmq_qt)</a>
+</li>
+      <li><a href="reference/om/lib/zmq_qt.html#om.lib.zmq_qt.ZmqDataListener.zmqmessage">zmqmessage (ZmqDataListener attribute)</a>
+</li>
+      <li><a href="reference/om/lib/zmq.html#om.lib.zmq.ZmqResponder">ZmqResponder (class in om.lib.zmq)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

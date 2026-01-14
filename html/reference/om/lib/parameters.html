@@ -1,0 +1,1697 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>parameters &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/om/lib/parameters';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="protocols" href="protocols.html" />
+    <link rel="prev" title="logging" href="logging.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Documentation</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">om</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">lib</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">parameters</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-om.lib.parameters">
+<span id="parameters"></span><h1>parameters<a class="headerlink" href="#module-om.lib.parameters" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.Hdf5Compression">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Hdf5Compression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.Hdf5Compression" title="Link to this definition">#</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Hdf5Compression.gzip">
+<span class="sig-name descname"><span class="pre">gzip</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'gzip'</span></em><a class="headerlink" href="#om.lib.parameters.Hdf5Compression.gzip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Hdf5Compression.bitshuffle_with_zstd">
+<span class="sig-name descname"><span class="pre">bitshuffle_with_zstd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bitshuffle_with_zstd'</span></em><a class="headerlink" href="#om.lib.parameters.Hdf5Compression.bitshuffle_with_zstd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Hdf5Compression.none">
+<span class="sig-name descname"><span class="pre">none</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.Hdf5Compression.none" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.CustomBaseModel">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CustomBaseModel</span></span><a class="headerlink" href="#om.lib.parameters.CustomBaseModel" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CustomBaseModel.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.CustomBaseModel.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OmParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelization_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_retrieval_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processing_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configuration_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.OmParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parallelization_layer</strong> (<em>str</em>)</p></li>
+<li><p><strong>data_retrieval_layer</strong> (<em>str</em>)</p></li>
+<li><p><strong>processing_layer</strong> (<em>str</em>)</p></li>
+<li><p><strong>source</strong> (<em>str</em>)</p></li>
+<li><p><strong>configuration_file</strong> (<em>Path</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters.parallelization_layer">
+<span class="sig-name descname"><span class="pre">parallelization_layer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.OmParameters.parallelization_layer" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters.data_retrieval_layer">
+<span class="sig-name descname"><span class="pre">data_retrieval_layer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.OmParameters.data_retrieval_layer" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters.processing_layer">
+<span class="sig-name descname"><span class="pre">processing_layer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.OmParameters.processing_layer" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters.source">
+<span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.OmParameters.source" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters.configuration_file">
+<span class="sig-name descname"><span class="pre">configuration_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#om.lib.parameters.OmParameters.configuration_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.OmParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.OmParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.DataSourceParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataSourceParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.DataSourceParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>str</em>)</p></li>
+<li><p><strong>extra_data</strong> (<em>Any</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataSourceParameters.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.DataSourceParameters.type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataSourceParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'allow'}</span></em><a class="headerlink" href="#om.lib.parameters.DataSourceParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataRetrievalLayerParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">asapo_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asapo_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asapo_data_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asapo_has_filesystem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asapo_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asapo_group_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default_om_group'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psana_calibration_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>asapo_url</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>asapo_path</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>asapo_data_source</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>asapo_has_filesystem</strong> (<em>bool</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>asapo_token</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>asapo_group_id</strong> (<em>str</em>)</p></li>
+<li><p><strong>buffer_size</strong> (<em>int</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>psana_calibration_directory</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>data_sources</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a><em>]</em>)</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.asapo_url">
+<span class="sig-name descname"><span class="pre">asapo_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.asapo_path">
+<span class="sig-name descname"><span class="pre">asapo_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.asapo_data_source">
+<span class="sig-name descname"><span class="pre">asapo_data_source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_data_source" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.asapo_has_filesystem">
+<span class="sig-name descname"><span class="pre">asapo_has_filesystem</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_has_filesystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.asapo_token">
+<span class="sig-name descname"><span class="pre">asapo_token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_token" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.asapo_group_id">
+<span class="sig-name descname"><span class="pre">asapo_group_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_group_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.buffer_size">
+<span class="sig-name descname"><span class="pre">buffer_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.buffer_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.psana_calibration_directory">
+<span class="sig-name descname"><span class="pre">psana_calibration_directory</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.psana_calibration_directory" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.data_sources">
+<span class="sig-name descname"><span class="pre">data_sources</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><span class="pre">DataSourceParameters</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.data_sources" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.node_pool_size">
+<span class="sig-name descname"><span class="pre">node_pool_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.node_pool_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.DataRetrievalLayerParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.DataRetrievalLayerParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Peakfinder8PeakDetectionParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum_snr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_pixel_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_pixel_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_bg_radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fast_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_pixel_per_bin_in_radial_statistics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_map_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_map_hdf5_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_num_peaks</strong> (<em>int</em>)</p></li>
+<li><p><strong>adc_threshold</strong> (<em>float</em>)</p></li>
+<li><p><strong>minimum_snr</strong> (<em>float</em>)</p></li>
+<li><p><strong>min_pixel_count</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_pixel_count</strong> (<em>int</em>)</p></li>
+<li><p><strong>local_bg_radius</strong> (<em>int</em>)</p></li>
+<li><p><strong>min_res</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_res</strong> (<em>int</em>)</p></li>
+<li><p><strong>fast_mode</strong> (<em>bool</em>)</p></li>
+<li><p><strong>num_pixel_per_bin_in_radial_statistics</strong> (<em>int</em>)</p></li>
+<li><p><strong>bad_pixel_map_filename</strong> (<em>Path</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>bad_pixel_map_hdf5_path</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.max_num_peaks">
+<span class="sig-name descname"><span class="pre">max_num_peaks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_num_peaks" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.adc_threshold">
+<span class="sig-name descname"><span class="pre">adc_threshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.adc_threshold" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.minimum_snr">
+<span class="sig-name descname"><span class="pre">minimum_snr</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.minimum_snr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.min_pixel_count">
+<span class="sig-name descname"><span class="pre">min_pixel_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.min_pixel_count" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.max_pixel_count">
+<span class="sig-name descname"><span class="pre">max_pixel_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_pixel_count" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.local_bg_radius">
+<span class="sig-name descname"><span class="pre">local_bg_radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.local_bg_radius" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.min_res">
+<span class="sig-name descname"><span class="pre">min_res</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.min_res" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.max_res">
+<span class="sig-name descname"><span class="pre">max_res</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_res" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.fast_mode">
+<span class="sig-name descname"><span class="pre">fast_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.fast_mode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.num_pixel_per_bin_in_radial_statistics">
+<span class="sig-name descname"><span class="pre">num_pixel_per_bin_in_radial_statistics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.num_pixel_per_bin_in_radial_statistics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_filename">
+<span class="sig-name descname"><span class="pre">bad_pixel_map_filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_filename" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_hdf5_path">
+<span class="sig-name descname"><span class="pre">bad_pixel_map_hdf5_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_hdf5_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.check_hd5_path">
+<span class="sig-name descname"><span class="pre">check_hd5_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.check_hd5_path" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.Peakfinder8PeakDetectionParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BinningParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_good_pix_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_map_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_map_hdf5_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.BinningParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bin_size</strong> (<em>int</em>)</p></li>
+<li><p><strong>min_good_pix_count</strong> (<em>int</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>bad_pixel_value</strong> (<em>int</em><em> | </em><em>float</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>bad_pixel_map_filename</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>bad_pixel_map_hdf5_path</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.bin_size">
+<span class="sig-name descname"><span class="pre">bin_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.BinningParameters.bin_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.min_good_pix_count">
+<span class="sig-name descname"><span class="pre">min_good_pix_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.BinningParameters.min_good_pix_count" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.bad_pixel_value">
+<span class="sig-name descname"><span class="pre">bad_pixel_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.BinningParameters.bad_pixel_value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.bad_pixel_map_filename">
+<span class="sig-name descname"><span class="pre">bad_pixel_map_filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.BinningParameters.bad_pixel_map_filename" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.bad_pixel_map_hdf5_path">
+<span class="sig-name descname"><span class="pre">bad_pixel_map_hdf5_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.BinningParameters.bad_pixel_map_hdf5_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.check_hd5_path">
+<span class="sig-name descname"><span class="pre">check_hd5_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.BinningParameters.check_hd5_path" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.BinningParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.BinningParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">XesParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_in_degrees</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_broadcast_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_broadcast_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_resolved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_row_in_pix_for_integration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_row_in_pix_for_integration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running_average_window_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_report_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hit_frame_sending_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_hit_frame_sending_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.XesParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intensity_threshold</strong> (<em>float</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>rotation_in_degrees</strong> (<em>float</em>)</p></li>
+<li><p><strong>geometry_file</strong> (<em>str</em>)</p></li>
+<li><p><strong>data_broadcast_url</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>data_broadcast_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>time_resolved</strong> (<em>bool</em>)</p></li>
+<li><p><strong>min_row_in_pix_for_integration</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_row_in_pix_for_integration</strong> (<em>int</em>)</p></li>
+<li><p><strong>running_average_window_size</strong> (<em>int</em>)</p></li>
+<li><p><strong>speed_report_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>hit_frame_sending_interval</strong> (<em>int</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>non_hit_frame_sending_interval</strong> (<em>int</em><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.intensity_threshold">
+<span class="sig-name descname"><span class="pre">intensity_threshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.intensity_threshold" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.rotation_in_degrees">
+<span class="sig-name descname"><span class="pre">rotation_in_degrees</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.rotation_in_degrees" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.geometry_file">
+<span class="sig-name descname"><span class="pre">geometry_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.geometry_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.data_broadcast_url">
+<span class="sig-name descname"><span class="pre">data_broadcast_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.data_broadcast_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.data_broadcast_interval">
+<span class="sig-name descname"><span class="pre">data_broadcast_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.data_broadcast_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.time_resolved">
+<span class="sig-name descname"><span class="pre">time_resolved</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.time_resolved" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.min_row_in_pix_for_integration">
+<span class="sig-name descname"><span class="pre">min_row_in_pix_for_integration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.min_row_in_pix_for_integration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.max_row_in_pix_for_integration">
+<span class="sig-name descname"><span class="pre">max_row_in_pix_for_integration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.max_row_in_pix_for_integration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.running_average_window_size">
+<span class="sig-name descname"><span class="pre">running_average_window_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.running_average_window_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.speed_report_interval">
+<span class="sig-name descname"><span class="pre">speed_report_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.speed_report_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.hit_frame_sending_interval">
+<span class="sig-name descname"><span class="pre">hit_frame_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.hit_frame_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.non_hit_frame_sending_interval">
+<span class="sig-name descname"><span class="pre">non_hit_frame_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.non_hit_frame_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.XesParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.XesParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RadialProfileParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_report_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_broadcast_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hit_frame_sending_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_hit_frame_sending_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_broadcast_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius_bin_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_processing_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_map_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixel_map_hdf5_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running_average_window_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_radials_to_send</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_hits_in_cum_radial_avg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_intensity_jet_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_subtraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_profile_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_profile_hdf5_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_subtraction_min_fit_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_subtraction_max_fit_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_detection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum_roi1_to_roi2_intensity_ratio_for_sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_roi1_to_roi2_intensity_ratio_for_sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate_particle_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_estimation_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'guinier'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roi1_qmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roi1_qmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roi2_qmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roi2_qmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guinier_qmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guinier_qmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed_report_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>data_broadcast_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>hit_frame_sending_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>non_hit_frame_sending_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>data_broadcast_url</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>radius_bin_size</strong> (<em>int</em>)</p></li>
+<li><p><strong>geometry_file</strong> (<em>str</em>)</p></li>
+<li><p><strong>post_processing_binning</strong> (<em>bool</em>)</p></li>
+<li><p><strong>bad_pixel_map_filename</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>bad_pixel_map_hdf5_path</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>running_average_window_size</strong> (<em>int</em>)</p></li>
+<li><p><strong>num_radials_to_send</strong> (<em>int</em>)</p></li>
+<li><p><strong>num_hits_in_cum_radial_avg</strong> (<em>int</em>)</p></li>
+<li><p><strong>total_intensity_jet_threshold</strong> (<em>float</em>)</p></li>
+<li><p><strong>background_subtraction</strong> (<em>bool</em>)</p></li>
+<li><p><strong>background_profile_filename</strong> (<em>str</em>)</p></li>
+<li><p><strong>background_profile_hdf5_path</strong> (<em>str</em>)</p></li>
+<li><p><strong>background_subtraction_min_fit_bin</strong> (<em>int</em>)</p></li>
+<li><p><strong>background_subtraction_max_fit_bin</strong> (<em>int</em>)</p></li>
+<li><p><strong>sample_detection</strong> (<em>bool</em>)</p></li>
+<li><p><strong>minimum_roi1_to_roi2_intensity_ratio_for_sample</strong> (<em>float</em>)</p></li>
+<li><p><strong>maximum_roi1_to_roi2_intensity_ratio_for_sample</strong> (<em>float</em>)</p></li>
+<li><p><strong>estimate_particle_size</strong> (<em>bool</em>)</p></li>
+<li><p><strong>size_estimation_method</strong> (<em>Literal</em><em>[</em><em>'guinier'</em><em>, </em><em>'sphere'</em><em>, </em><em>'peak'</em><em>]</em>)</p></li>
+<li><p><strong>roi1_qmin</strong> (<em>float</em>)</p></li>
+<li><p><strong>roi1_qmax</strong> (<em>float</em>)</p></li>
+<li><p><strong>roi2_qmin</strong> (<em>float</em>)</p></li>
+<li><p><strong>roi2_qmax</strong> (<em>float</em>)</p></li>
+<li><p><strong>guinier_qmin</strong> (<em>float</em>)</p></li>
+<li><p><strong>guinier_qmax</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.speed_report_interval">
+<span class="sig-name descname"><span class="pre">speed_report_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.speed_report_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.data_broadcast_interval">
+<span class="sig-name descname"><span class="pre">data_broadcast_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.data_broadcast_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.hit_frame_sending_interval">
+<span class="sig-name descname"><span class="pre">hit_frame_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.hit_frame_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.non_hit_frame_sending_interval">
+<span class="sig-name descname"><span class="pre">non_hit_frame_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.non_hit_frame_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.data_broadcast_url">
+<span class="sig-name descname"><span class="pre">data_broadcast_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.data_broadcast_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.radius_bin_size">
+<span class="sig-name descname"><span class="pre">radius_bin_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.radius_bin_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.geometry_file">
+<span class="sig-name descname"><span class="pre">geometry_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.geometry_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.post_processing_binning">
+<span class="sig-name descname"><span class="pre">post_processing_binning</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.post_processing_binning" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.bad_pixel_map_filename">
+<span class="sig-name descname"><span class="pre">bad_pixel_map_filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.bad_pixel_map_filename" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.bad_pixel_map_hdf5_path">
+<span class="sig-name descname"><span class="pre">bad_pixel_map_hdf5_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.bad_pixel_map_hdf5_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.running_average_window_size">
+<span class="sig-name descname"><span class="pre">running_average_window_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.running_average_window_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.num_radials_to_send">
+<span class="sig-name descname"><span class="pre">num_radials_to_send</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.num_radials_to_send" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.num_hits_in_cum_radial_avg">
+<span class="sig-name descname"><span class="pre">num_hits_in_cum_radial_avg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.num_hits_in_cum_radial_avg" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.total_intensity_jet_threshold">
+<span class="sig-name descname"><span class="pre">total_intensity_jet_threshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.total_intensity_jet_threshold" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.background_subtraction">
+<span class="sig-name descname"><span class="pre">background_subtraction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.background_subtraction" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.background_profile_filename">
+<span class="sig-name descname"><span class="pre">background_profile_filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.background_profile_filename" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.background_profile_hdf5_path">
+<span class="sig-name descname"><span class="pre">background_profile_hdf5_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.background_profile_hdf5_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.background_subtraction_min_fit_bin">
+<span class="sig-name descname"><span class="pre">background_subtraction_min_fit_bin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.background_subtraction_min_fit_bin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.background_subtraction_max_fit_bin">
+<span class="sig-name descname"><span class="pre">background_subtraction_max_fit_bin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.background_subtraction_max_fit_bin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.sample_detection">
+<span class="sig-name descname"><span class="pre">sample_detection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.sample_detection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.minimum_roi1_to_roi2_intensity_ratio_for_sample">
+<span class="sig-name descname"><span class="pre">minimum_roi1_to_roi2_intensity_ratio_for_sample</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.minimum_roi1_to_roi2_intensity_ratio_for_sample" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.maximum_roi1_to_roi2_intensity_ratio_for_sample">
+<span class="sig-name descname"><span class="pre">maximum_roi1_to_roi2_intensity_ratio_for_sample</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.maximum_roi1_to_roi2_intensity_ratio_for_sample" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.estimate_particle_size">
+<span class="sig-name descname"><span class="pre">estimate_particle_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.estimate_particle_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.size_estimation_method">
+<span class="sig-name descname"><span class="pre">size_estimation_method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'guinier'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'sphere'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'peak'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.size_estimation_method" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.roi1_qmin">
+<span class="sig-name descname"><span class="pre">roi1_qmin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.roi1_qmin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.roi1_qmax">
+<span class="sig-name descname"><span class="pre">roi1_qmax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.roi1_qmax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.roi2_qmin">
+<span class="sig-name descname"><span class="pre">roi2_qmin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.roi2_qmin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.roi2_qmax">
+<span class="sig-name descname"><span class="pre">roi2_qmax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.roi2_qmax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.guinier_qmin">
+<span class="sig-name descname"><span class="pre">guinier_qmin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.guinier_qmin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.guinier_qmax">
+<span class="sig-name descname"><span class="pre">guinier_qmax</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.guinier_qmax" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.check_hd5_path">
+<span class="sig-name descname"><span class="pre">check_hd5_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.check_hd5_path" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.check_background_subtraction">
+<span class="sig-name descname"><span class="pre">check_background_subtraction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.check_background_subtraction" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.check_sample_detection">
+<span class="sig-name descname"><span class="pre">check_sample_detection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.check_sample_detection" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.check_particle_size_estimation">
+<span class="sig-name descname"><span class="pre">check_particle_size_estimation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.check_particle_size_estimation" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.RadialProfileParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.RadialProfileParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CheetahParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">processed_directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processed_filename_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'processed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processed_filename_extension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_fields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_file_data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_file_compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Hdf5Compression.none</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_file_gzip_compression_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_file_zstd_compression_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_file_compression_shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdf5_file_max_num_peaks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_class_sums</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_sums_sending_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_sums_update_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_sums_filename_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sums'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_file_update_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responding_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_data_request_list_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.CheetahParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>processed_directory</strong> (<em>str</em>)</p></li>
+<li><p><strong>processed_filename_prefix</strong> (<em>str</em>)</p></li>
+<li><p><strong>processed_filename_extension</strong> (<em>str</em>)</p></li>
+<li><p><strong>hdf5_fields</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em>)</p></li>
+<li><p><strong>hdf5_file_data_type</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>hdf5_file_compression</strong> (<a class="reference internal" href="#om.lib.parameters.Hdf5Compression" title="om.lib.parameters.Hdf5Compression"><em>Hdf5Compression</em></a>)</p></li>
+<li><p><strong>hdf5_file_gzip_compression_level</strong> (<em>int</em>)</p></li>
+<li><p><strong>hdf5_file_zstd_compression_level</strong> (<em>int</em>)</p></li>
+<li><p><strong>hdf5_file_compression_shuffle</strong> (<em>bool</em>)</p></li>
+<li><p><strong>hdf5_file_max_num_peaks</strong> (<em>int</em>)</p></li>
+<li><p><strong>write_class_sums</strong> (<em>bool</em>)</p></li>
+<li><p><strong>class_sums_sending_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>class_sums_update_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>class_sums_filename_prefix</strong> (<em>str</em>)</p></li>
+<li><p><strong>status_file_update_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>responding_url</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>external_data_request_list_size</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.processed_directory">
+<span class="sig-name descname"><span class="pre">processed_directory</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.processed_directory" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.processed_filename_prefix">
+<span class="sig-name descname"><span class="pre">processed_filename_prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.processed_filename_prefix" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.processed_filename_extension">
+<span class="sig-name descname"><span class="pre">processed_filename_extension</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.processed_filename_extension" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_fields">
+<span class="sig-name descname"><span class="pre">hdf5_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_fields" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_file_data_type">
+<span class="sig-name descname"><span class="pre">hdf5_file_data_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_file_data_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_file_compression">
+<span class="sig-name descname"><span class="pre">hdf5_file_compression</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.Hdf5Compression" title="om.lib.parameters.Hdf5Compression"><span class="pre">Hdf5Compression</span></a></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_file_compression" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_file_gzip_compression_level">
+<span class="sig-name descname"><span class="pre">hdf5_file_gzip_compression_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_file_gzip_compression_level" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_file_zstd_compression_level">
+<span class="sig-name descname"><span class="pre">hdf5_file_zstd_compression_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_file_zstd_compression_level" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_file_compression_shuffle">
+<span class="sig-name descname"><span class="pre">hdf5_file_compression_shuffle</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_file_compression_shuffle" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.hdf5_file_max_num_peaks">
+<span class="sig-name descname"><span class="pre">hdf5_file_max_num_peaks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.hdf5_file_max_num_peaks" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.write_class_sums">
+<span class="sig-name descname"><span class="pre">write_class_sums</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.write_class_sums" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.class_sums_sending_interval">
+<span class="sig-name descname"><span class="pre">class_sums_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.class_sums_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.class_sums_update_interval">
+<span class="sig-name descname"><span class="pre">class_sums_update_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.class_sums_update_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.class_sums_filename_prefix">
+<span class="sig-name descname"><span class="pre">class_sums_filename_prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.class_sums_filename_prefix" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.status_file_update_interval">
+<span class="sig-name descname"><span class="pre">status_file_update_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.status_file_update_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.responding_url">
+<span class="sig-name descname"><span class="pre">responding_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.responding_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.external_data_request_list_size">
+<span class="sig-name descname"><span class="pre">external_data_request_list_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.external_data_request_list_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.check_sums_update_interval">
+<span class="sig-name descname"><span class="pre">check_sums_update_interval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.CheetahParameters.check_sums_update_interval" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.check_status_file_update_interval">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_status_file_update_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.CheetahParameters.check_status_file_update_interval" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> (<em>int</em>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CheetahParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.CheetahParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CrystallographyParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">peakfinding_algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'peakfinder8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_num_peaks_for_hit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_peaks_for_hit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peakogram_intensity_bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peakogram_radius_bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running_average_window_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_processing_binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pump_probe_experiment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_is_optimized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_report_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_broadcast_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responding_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_data_request_list_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_broadcast_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hit_frame_sending_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_hit_frame_sending_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peakfinding_algorithm</strong> (<em>str</em>)</p></li>
+<li><p><strong>min_num_peaks_for_hit</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_num_peaks_for_hit</strong> (<em>int</em>)</p></li>
+<li><p><strong>peakogram_intensity_bin_size</strong> (<em>float</em>)</p></li>
+<li><p><strong>peakogram_radius_bin_size</strong> (<em>float</em>)</p></li>
+<li><p><strong>running_average_window_size</strong> (<em>int</em>)</p></li>
+<li><p><strong>post_processing_binning</strong> (<em>bool</em>)</p></li>
+<li><p><strong>pump_probe_experiment</strong> (<em>bool</em>)</p></li>
+<li><p><strong>geometry_file</strong> (<em>str</em>)</p></li>
+<li><p><strong>geometry_is_optimized</strong> (<em>bool</em>)</p></li>
+<li><p><strong>speed_report_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>data_broadcast_url</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>responding_url</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>external_data_request_list_size</strong> (<em>int</em>)</p></li>
+<li><p><strong>data_broadcast_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>hit_frame_sending_interval</strong> (<em>int</em>)</p></li>
+<li><p><strong>non_hit_frame_sending_interval</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.peakfinding_algorithm">
+<span class="sig-name descname"><span class="pre">peakfinding_algorithm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.peakfinding_algorithm" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.min_num_peaks_for_hit">
+<span class="sig-name descname"><span class="pre">min_num_peaks_for_hit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.min_num_peaks_for_hit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.max_num_peaks_for_hit">
+<span class="sig-name descname"><span class="pre">max_num_peaks_for_hit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.max_num_peaks_for_hit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.peakogram_intensity_bin_size">
+<span class="sig-name descname"><span class="pre">peakogram_intensity_bin_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.peakogram_intensity_bin_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.peakogram_radius_bin_size">
+<span class="sig-name descname"><span class="pre">peakogram_radius_bin_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.peakogram_radius_bin_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.running_average_window_size">
+<span class="sig-name descname"><span class="pre">running_average_window_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.running_average_window_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.post_processing_binning">
+<span class="sig-name descname"><span class="pre">post_processing_binning</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.post_processing_binning" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.pump_probe_experiment">
+<span class="sig-name descname"><span class="pre">pump_probe_experiment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.pump_probe_experiment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.geometry_file">
+<span class="sig-name descname"><span class="pre">geometry_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.geometry_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.geometry_is_optimized">
+<span class="sig-name descname"><span class="pre">geometry_is_optimized</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.geometry_is_optimized" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.speed_report_interval">
+<span class="sig-name descname"><span class="pre">speed_report_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.speed_report_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.data_broadcast_url">
+<span class="sig-name descname"><span class="pre">data_broadcast_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.data_broadcast_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.responding_url">
+<span class="sig-name descname"><span class="pre">responding_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.responding_url" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.external_data_request_list_size">
+<span class="sig-name descname"><span class="pre">external_data_request_list_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.external_data_request_list_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.data_broadcast_interval">
+<span class="sig-name descname"><span class="pre">data_broadcast_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.data_broadcast_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.hit_frame_sending_interval">
+<span class="sig-name descname"><span class="pre">hit_frame_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.hit_frame_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.non_hit_frame_sending_interval">
+<span class="sig-name descname"><span class="pre">non_hit_frame_sending_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.non_hit_frame_sending_interval" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.CrystallographyParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.CrystallographyParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MonitorParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">om</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_retrieval_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peakfinder8_peak_detection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radial_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crystallography</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cheetah</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.MonitorParameters" title="Link to this definition">#</a></dt>
+<dd><p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>om</strong> (<a class="reference internal" href="#om.lib.parameters.OmParameters" title="om.lib.parameters.OmParameters"><em>OmParameters</em></a>)</p></li>
+<li><p><strong>data_retrieval_layer</strong> (<a class="reference internal" href="#om.lib.parameters.DataRetrievalLayerParameters" title="om.lib.parameters.DataRetrievalLayerParameters"><em>DataRetrievalLayerParameters</em></a>)</p></li>
+<li><p><strong>peakfinder8_peak_detection</strong> (<a class="reference internal" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters" title="om.lib.parameters.Peakfinder8PeakDetectionParameters"><em>Peakfinder8PeakDetectionParameters</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>radial_profile</strong> (<a class="reference internal" href="#om.lib.parameters.RadialProfileParameters" title="om.lib.parameters.RadialProfileParameters"><em>RadialProfileParameters</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>binning</strong> (<a class="reference internal" href="#om.lib.parameters.BinningParameters" title="om.lib.parameters.BinningParameters"><em>BinningParameters</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>crystallography</strong> (<a class="reference internal" href="#om.lib.parameters.CrystallographyParameters" title="om.lib.parameters.CrystallographyParameters"><em>CrystallographyParameters</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>xes</strong> (<a class="reference internal" href="#om.lib.parameters.XesParameters" title="om.lib.parameters.XesParameters"><em>XesParameters</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>cheetah</strong> (<a class="reference internal" href="#om.lib.parameters.CheetahParameters" title="om.lib.parameters.CheetahParameters"><em>CheetahParameters</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.om">
+<span class="sig-name descname"><span class="pre">om</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.OmParameters" title="om.lib.parameters.OmParameters"><span class="pre">OmParameters</span></a></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.om" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.data_retrieval_layer">
+<span class="sig-name descname"><span class="pre">data_retrieval_layer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.DataRetrievalLayerParameters" title="om.lib.parameters.DataRetrievalLayerParameters"><span class="pre">DataRetrievalLayerParameters</span></a></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.data_retrieval_layer" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.peakfinder8_peak_detection">
+<span class="sig-name descname"><span class="pre">peakfinder8_peak_detection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters" title="om.lib.parameters.Peakfinder8PeakDetectionParameters"><span class="pre">Peakfinder8PeakDetectionParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.peakfinder8_peak_detection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.radial_profile">
+<span class="sig-name descname"><span class="pre">radial_profile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.RadialProfileParameters" title="om.lib.parameters.RadialProfileParameters"><span class="pre">RadialProfileParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.radial_profile" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.binning">
+<span class="sig-name descname"><span class="pre">binning</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.BinningParameters" title="om.lib.parameters.BinningParameters"><span class="pre">BinningParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.binning" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.crystallography">
+<span class="sig-name descname"><span class="pre">crystallography</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.CrystallographyParameters" title="om.lib.parameters.CrystallographyParameters"><span class="pre">CrystallographyParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.crystallography" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.xes">
+<span class="sig-name descname"><span class="pre">xes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.XesParameters" title="om.lib.parameters.XesParameters"><span class="pre">XesParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.xes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.cheetah">
+<span class="sig-name descname"><span class="pre">cheetah</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.parameters.CheetahParameters" title="om.lib.parameters.CheetahParameters"><span class="pre">CheetahParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.cheetah" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.check_peakfinder8_peak_detection_parameters">
+<span class="sig-name descname"><span class="pre">check_peakfinder8_peak_detection_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.MonitorParameters.check_peakfinder8_peak_detection_parameters" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.check_binning_parameters">
+<span class="sig-name descname"><span class="pre">check_binning_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.parameters.MonitorParameters.check_binning_parameters" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Self</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.parameters.MonitorParameters.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid'}</span></em><a class="headerlink" href="#om.lib.parameters.MonitorParameters.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Hdf5Compression"><code class="docutils literal notranslate"><span class="pre">Hdf5Compression</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Hdf5Compression.gzip"><code class="docutils literal notranslate"><span class="pre">Hdf5Compression.gzip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Hdf5Compression.bitshuffle_with_zstd"><code class="docutils literal notranslate"><span class="pre">Hdf5Compression.bitshuffle_with_zstd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Hdf5Compression.none"><code class="docutils literal notranslate"><span class="pre">Hdf5Compression.none</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CustomBaseModel"><code class="docutils literal notranslate"><span class="pre">CustomBaseModel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CustomBaseModel.model_config"><code class="docutils literal notranslate"><span class="pre">CustomBaseModel.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters"><code class="docutils literal notranslate"><span class="pre">OmParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters.parallelization_layer"><code class="docutils literal notranslate"><span class="pre">OmParameters.parallelization_layer</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters.data_retrieval_layer"><code class="docutils literal notranslate"><span class="pre">OmParameters.data_retrieval_layer</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters.processing_layer"><code class="docutils literal notranslate"><span class="pre">OmParameters.processing_layer</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters.source"><code class="docutils literal notranslate"><span class="pre">OmParameters.source</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters.configuration_file"><code class="docutils literal notranslate"><span class="pre">OmParameters.configuration_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.OmParameters.model_config"><code class="docutils literal notranslate"><span class="pre">OmParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataSourceParameters"><code class="docutils literal notranslate"><span class="pre">DataSourceParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataSourceParameters.type"><code class="docutils literal notranslate"><span class="pre">DataSourceParameters.type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataSourceParameters.model_config"><code class="docutils literal notranslate"><span class="pre">DataSourceParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_url"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.asapo_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_path"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.asapo_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_data_source"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.asapo_data_source</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_has_filesystem"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.asapo_has_filesystem</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_token"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.asapo_token</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.asapo_group_id"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.asapo_group_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.buffer_size"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.buffer_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.psana_calibration_directory"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.psana_calibration_directory</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.data_sources"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.data_sources</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.node_pool_size"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.node_pool_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.DataRetrievalLayerParameters.model_config"><code class="docutils literal notranslate"><span class="pre">DataRetrievalLayerParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_num_peaks"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.max_num_peaks</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.adc_threshold"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.adc_threshold</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.minimum_snr"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.minimum_snr</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.min_pixel_count"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.min_pixel_count</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_pixel_count"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.max_pixel_count</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.local_bg_radius"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.local_bg_radius</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.min_res"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.min_res</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.max_res"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.max_res</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.fast_mode"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.fast_mode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.num_pixel_per_bin_in_radial_statistics"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.num_pixel_per_bin_in_radial_statistics</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_filename"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.bad_pixel_map_filename</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.bad_pixel_map_hdf5_path"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.bad_pixel_map_hdf5_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.check_hd5_path"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.check_hd5_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.Peakfinder8PeakDetectionParameters.model_config"><code class="docutils literal notranslate"><span class="pre">Peakfinder8PeakDetectionParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters"><code class="docutils literal notranslate"><span class="pre">BinningParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.bin_size"><code class="docutils literal notranslate"><span class="pre">BinningParameters.bin_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.min_good_pix_count"><code class="docutils literal notranslate"><span class="pre">BinningParameters.min_good_pix_count</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.bad_pixel_value"><code class="docutils literal notranslate"><span class="pre">BinningParameters.bad_pixel_value</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.bad_pixel_map_filename"><code class="docutils literal notranslate"><span class="pre">BinningParameters.bad_pixel_map_filename</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.bad_pixel_map_hdf5_path"><code class="docutils literal notranslate"><span class="pre">BinningParameters.bad_pixel_map_hdf5_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.check_hd5_path"><code class="docutils literal notranslate"><span class="pre">BinningParameters.check_hd5_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.BinningParameters.model_config"><code class="docutils literal notranslate"><span class="pre">BinningParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters"><code class="docutils literal notranslate"><span class="pre">XesParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.intensity_threshold"><code class="docutils literal notranslate"><span class="pre">XesParameters.intensity_threshold</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.rotation_in_degrees"><code class="docutils literal notranslate"><span class="pre">XesParameters.rotation_in_degrees</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.geometry_file"><code class="docutils literal notranslate"><span class="pre">XesParameters.geometry_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.data_broadcast_url"><code class="docutils literal notranslate"><span class="pre">XesParameters.data_broadcast_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.data_broadcast_interval"><code class="docutils literal notranslate"><span class="pre">XesParameters.data_broadcast_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.time_resolved"><code class="docutils literal notranslate"><span class="pre">XesParameters.time_resolved</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.min_row_in_pix_for_integration"><code class="docutils literal notranslate"><span class="pre">XesParameters.min_row_in_pix_for_integration</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.max_row_in_pix_for_integration"><code class="docutils literal notranslate"><span class="pre">XesParameters.max_row_in_pix_for_integration</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.running_average_window_size"><code class="docutils literal notranslate"><span class="pre">XesParameters.running_average_window_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.speed_report_interval"><code class="docutils literal notranslate"><span class="pre">XesParameters.speed_report_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.hit_frame_sending_interval"><code class="docutils literal notranslate"><span class="pre">XesParameters.hit_frame_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.non_hit_frame_sending_interval"><code class="docutils literal notranslate"><span class="pre">XesParameters.non_hit_frame_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.XesParameters.model_config"><code class="docutils literal notranslate"><span class="pre">XesParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.speed_report_interval"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.speed_report_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.data_broadcast_interval"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.data_broadcast_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.hit_frame_sending_interval"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.hit_frame_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.non_hit_frame_sending_interval"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.non_hit_frame_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.data_broadcast_url"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.data_broadcast_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.radius_bin_size"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.radius_bin_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.geometry_file"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.geometry_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.post_processing_binning"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.post_processing_binning</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.bad_pixel_map_filename"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.bad_pixel_map_filename</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.bad_pixel_map_hdf5_path"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.bad_pixel_map_hdf5_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.running_average_window_size"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.running_average_window_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.num_radials_to_send"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.num_radials_to_send</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.num_hits_in_cum_radial_avg"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.num_hits_in_cum_radial_avg</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.total_intensity_jet_threshold"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.total_intensity_jet_threshold</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.background_subtraction"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.background_subtraction</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.background_profile_filename"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.background_profile_filename</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.background_profile_hdf5_path"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.background_profile_hdf5_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.background_subtraction_min_fit_bin"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.background_subtraction_min_fit_bin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.background_subtraction_max_fit_bin"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.background_subtraction_max_fit_bin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.sample_detection"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.sample_detection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.minimum_roi1_to_roi2_intensity_ratio_for_sample"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.minimum_roi1_to_roi2_intensity_ratio_for_sample</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.maximum_roi1_to_roi2_intensity_ratio_for_sample"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.maximum_roi1_to_roi2_intensity_ratio_for_sample</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.estimate_particle_size"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.estimate_particle_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.size_estimation_method"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.size_estimation_method</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.roi1_qmin"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.roi1_qmin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.roi1_qmax"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.roi1_qmax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.roi2_qmin"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.roi2_qmin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.roi2_qmax"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.roi2_qmax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.guinier_qmin"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.guinier_qmin</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.guinier_qmax"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.guinier_qmax</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.check_hd5_path"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.check_hd5_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.check_background_subtraction"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.check_background_subtraction()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.check_sample_detection"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.check_sample_detection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.check_particle_size_estimation"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.check_particle_size_estimation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.RadialProfileParameters.model_config"><code class="docutils literal notranslate"><span class="pre">RadialProfileParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters"><code class="docutils literal notranslate"><span class="pre">CheetahParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.processed_directory"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.processed_directory</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.processed_filename_prefix"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.processed_filename_prefix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.processed_filename_extension"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.processed_filename_extension</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_fields"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_fields</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_file_data_type"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_file_data_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_file_compression"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_file_compression</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_file_gzip_compression_level"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_file_gzip_compression_level</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_file_zstd_compression_level"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_file_zstd_compression_level</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_file_compression_shuffle"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_file_compression_shuffle</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.hdf5_file_max_num_peaks"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.hdf5_file_max_num_peaks</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.write_class_sums"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.write_class_sums</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.class_sums_sending_interval"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.class_sums_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.class_sums_update_interval"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.class_sums_update_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.class_sums_filename_prefix"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.class_sums_filename_prefix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.status_file_update_interval"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.status_file_update_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.responding_url"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.responding_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.external_data_request_list_size"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.external_data_request_list_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.check_sums_update_interval"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.check_sums_update_interval()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.check_status_file_update_interval"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.check_status_file_update_interval()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CheetahParameters.model_config"><code class="docutils literal notranslate"><span class="pre">CheetahParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.peakfinding_algorithm"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.peakfinding_algorithm</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.min_num_peaks_for_hit"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.min_num_peaks_for_hit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.max_num_peaks_for_hit"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.max_num_peaks_for_hit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.peakogram_intensity_bin_size"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.peakogram_intensity_bin_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.peakogram_radius_bin_size"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.peakogram_radius_bin_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.running_average_window_size"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.running_average_window_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.post_processing_binning"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.post_processing_binning</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.pump_probe_experiment"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.pump_probe_experiment</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.geometry_file"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.geometry_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.geometry_is_optimized"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.geometry_is_optimized</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.speed_report_interval"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.speed_report_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.data_broadcast_url"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.data_broadcast_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.responding_url"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.responding_url</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.external_data_request_list_size"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.external_data_request_list_size</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.data_broadcast_interval"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.data_broadcast_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.hit_frame_sending_interval"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.hit_frame_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.non_hit_frame_sending_interval"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.non_hit_frame_sending_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.CrystallographyParameters.model_config"><code class="docutils literal notranslate"><span class="pre">CrystallographyParameters.model_config</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters"><code class="docutils literal notranslate"><span class="pre">MonitorParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.om"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.om</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.data_retrieval_layer"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.data_retrieval_layer</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.peakfinder8_peak_detection"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.peakfinder8_peak_detection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.radial_profile"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.radial_profile</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.binning"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.binning</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.crystallography"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.crystallography</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.xes"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.xes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.cheetah"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.cheetah</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.check_peakfinder8_peak_detection_parameters"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.check_peakfinder8_peak_detection_parameters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.check_binning_parameters"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.check_binning_parameters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.parameters.MonitorParameters.model_config"><code class="docutils literal notranslate"><span class="pre">MonitorParameters.model_config</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

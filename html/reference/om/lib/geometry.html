@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>geometry &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/om/lib/geometry';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="layer_management" href="layer_management.html" />
+    <link rel="prev" title="files" href="files.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Documentation</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">om</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">lib</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">geometry</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-om.lib.geometry">
+<span id="geometry"></span><h1>geometry<a class="headerlink" href="#module-om.lib.geometry" title="Link to this heading">#</a></h1>
+<p>CrystFEL’s geometry utilities.</p>
+<p>This module contains functions and classes that manipulate geometry information.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BadRegion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">panel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_ss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_ss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_fsss</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.BadRegion" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary storing information about a bad region of a detector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>panel</strong> (<em>str</em>)</p></li>
+<li><p><strong>min_x</strong> (<em>float</em>)</p></li>
+<li><p><strong>max_x</strong> (<em>float</em>)</p></li>
+<li><p><strong>min_y</strong> (<em>float</em>)</p></li>
+<li><p><strong>max_y</strong> (<em>float</em>)</p></li>
+<li><p><strong>min_fs</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_fs</strong> (<em>int</em>)</p></li>
+<li><p><strong>min_ss</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_ss</strong> (<em>int</em>)</p></li>
+<li><p><strong>is_fsss</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.panel">
+<span class="sig-name descname"><span class="pre">panel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.panel" title="Link to this definition">#</a></dt>
+<dd><p>The name of the panel in which the bad region lies.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.min_x">
+<span class="sig-name descname"><span class="pre">min_x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.min_x" title="Link to this definition">#</a></dt>
+<dd><p>The initial x coordinate of the bad region in the detector reference
+system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.max_x">
+<span class="sig-name descname"><span class="pre">max_x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.max_x" title="Link to this definition">#</a></dt>
+<dd><p>The final x coordinate of the bad region in the detector reference system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.min_y">
+<span class="sig-name descname"><span class="pre">min_y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.min_y" title="Link to this definition">#</a></dt>
+<dd><p>The initial y coordinate of the bad region in the detector reference
+system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.max_y">
+<span class="sig-name descname"><span class="pre">max_y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.max_y" title="Link to this definition">#</a></dt>
+<dd><p>The final y coordinate of the bad region in the detector reference
+system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.min_fs">
+<span class="sig-name descname"><span class="pre">min_fs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.min_fs" title="Link to this definition">#</a></dt>
+<dd><p>The initial fs index of the bad region in the block where the panel data is
+stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.max_fs">
+<span class="sig-name descname"><span class="pre">max_fs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.max_fs" title="Link to this definition">#</a></dt>
+<dd><p>The final (inclusive) fs index of the bad region in the block where the
+panel data is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.min_ss">
+<span class="sig-name descname"><span class="pre">min_ss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.min_ss" title="Link to this definition">#</a></dt>
+<dd><p>The initial ss index of the bad region in the block where the panel
+data is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.max_ss">
+<span class="sig-name descname"><span class="pre">max_ss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.max_ss" title="Link to this definition">#</a></dt>
+<dd><p>The final (inclusive) ss index of the bad region in the block where the
+panel data is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.BadRegion.is_fsss">
+<span class="sig-name descname"><span class="pre">is_fsss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.BadRegion.is_fsss" title="Link to this definition">#</a></dt>
+<dd><p>Whether the fs,ss definition of the bad region (as opposed to the
+x,y-based one) should be considered. In the first case, the min_fs, max_fs,
+min_ss, and max_ss entries in this dictionary will define the bad region.
+In the second case, the min_x, max_x, min_y, and max_y entries will. If the
+value corresponding to this key is 1, the fs,ss-based definition will be
+considered valid. Otherwise, the x,y definition will be used.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.Beam">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Beam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">photon_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">photon_energy_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">photon_energy_scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.Beam" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary storing information about the x-ray beam.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>photon_energy</strong> (<em>float</em>)</p></li>
+<li><p><strong>photon_energy_from</strong> (<em>str</em>)</p></li>
+<li><p><strong>photon_energy_scale</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Beam.photon_energy">
+<span class="sig-name descname"><span class="pre">photon_energy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Beam.photon_energy" title="Link to this definition">#</a></dt>
+<dd><p>The photon energy of the beam in eV.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Beam.photon_energy_from">
+<span class="sig-name descname"><span class="pre">photon_energy_from</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Beam.photon_energy_from" title="Link to this definition">#</a></dt>
+<dd><p>The internal path for the photon energy information in an
+HDF5 data file, in case the beam energy information is extracted from it.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Beam.photon_energy_scale">
+<span class="sig-name descname"><span class="pre">photon_energy_scale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Beam.photon_energy_scale" title="Link to this definition">#</a></dt>
+<dd><p>The scaling factor to be applied to the photon energy, in case the provided
+energy value is not in eV.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Panel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cnx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cny</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clen_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coffset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">satmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">satmap_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">badrow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adu_per_photon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_adu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adu_per_eV</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_structure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fsx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fsy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fsz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rail_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rail_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rail_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clen_for_centering</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orig_min_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orig_max_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orig_min_ss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orig_max_ss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.Panel" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary storing information about a detector panel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cnx</strong> (<em>float</em>)</p></li>
+<li><p><strong>cny</strong> (<em>float</em>)</p></li>
+<li><p><strong>clen</strong> (<em>float</em>)</p></li>
+<li><p><strong>clen_from</strong> (<em>str</em>)</p></li>
+<li><p><strong>coffset</strong> (<em>float</em>)</p></li>
+<li><p><strong>mask</strong> (<em>str</em>)</p></li>
+<li><p><strong>mask_file</strong> (<em>str</em>)</p></li>
+<li><p><strong>satmap</strong> (<em>str</em>)</p></li>
+<li><p><strong>satmap_file</strong> (<em>str</em>)</p></li>
+<li><p><strong>res</strong> (<em>float</em>)</p></li>
+<li><p><strong>badrow</strong> (<em>str</em>)</p></li>
+<li><p><strong>no_index</strong> (<em>bool</em>)</p></li>
+<li><p><strong>adu_per_photon</strong> (<em>float</em>)</p></li>
+<li><p><strong>max_adu</strong> (<em>float</em>)</p></li>
+<li><p><strong>data</strong> (<em>str</em>)</p></li>
+<li><p><strong>adu_per_eV</strong> (<em>float</em>)</p></li>
+<li><p><strong>dim_structure</strong> (<em>list</em><em>[</em><em>int</em><em> | </em><em>str</em><em> | </em><em>None</em><em>]</em>)</p></li>
+<li><p><strong>fsx</strong> (<em>float</em>)</p></li>
+<li><p><strong>fsy</strong> (<em>float</em>)</p></li>
+<li><p><strong>fsz</strong> (<em>float</em>)</p></li>
+<li><p><strong>ssx</strong> (<em>float</em>)</p></li>
+<li><p><strong>ssy</strong> (<em>float</em>)</p></li>
+<li><p><strong>ssz</strong> (<em>float</em>)</p></li>
+<li><p><strong>rail_x</strong> (<em>float</em>)</p></li>
+<li><p><strong>rail_y</strong> (<em>float</em>)</p></li>
+<li><p><strong>rail_z</strong> (<em>float</em>)</p></li>
+<li><p><strong>clen_for_centering</strong> (<em>float</em>)</p></li>
+<li><p><strong>xfs</strong> (<em>float</em>)</p></li>
+<li><p><strong>yfs</strong> (<em>float</em>)</p></li>
+<li><p><strong>xss</strong> (<em>float</em>)</p></li>
+<li><p><strong>yss</strong> (<em>float</em>)</p></li>
+<li><p><strong>orig_min_fs</strong> (<em>int</em>)</p></li>
+<li><p><strong>orig_max_fs</strong> (<em>int</em>)</p></li>
+<li><p><strong>orig_min_ss</strong> (<em>int</em>)</p></li>
+<li><p><strong>orig_max_ss</strong> (<em>int</em>)</p></li>
+<li><p><strong>w</strong> (<em>int</em>)</p></li>
+<li><p><strong>h</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.cnx">
+<span class="sig-name descname"><span class="pre">cnx</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.cnx" title="Link to this definition">#</a></dt>
+<dd><p>The x coordinate of the corner of the panel in the detector reference
+system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.cny">
+<span class="sig-name descname"><span class="pre">cny</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.cny" title="Link to this definition">#</a></dt>
+<dd><p>The y coordinate of the corner of the panel in the detector reference
+system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.clen">
+<span class="sig-name descname"><span class="pre">clen</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.clen" title="Link to this definition">#</a></dt>
+<dd><p>The perpendicular distance, as reported by the facility, of the sample
+interaction point from the corner of the panel.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.clen_from">
+<span class="sig-name descname"><span class="pre">clen_from</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.clen_from" title="Link to this definition">#</a></dt>
+<dd><p>The internal path to the <cite>clen</cite> information in an HDF5 data file, in
+case the information is extracted from it.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.coffset">
+<span class="sig-name descname"><span class="pre">coffset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.coffset" title="Link to this definition">#</a></dt>
+<dd><p>The offset to be applied to the <cite>clen</cite> value reported by the facility
+in order to determine the real perpendicular distance of the panel from the
+interaction point.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.mask">
+<span class="sig-name descname"><span class="pre">mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.mask" title="Link to this definition">#</a></dt>
+<dd><p>The internal path, in an HDF5 data file, to the mask data for the panel.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.mask_file">
+<span class="sig-name descname"><span class="pre">mask_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.mask_file" title="Link to this definition">#</a></dt>
+<dd><p>The name of the HDF5 data file in which the mask data for the panel
+can be found.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.satmap">
+<span class="sig-name descname"><span class="pre">satmap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.satmap" title="Link to this definition">#</a></dt>
+<dd><p>The internal path, in an HDF5 data file, to the per-pixel saturation
+map for the panel.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.satmap_file">
+<span class="sig-name descname"><span class="pre">satmap_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.satmap_file" title="Link to this definition">#</a></dt>
+<dd><p>The name of the HDF5 data file in which the per-pixel saturation
+map for the panel can be found.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.res">
+<span class="sig-name descname"><span class="pre">res</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.res" title="Link to this definition">#</a></dt>
+<dd><p>The size of the pixels that make up the the panel (in pixels per meter).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.badrow">
+<span class="sig-name descname"><span class="pre">badrow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.badrow" title="Link to this definition">#</a></dt>
+<dd><p>The readout direction for the panel, for filtering out clusters of
+peaks. The value corresponding to this key must be either <cite>x</cite> or <cite>y</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.no_index">
+<span class="sig-name descname"><span class="pre">no_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#om.lib.geometry.Panel.no_index" title="Link to this definition">#</a></dt>
+<dd><p>Wether the panel should be considered entirely bad. The panel will be
+considered bad if the value corresponding to this key is non-zero.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.adu_per_photon">
+<span class="sig-name descname"><span class="pre">adu_per_photon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.adu_per_photon" title="Link to this definition">#</a></dt>
+<dd><p>The number of ADUs per photon for the panel.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.max_adu">
+<span class="sig-name descname"><span class="pre">max_adu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.max_adu" title="Link to this definition">#</a></dt>
+<dd><p>The ADU value above which a pixel of the panel should be considered
+unreliable.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Panel.data" title="Link to this definition">#</a></dt>
+<dd><p>The internal path, in an HDF5 data file, to the data block where the
+panel data is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.adu_per_eV">
+<span class="sig-name descname"><span class="pre">adu_per_eV</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.adu_per_eV" title="Link to this definition">#</a></dt>
+<dd><p>The number of ADUs per eV of photon energy for the panel.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.dim_structure">
+<span class="sig-name descname"><span class="pre">dim_structure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.Panel.dim_structure" title="Link to this definition">#</a></dt>
+<dd><p>A description of the internal layout of the data block storing the panel’s
+data. The value corresponding to this key is a list of strings which define
+the role of each axis in the data block. See the
+<a class="reference external" href="http://www.desy.de/~twhite/crystfel/manual-crystfel_geometry.html">crystfel_geometry</a>
+man page for a detailed explanation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.fsx">
+<span class="sig-name descname"><span class="pre">fsx</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.fsx" title="Link to this definition">#</a></dt>
+<dd><p>The fs-&gt;x component of the matrix used to transform pixel indexes into
+detector reference system coordinates.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.fsy">
+<span class="sig-name descname"><span class="pre">fsy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.fsy" title="Link to this definition">#</a></dt>
+<dd><p>The fs-&gt;y component of the matrix used to transform pixel indexes into
+detector reference system coordinates.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.fsz">
+<span class="sig-name descname"><span class="pre">fsz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.fsz" title="Link to this definition">#</a></dt>
+<dd><p>The fs-&gt;z component of the matrix used to transform pixel indexes into
+detector reference system coordinates.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.ssx">
+<span class="sig-name descname"><span class="pre">ssx</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.ssx" title="Link to this definition">#</a></dt>
+<dd><p>The ss-&gt;x component of the matrix used to transform pixel indexes into
+detector reference system coordinates.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.ssy">
+<span class="sig-name descname"><span class="pre">ssy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.ssy" title="Link to this definition">#</a></dt>
+<dd><p>The ss-&gt;y component of the matrix used to transform pixel indexes into
+detector reference system coordinates.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.ssz">
+<span class="sig-name descname"><span class="pre">ssz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.ssz" title="Link to this definition">#</a></dt>
+<dd><p>The ss-&gt;z component of the matrix used to transform pixel indexes into
+detector reference system coordinates.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.rail_x">
+<span class="sig-name descname"><span class="pre">rail_x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.rail_x" title="Link to this definition">#</a></dt>
+<dd><p>The x component, in the detector reference system, of the direction of
+the rail along which the detector moves.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.rail_y">
+<span class="sig-name descname"><span class="pre">rail_y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.rail_y" title="Link to this definition">#</a></dt>
+<dd><p>The y component, in the detector reference system, of the direction of
+the rail along which the detector moves.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.rail_z">
+<span class="sig-name descname"><span class="pre">rail_z</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.rail_z" title="Link to this definition">#</a></dt>
+<dd><p>The z component, in the detector reference system, of the direction of
+the rail along which the detector moves.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.clen_for_centering">
+<span class="sig-name descname"><span class="pre">clen_for_centering</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.clen_for_centering" title="Link to this definition">#</a></dt>
+<dd><p>The perpendicular distance of the origin of the detector
+reference system from the interaction point, as reported by the facility,</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.xfs">
+<span class="sig-name descname"><span class="pre">xfs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.xfs" title="Link to this definition">#</a></dt>
+<dd><p>The x-&gt;fs component of the matrix used to transform detector reference
+system coordinates into pixel indexes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.yfs">
+<span class="sig-name descname"><span class="pre">yfs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.yfs" title="Link to this definition">#</a></dt>
+<dd><p>The y-&gt;fs component of the matrix used to transform detector reference
+system coordinates into pixel indexes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.xss">
+<span class="sig-name descname"><span class="pre">xss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.xss" title="Link to this definition">#</a></dt>
+<dd><p>The x-&gt;ss component of the matrix used to transform detector reference
+system coordinates into pixel indexes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.yss">
+<span class="sig-name descname"><span class="pre">yss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Panel.yss" title="Link to this definition">#</a></dt>
+<dd><p>The y-&gt;ss component of the matrix used to transform detector reference
+system coordinates into pixel indexes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.orig_min_fs">
+<span class="sig-name descname"><span class="pre">orig_min_fs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Panel.orig_min_fs" title="Link to this definition">#</a></dt>
+<dd><p>The initial fs index of the panel data in the data block where
+it is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.orig_max_fs">
+<span class="sig-name descname"><span class="pre">orig_max_fs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Panel.orig_max_fs" title="Link to this definition">#</a></dt>
+<dd><p>The final (inclusive) fs index of the panel data in the data block
+where it is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.orig_min_ss">
+<span class="sig-name descname"><span class="pre">orig_min_ss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Panel.orig_min_ss" title="Link to this definition">#</a></dt>
+<dd><p>The initial ss index of the panel data in the data block where it
+is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.orig_max_ss">
+<span class="sig-name descname"><span class="pre">orig_max_ss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Panel.orig_max_ss" title="Link to this definition">#</a></dt>
+<dd><p>The final (inclusive) fs index of the panel data in the data block
+where it is stored.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.w">
+<span class="sig-name descname"><span class="pre">w</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Panel.w" title="Link to this definition">#</a></dt>
+<dd><p>The width of the panel in pixels.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Panel.h">
+<span class="sig-name descname"><span class="pre">h</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Panel.h" title="Link to this definition">#</a></dt>
+<dd><p>The height of the panel in pixels.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Detector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">panels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_bad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_good</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rigid_groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rigid_group_collections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">furthest_out_panel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">furthest_out_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">furthest_out_ss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">furthest_in_panel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">furthest_in_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">furthest_in_ss</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.Detector" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary storing information about a detector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>panels</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="#om.lib.geometry.Panel" title="om.lib.geometry.Panel"><em>Panel</em></a><em>]</em>)</p></li>
+<li><p><strong>bad</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="#om.lib.geometry.BadRegion" title="om.lib.geometry.BadRegion"><em>BadRegion</em></a><em>]</em>)</p></li>
+<li><p><strong>mask_bad</strong> (<em>int</em>)</p></li>
+<li><p><strong>mask_good</strong> (<em>int</em>)</p></li>
+<li><p><strong>rigid_groups</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>rigid_group_collections</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>furthest_out_panel</strong> (<em>str</em>)</p></li>
+<li><p><strong>furthest_out_fs</strong> (<em>float</em>)</p></li>
+<li><p><strong>furthest_out_ss</strong> (<em>float</em>)</p></li>
+<li><p><strong>furthest_in_panel</strong> (<em>str</em>)</p></li>
+<li><p><strong>furthest_in_fs</strong> (<em>float</em>)</p></li>
+<li><p><strong>furthest_in_ss</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.panels">
+<span class="sig-name descname"><span class="pre">panels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.geometry.Panel" title="om.lib.geometry.Panel"><span class="pre">Panel</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.Detector.panels" title="Link to this definition">#</a></dt>
+<dd><p>The panels in the detector. The value corresponding to this key is
+dictionary containing information about the panels that make up the
+detector. In the dictionary, the keys are the panel names, and the values
+are [<cite>TypePanel</cite>][om.lib.geometry.TypePanel] dictionaries.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.bad">
+<span class="sig-name descname"><span class="pre">bad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#om.lib.geometry.BadRegion" title="om.lib.geometry.BadRegion"><span class="pre">BadRegion</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.Detector.bad" title="Link to this definition">#</a></dt>
+<dd><p>The bad regions in the detector. The value corresponding to this key is a
+dictionary containing information about the bad regions in the detector. In
+the dictionary, the keys are bad region names, and the values are
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TypeBadRegion</span></code> dictionaries.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.mask_bad">
+<span class="sig-name descname"><span class="pre">mask_bad</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Detector.mask_bad" title="Link to this definition">#</a></dt>
+<dd><p>The value used in a bad pixel mask to label a pixel as bad.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.mask_good">
+<span class="sig-name descname"><span class="pre">mask_good</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.Detector.mask_good" title="Link to this definition">#</a></dt>
+<dd><p>The value used in a bad pixel mask to label a pixel as good.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.rigid_groups">
+<span class="sig-name descname"><span class="pre">rigid_groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.Detector.rigid_groups" title="Link to this definition">#</a></dt>
+<dd><p>The rigid groups of panels in the detector. The value
+corresponding to this key is a dictionary containing information about the
+rigid groups. In the dictionary, the keys are names of rigid groups and the
+values are lists storing the names of the panels belonging to each group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.rigid_group_collections">
+<span class="sig-name descname"><span class="pre">rigid_group_collections</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.Detector.rigid_group_collections" title="Link to this definition">#</a></dt>
+<dd><p>The collections of rigid groups of panels in the
+detector. The value corresponding to this key is a dictionary containing
+information about the rigid group collections. In the dictionary, the keys
+are names of rigid group collections and the values are lists storing the
+names of the rigid groups belonging to the each collection.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.furthest_out_panel">
+<span class="sig-name descname"><span class="pre">furthest_out_panel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Detector.furthest_out_panel" title="Link to this definition">#</a></dt>
+<dd><p>The name of the panel which contains the pixel that is the
+furthest away from the center of the detector reference system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.furthest_out_fs">
+<span class="sig-name descname"><span class="pre">furthest_out_fs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Detector.furthest_out_fs" title="Link to this definition">#</a></dt>
+<dd><p>The fs coordinate, within its panel, of the pixel that is the
+furthest away from the center of the detector reference system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.furthest_out_ss">
+<span class="sig-name descname"><span class="pre">furthest_out_ss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Detector.furthest_out_ss" title="Link to this definition">#</a></dt>
+<dd><p>The ss coordinate, within its panel, of the pixel that is the
+furthest away from the center of the detector reference system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.furthest_in_panel">
+<span class="sig-name descname"><span class="pre">furthest_in_panel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#om.lib.geometry.Detector.furthest_in_panel" title="Link to this definition">#</a></dt>
+<dd><p>The name of the panel which contains the closest pixel to
+the center of the detector reference system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.furthest_in_fs">
+<span class="sig-name descname"><span class="pre">furthest_in_fs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Detector.furthest_in_fs" title="Link to this definition">#</a></dt>
+<dd><p>The fs coordinate, within its panel, of the closest pixel to
+the center of the detector reference system.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.Detector.furthest_in_ss">
+<span class="sig-name descname"><span class="pre">furthest_in_ss</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#om.lib.geometry.Detector.furthest_in_ss" title="Link to this definition">#</a></dt>
+<dd><p>The ss coordinate, within its panel, of the closest pixel to
+the center of the detector reference system.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.DetectorLayoutInformation">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DetectorLayoutInformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asic_nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asic_ny</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nasics_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nasics_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.DetectorLayoutInformation" title="Link to this definition">#</a></dt>
+<dd><p>Detector layout information for the peakfinder8 algorithm.</p>
+<p>A dictionary storing information about the internal layout of a detector data frame
+for a specific detector. The information is needed by the
+<a class="reference internal" href="../algorithms/crystallography.html#om.algorithms.crystallography.Peakfinder8PeakDetection" title="om.algorithms.crystallography.Peakfinder8PeakDetection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Peakfinder8PeakDetection</span></code></a>
+algorithm, and is usually retrieved via the
+<a class="reference internal" href="#om.lib.geometry.GeometryInformation.get_layout_info" title="om.lib.geometry.GeometryInformation.get_layout_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_layout_info()</span></code></a>
+function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>asic_nx</strong> (<em>int</em>)</p></li>
+<li><p><strong>asic_ny</strong> (<em>int</em>)</p></li>
+<li><p><strong>nasics_x</strong> (<em>int</em>)</p></li>
+<li><p><strong>nasics_y</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.DetectorLayoutInformation.asic_nx">
+<span class="sig-name descname"><span class="pre">asic_nx</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.DetectorLayoutInformation.asic_nx" title="Link to this definition">#</a></dt>
+<dd><p>The fs size in pixels of each detector panel in the data frame.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.DetectorLayoutInformation.asic_ny">
+<span class="sig-name descname"><span class="pre">asic_ny</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.DetectorLayoutInformation.asic_ny" title="Link to this definition">#</a></dt>
+<dd><p>The ss size in pixels of each detector panel in the data frame.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.DetectorLayoutInformation.nasics_x">
+<span class="sig-name descname"><span class="pre">nasics_x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.DetectorLayoutInformation.nasics_x" title="Link to this definition">#</a></dt>
+<dd><p>The number of detector panels along the fs axis of the data frame.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.DetectorLayoutInformation.nasics_y">
+<span class="sig-name descname"><span class="pre">nasics_y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#om.lib.geometry.DetectorLayoutInformation.nasics_y" title="Link to this definition">#</a></dt>
+<dd><p>The number of detector panels along the ss axis of the data frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.PixelMaps">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PixelMaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.PixelMaps" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary storing a set of pixel maps.</p>
+<p>This dictionary stores a set of look-up pixels maps. Each map stores the value of a
+specific coordinate for eac pixel in a detector data frame. All coordinates in this
+set of maps are assumed to be relative to the detector’s reference system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>z</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>radius</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>phi</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.PixelMaps.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.PixelMaps.x" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map for the x coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.PixelMaps.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.PixelMaps.y" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map for the y coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.PixelMaps.z">
+<span class="sig-name descname"><span class="pre">z</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.PixelMaps.z" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map for the z coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.PixelMaps.radius">
+<span class="sig-name descname"><span class="pre">radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.PixelMaps.radius" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map storing the distance of each pixel from the center of the
+reference system (usually the center of the detector).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.PixelMaps.phi">
+<span class="sig-name descname"><span class="pre">phi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.PixelMaps.phi" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map storing, for each pixel, the amplitude of the angle drawn by
+the pixel, the center of the reference system, and the x axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.VisualizationPixelMaps">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VisualizationPixelMaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.VisualizationPixelMaps" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary storing a set of pixel maps used for visualization.</p>
+<p>This dictionary stores a set of look-up pixels maps. Each map stores the value of
+a specific coordinate for each pixel in a detector data frame. This set of pixel
+maps is supposed to be used for visualization: all coordinates are assumed to
+refer to a cartesian reference system mapped on a 2D array storing pixel
+information for an assembled detector image, with the origin in the top left
+corner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>int64</em><em>]</em><em>]</em>)</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>int64</em><em>]</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.VisualizationPixelMaps.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.VisualizationPixelMaps.x" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map for the x coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="om.lib.geometry.VisualizationPixelMaps.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#om.lib.geometry.VisualizationPixelMaps.y" title="Link to this definition">#</a></dt>
+<dd><p>A pixel map for the y coordinate.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.GeometryInformation">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeometryInformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.GeometryInformation" title="Link to this definition">#</a></dt>
+<dd><p>Detector geometry information.</p>
+<p>This class stores the all the information describing the geometry of an area
+detector. It is initialized with a block of text containing the description of
+the geometry of the detector (usually the content of a geometry file), and with
+a string specifying the format of the provided information.</p>
+<p>Once the class has been initialized, methods can be invoked to recover
+information about the geometry of the area detector: lookup-pixel maps,
+size of the detector’s pixels, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geometry_description</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – a block of text describing the detector’s geometry</p></li>
+<li><p><strong>geometry_format</strong> (<em>str</em>) – <p>a string describing the format of the provided geometry
+description. Currently the following formats are supported:</p>
+<ul>
+<li><p><cite>crystfel</cite>: the geometry format used by the CrystFEL software
+package.processing of crystallography data. The format is fully
+documented in CrystFEL’s
+[man pages](<a class="reference external" href="http://www.desy.de/~twhite/crystfel/manual-crystfel_geometry.html">http://www.desy.de/~twhite/crystfel/manual-crystfel_geometry.html</a>)  # noqa: E501</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="exceptions.html#om.lib.exceptions.OmGeometryError" title="om.lib.exceptions.OmGeometryError"><strong>OmGeometryError</strong></a> – Raised if the format of the provided geometry information
+    is not supported.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.GeometryInformation.from_file">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.GeometryInformation.from_file" title="Link to this definition">#</a></dt>
+<dd><p>Reads geometry description from file.</p>
+<p>This class method initializes the
+[<cite>GeometryInformation</cite>][om.lib.geometry.GeometryInformation] class from a file,
+rather than from a block of text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geometry_filename</strong> (<em>str</em>) – the relative or absolute path to file containing the
+description of the geometry of an area detector</p></li>
+<li><p><strong>geometry_format</strong> (<em>str</em><em> | </em><em>None</em>) – <p>a string describing the format of the provided geometry
+description. Currently the following formats are supported:</p>
+<ul>
+<li><p><cite>crystfel</cite>: the geometry format used by the CrystFEL software
+package. The format is fully documented in the CrystFEL’s
+[man pages](<a class="reference external" href="http://www.desy.de/~twhite/crystfel/manual-crystfel_geometry.html">http://www.desy.de/~twhite/crystfel/manual-crystfel_geometry.html</a>)  # noqa: E501</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="exceptions.html#om.lib.exceptions.OmGeometryError" title="om.lib.exceptions.OmGeometryError"><strong>OmGeometryError</strong></a> – Raised if the format of the geometry file cannot be
+    inferred from the file’s extension.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#om.lib.geometry.GeometryInformation" title="om.lib.geometry.GeometryInformation"><em>GeometryInformation</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.GeometryInformation.get_pixel_maps">
+<span class="sig-name descname"><span class="pre">get_pixel_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.GeometryInformation.get_pixel_maps" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves pixel maps.</p>
+<p>This function retrieves look-up pixel maps storing coordinate information for
+each pixel of a detector data frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The set of look-up pixel maps.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.GeometryInformation.get_layout_info">
+<span class="sig-name descname"><span class="pre">get_layout_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.GeometryInformation.get_layout_info" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves detector layout information for the peakfinder8 algorithm.</p>
+<p>This function retrieves information about the internal layout of a detector
+data frame (number and size of ASICs, etc.). This information is needed by the
+[<cite>Peakfinder8PeakDetection</cite>][om.algorithms.crystallography.Peakfinder8PeakDetection]
+peak detection algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Internal layout of a detector data frame.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#om.lib.geometry.DetectorLayoutInformation" title="om.lib.geometry.DetectorLayoutInformation"><em>DetectorLayoutInformation</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.GeometryInformation.get_detector_distance_offset">
+<span class="sig-name descname"><span class="pre">get_detector_distance_offset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.GeometryInformation.get_detector_distance_offset" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves detector distance offset information.</p>
+<p>This function retrieves the offset that should be added to the nominal
+detector distance reported by a facility to obtain the real detector distance
+(i.e., the distance between the sample interaction point and the area detector
+where data is recorded). This value is often stored together with the geometry
+information, but if it is not available, the function returns 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The detector distance offset in meters, or 0 if the information is not
+available.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.GeometryInformation.get_pixel_size">
+<span class="sig-name descname"><span class="pre">get_pixel_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.GeometryInformation.get_pixel_size" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves the size of an area detector pixel.</p>
+<p>This function retrieves information about the size of each pixel making up an
+area detector. All pixels in the detector are assumed to have the same size,
+and have a square shape. The value returned by this function describes the
+length of the side of each pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Length of the pixel’s side in meters.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.lib.geometry.DataVisualizer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataVisualizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_maps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.DataVisualizer" title="Link to this definition">#</a></dt>
+<dd><p>Visualization of detector data with geometry applied.</p>
+<p>This class stores all the information needed to display detector data with
+geometry applied to it. Once the class has been initialized, it can be invoked
+to retrieve visualization look-up pixel maps and other information needed to
+display the data. A detector frame is assumed to be visualized in the form of a
+2D image showing an approximate representation of the physical layout of the
+detector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pixel_maps</strong> (<a class="reference internal" href="#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a>) – A set of look-up pixel maps storing coordinate information for
+each pixel in detector data frame.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.DataVisualizer.get_pixel_maps">
+<span class="sig-name descname"><span class="pre">get_pixel_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.DataVisualizer.get_pixel_maps" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves pixel maps.</p>
+<p>This function just returns the pixel maps that were used to initialize the
+class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A set of look-up pixel maps storing coordinate information for each pixel
+in detector data frame.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.DataVisualizer.get_visualization_pixel_maps">
+<span class="sig-name descname"><span class="pre">get_visualization_pixel_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.DataVisualizer.get_visualization_pixel_maps" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves visualization pixel maps.</p>
+<p>This function retrieves a set of visualization look-up pixel maps. These pixel
+maps store the information needed to display a detector data frame. with
+geometry information applied to it, in the form of a 2D image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A set of look-up pixel maps storing the information needed to display a
+detector data frame as a 2D image.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#om.lib.geometry.VisualizationPixelMaps" title="om.lib.geometry.VisualizationPixelMaps"><em>VisualizationPixelMaps</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.DataVisualizer.get_min_array_shape_for_visualization">
+<span class="sig-name descname"><span class="pre">get_min_array_shape_for_visualization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.DataVisualizer.get_min_array_shape_for_visualization" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves the minimum shape of an array that can store a detector frame image.</p>
+<p>Computes the minimum size of an array that can hold the pixel information for
+the image representation of a detector data frame. The size of the array
+computed by this function is enough to include the full representation of the
+data frame with geometry applied, but it is also calculated assuming that the
+center of the detector’s reference system is kept at the center of image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum shape, in numpy format, of an array storing the image
+representation of a detector data frame.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.lib.geometry.DataVisualizer.visualize_data">
+<span class="sig-name descname"><span class="pre">visualize_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_for_visualization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.lib.geometry.DataVisualizer.visualize_data" title="Link to this definition">#</a></dt>
+<dd><p>Applies geometry information to a detector data frame.</p>
+<p>This function applies the geometry information stored by the class to a
+provided detector data frame. It returns a 2D array storing the pixel
+information of an image representing the data frame with geometry applied.</p>
+<p>If a pre-existing visualization array is provided, with exactly the shape
+returned by the
+[<cite>get_min_array_shape_for_visualization</cite>][om.lib.geometry.DataVisualizer.get_min_array_shape_for_visualization]
+function, it used by the function to store the pixel information. Otherwise
+the function creates a new array with the appropriate shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>int64</em><em> | </em><em>float64</em><em>]</em><em>]</em>) – The detector data frame on which geometry should be applied.</p></li>
+<li><p><strong>array_for_visualization</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>] </em><em>| </em><em>None</em>) – Either a pre-existing array of the correct size,
+in which case the array is used to store the pixel information of
+the detector data frame image, or None. If the value of this argument
+is None, an array with the appropriate shape is generated by the
+function. Optional. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An array containing pixel information for the image representation of the
+provided detector data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="exceptions.html#om.lib.exceptions.OmWrongArrayShape" title="om.lib.exceptions.OmWrongArrayShape"><strong>OmWrongArrayShape</strong></a> – Raised if the provided array has the wrong shape and
+    cannot be used to store the pixel information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion"><code class="docutils literal notranslate"><span class="pre">BadRegion</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.panel"><code class="docutils literal notranslate"><span class="pre">BadRegion.panel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.min_x"><code class="docutils literal notranslate"><span class="pre">BadRegion.min_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.max_x"><code class="docutils literal notranslate"><span class="pre">BadRegion.max_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.min_y"><code class="docutils literal notranslate"><span class="pre">BadRegion.min_y</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.max_y"><code class="docutils literal notranslate"><span class="pre">BadRegion.max_y</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.min_fs"><code class="docutils literal notranslate"><span class="pre">BadRegion.min_fs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.max_fs"><code class="docutils literal notranslate"><span class="pre">BadRegion.max_fs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.min_ss"><code class="docutils literal notranslate"><span class="pre">BadRegion.min_ss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.max_ss"><code class="docutils literal notranslate"><span class="pre">BadRegion.max_ss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.BadRegion.is_fsss"><code class="docutils literal notranslate"><span class="pre">BadRegion.is_fsss</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Beam"><code class="docutils literal notranslate"><span class="pre">Beam</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Beam.photon_energy"><code class="docutils literal notranslate"><span class="pre">Beam.photon_energy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Beam.photon_energy_from"><code class="docutils literal notranslate"><span class="pre">Beam.photon_energy_from</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Beam.photon_energy_scale"><code class="docutils literal notranslate"><span class="pre">Beam.photon_energy_scale</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel"><code class="docutils literal notranslate"><span class="pre">Panel</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.cnx"><code class="docutils literal notranslate"><span class="pre">Panel.cnx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.cny"><code class="docutils literal notranslate"><span class="pre">Panel.cny</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.clen"><code class="docutils literal notranslate"><span class="pre">Panel.clen</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.clen_from"><code class="docutils literal notranslate"><span class="pre">Panel.clen_from</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.coffset"><code class="docutils literal notranslate"><span class="pre">Panel.coffset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.mask"><code class="docutils literal notranslate"><span class="pre">Panel.mask</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.mask_file"><code class="docutils literal notranslate"><span class="pre">Panel.mask_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.satmap"><code class="docutils literal notranslate"><span class="pre">Panel.satmap</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.satmap_file"><code class="docutils literal notranslate"><span class="pre">Panel.satmap_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.res"><code class="docutils literal notranslate"><span class="pre">Panel.res</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.badrow"><code class="docutils literal notranslate"><span class="pre">Panel.badrow</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.no_index"><code class="docutils literal notranslate"><span class="pre">Panel.no_index</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.adu_per_photon"><code class="docutils literal notranslate"><span class="pre">Panel.adu_per_photon</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.max_adu"><code class="docutils literal notranslate"><span class="pre">Panel.max_adu</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.data"><code class="docutils literal notranslate"><span class="pre">Panel.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.adu_per_eV"><code class="docutils literal notranslate"><span class="pre">Panel.adu_per_eV</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.dim_structure"><code class="docutils literal notranslate"><span class="pre">Panel.dim_structure</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.fsx"><code class="docutils literal notranslate"><span class="pre">Panel.fsx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.fsy"><code class="docutils literal notranslate"><span class="pre">Panel.fsy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.fsz"><code class="docutils literal notranslate"><span class="pre">Panel.fsz</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.ssx"><code class="docutils literal notranslate"><span class="pre">Panel.ssx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.ssy"><code class="docutils literal notranslate"><span class="pre">Panel.ssy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.ssz"><code class="docutils literal notranslate"><span class="pre">Panel.ssz</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.rail_x"><code class="docutils literal notranslate"><span class="pre">Panel.rail_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.rail_y"><code class="docutils literal notranslate"><span class="pre">Panel.rail_y</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.rail_z"><code class="docutils literal notranslate"><span class="pre">Panel.rail_z</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.clen_for_centering"><code class="docutils literal notranslate"><span class="pre">Panel.clen_for_centering</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.xfs"><code class="docutils literal notranslate"><span class="pre">Panel.xfs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.yfs"><code class="docutils literal notranslate"><span class="pre">Panel.yfs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.xss"><code class="docutils literal notranslate"><span class="pre">Panel.xss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.yss"><code class="docutils literal notranslate"><span class="pre">Panel.yss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.orig_min_fs"><code class="docutils literal notranslate"><span class="pre">Panel.orig_min_fs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.orig_max_fs"><code class="docutils literal notranslate"><span class="pre">Panel.orig_max_fs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.orig_min_ss"><code class="docutils literal notranslate"><span class="pre">Panel.orig_min_ss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.orig_max_ss"><code class="docutils literal notranslate"><span class="pre">Panel.orig_max_ss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.w"><code class="docutils literal notranslate"><span class="pre">Panel.w</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Panel.h"><code class="docutils literal notranslate"><span class="pre">Panel.h</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector"><code class="docutils literal notranslate"><span class="pre">Detector</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.panels"><code class="docutils literal notranslate"><span class="pre">Detector.panels</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.bad"><code class="docutils literal notranslate"><span class="pre">Detector.bad</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.mask_bad"><code class="docutils literal notranslate"><span class="pre">Detector.mask_bad</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.mask_good"><code class="docutils literal notranslate"><span class="pre">Detector.mask_good</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.rigid_groups"><code class="docutils literal notranslate"><span class="pre">Detector.rigid_groups</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.rigid_group_collections"><code class="docutils literal notranslate"><span class="pre">Detector.rigid_group_collections</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.furthest_out_panel"><code class="docutils literal notranslate"><span class="pre">Detector.furthest_out_panel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.furthest_out_fs"><code class="docutils literal notranslate"><span class="pre">Detector.furthest_out_fs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.furthest_out_ss"><code class="docutils literal notranslate"><span class="pre">Detector.furthest_out_ss</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.furthest_in_panel"><code class="docutils literal notranslate"><span class="pre">Detector.furthest_in_panel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.furthest_in_fs"><code class="docutils literal notranslate"><span class="pre">Detector.furthest_in_fs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.Detector.furthest_in_ss"><code class="docutils literal notranslate"><span class="pre">Detector.furthest_in_ss</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DetectorLayoutInformation"><code class="docutils literal notranslate"><span class="pre">DetectorLayoutInformation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DetectorLayoutInformation.asic_nx"><code class="docutils literal notranslate"><span class="pre">DetectorLayoutInformation.asic_nx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DetectorLayoutInformation.asic_ny"><code class="docutils literal notranslate"><span class="pre">DetectorLayoutInformation.asic_ny</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DetectorLayoutInformation.nasics_x"><code class="docutils literal notranslate"><span class="pre">DetectorLayoutInformation.nasics_x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DetectorLayoutInformation.nasics_y"><code class="docutils literal notranslate"><span class="pre">DetectorLayoutInformation.nasics_y</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.PixelMaps"><code class="docutils literal notranslate"><span class="pre">PixelMaps</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.PixelMaps.x"><code class="docutils literal notranslate"><span class="pre">PixelMaps.x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.PixelMaps.y"><code class="docutils literal notranslate"><span class="pre">PixelMaps.y</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.PixelMaps.z"><code class="docutils literal notranslate"><span class="pre">PixelMaps.z</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.PixelMaps.radius"><code class="docutils literal notranslate"><span class="pre">PixelMaps.radius</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.PixelMaps.phi"><code class="docutils literal notranslate"><span class="pre">PixelMaps.phi</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.VisualizationPixelMaps"><code class="docutils literal notranslate"><span class="pre">VisualizationPixelMaps</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.VisualizationPixelMaps.x"><code class="docutils literal notranslate"><span class="pre">VisualizationPixelMaps.x</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.VisualizationPixelMaps.y"><code class="docutils literal notranslate"><span class="pre">VisualizationPixelMaps.y</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.GeometryInformation"><code class="docutils literal notranslate"><span class="pre">GeometryInformation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.GeometryInformation.from_file"><code class="docutils literal notranslate"><span class="pre">GeometryInformation.from_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.GeometryInformation.get_pixel_maps"><code class="docutils literal notranslate"><span class="pre">GeometryInformation.get_pixel_maps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.GeometryInformation.get_layout_info"><code class="docutils literal notranslate"><span class="pre">GeometryInformation.get_layout_info()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.GeometryInformation.get_detector_distance_offset"><code class="docutils literal notranslate"><span class="pre">GeometryInformation.get_detector_distance_offset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.GeometryInformation.get_pixel_size"><code class="docutils literal notranslate"><span class="pre">GeometryInformation.get_pixel_size()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DataVisualizer"><code class="docutils literal notranslate"><span class="pre">DataVisualizer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DataVisualizer.get_pixel_maps"><code class="docutils literal notranslate"><span class="pre">DataVisualizer.get_pixel_maps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DataVisualizer.get_visualization_pixel_maps"><code class="docutils literal notranslate"><span class="pre">DataVisualizer.get_visualization_pixel_maps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DataVisualizer.get_min_array_shape_for_visualization"><code class="docutils literal notranslate"><span class="pre">DataVisualizer.get_min_array_shape_for_visualization()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.lib.geometry.DataVisualizer.visualize_data"><code class="docutils literal notranslate"><span class="pre">DataVisualizer.visualize_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

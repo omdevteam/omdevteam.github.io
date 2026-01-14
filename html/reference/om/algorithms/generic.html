@@ -1,0 +1,1006 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>generic &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/om/algorithms/generic';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="xes" href="xes.html" />
+    <link rel="prev" title="crystallography" href="crystallography.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Documentation</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">om</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">algorithms</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">generic</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-om.algorithms.generic">
+<span id="generic"></span><h1>generic<a class="headerlink" href="#module-om.algorithms.generic" title="Link to this heading">#</a></h1>
+<p>Generic algorithms.</p>
+<p>This module contains algorithms that perform generic data processing operations, not
+tied to a specific experimental technique (e.g.: data accumulation, radial averaging,
+binning, etc.).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="om.algorithms.generic.RadialProfile">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RadialProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius_pixel_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.RadialProfile" title="Link to this definition">#</a></dt>
+<dd><p>Radial average calculation.</p>
+<p>This algorithm stores all the parameters needed to calculate the pixel-based
+radial profile of a detector data frame. After the algorithm has been
+initialized, it can be invoked to compute the radial profile of a data frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius_pixel_map</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em>]</em><em>]</em>) – <p>A pixel map storing radius information for the detector
+data frame on which the algorithm is applied.</p>
+<ul>
+<li><p>The array must have the same shape as the data frame on which the
+algorithm is applied.</p></li>
+<li><p>Each element of the array must store, for the corresponding pixel in
+the data frame, its distance (in pixels) from the origin of the
+detector reference system (usually the center of the detector).</p></li>
+</ul>
+</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.RadialProfileParameters" title="om.lib.parameters.RadialProfileParameters"><em>RadialProfileParameters</em></a>) – <p>A set of OM configuration parameters collected together in a
+parameter group. The parameter group must contain the following
+entries:</p>
+<ul>
+<li><p><cite>radius_bin_size</cite>: The width, in pixels, of each radius bin in the
+radial profile.</p></li>
+<li><p><cite>bad_pixel_map_filename</cite>: The relative or absolute path to an HDF5
+file containing a bad pixel map. The map can be used to exclude
+regions of the data frame from the calculation of the radial
+profile. If the value of this entry is None, the calculation
+includes the full frame. Defaults to None.</p>
+<ul>
+<li><p>The map must be a numpy array with the same shape as the data
+frame on which the algorithm is applied.</p></li>
+<li><p>Each pixel in the map must have a value of either 0, meaning that
+the corresponding pixel in the data frame should be ignored, or
+1, meaning that the corresponding pixel should be included in the
+calculation of the profile.</p></li>
+<li><p>The map is only used to exclude regions from the calculation: the
+data is not modified in any way.</p></li>
+</ul>
+</li>
+<li><p><cite>bad_pixel_map_hdf5_path</cite>: The internal HDF5 path to the data block
+where the bad pixel map data is located. Defaults to None.</p>
+<ul>
+<li><p>If the <cite>bad_pixel_map_filename</cite> entry is not None, this entry
+must also be provided, and cannot be None. Otherwise it is
+ignored.</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.RadialProfile.get_radial_bin_labels">
+<span class="sig-name descname"><span class="pre">get_radial_bin_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.RadialProfile.get_radial_bin_labels" title="Link to this definition">#</a></dt>
+<dd><p>Gets the radial bin label information.</p>
+<p>This function returns an array, with the same shape as the data frame on which
+the algorithm is applied, containing bin labelling information. Each element of
+the array corresponds to a pixel in the data frame, and stores the index of
+the radial bin in which the pixel falls according to the radius information
+provided to the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An array containing the bin labelling information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>int64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.RadialProfile.get_bad_pixel_map">
+<span class="sig-name descname"><span class="pre">get_bad_pixel_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.RadialProfile.get_bad_pixel_map" title="Link to this definition">#</a></dt>
+<dd><p>Gets the bad pixel map provided to the algorithm.</p>
+<p>This function returns the bad pixel map provided to the algorithm at
+initialization. If no bad pixel map was provided, the function returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The bad pixel map provided to the algorithm at initialization, or None if
+no map was provided.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>bool_</em>]] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.RadialProfile.calculate_profile">
+<span class="sig-name descname"><span class="pre">calculate_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.RadialProfile.calculate_profile" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the radial profile for a detector data frame.</p>
+<p>This function calculates the radial profile of a provided detector data frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em> | </em><em>int64</em><em>]</em><em>]</em>) – the detector data frame for which the radial profile must be
+calculated.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The radial profile.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Binning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning" title="Link to this definition">#</a></dt>
+<dd><p>Binning of detector data frames.</p>
+<p>This algorithm stores all the parameters needed to bin the data in a detector
+data frame. After the algorithm has been initialized, it can be invoked to bin
+the data in a data frame, or to generate pixel maps and masks that are
+compatible with the binned data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layout_info</strong> (<a class="reference internal" href="../lib/geometry.html#om.lib.geometry.DetectorLayoutInformation" title="om.lib.geometry.DetectorLayoutInformation"><em>DetectorLayoutInformation</em></a>) – An object storing information about the internal data layout
+of the detector frame on which the algorithm is applied (number and
+size of ASICs, etc.).</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.BinningParameters" title="om.lib.parameters.BinningParameters"><em>BinningParameters</em></a>) – <p>A set of OM configuration parameters collected together in a
+parameter group. The parameter group must contain the following
+entries:</p>
+<ul>
+<li><p><cite>bin_size</cite>: The size of the binning area in pixels (A square area of
+<cite>bin_size</cite> x <cite>bin_size</cite> pixels in the original data frame
+is transformed by the algorithm into a single binned pixel).</p></li>
+<li><p><cite>bad_pixel_map_filename</cite>: The absolute or relative path to an HDF5
+file containing a bad pixel map. The map can be used to exclude
+regions of the the data frame from the binning calculation. If the
+value of this entry is None, the full frame is used to compute the
+binned data. Defaults to None.</p>
+<ul>
+<li><p>The map must be a numpy array of the same shape as the data frame
+on which the algorithm is applied.</p></li>
+<li><p>Each pixel in the map must have a value of either 0, meaning
+that the corresponding pixel in the data frame must be ignored
+in the binning calculation, or 1, meaning that the pixel
+must be included in the calculation.</p></li>
+</ul>
+</li>
+<li><p><cite>bad_pixel_map_hdf5_path</cite>: The internal HDF5 path to the data block
+where the bad pixel map is stored.</p>
+<ul>
+<li><p>If the value of the <cite>bad_pixel_map_filename</cite> entry is not None,
+this parameter must also be provided, and cannot be None.
+Otherwise it is ignored.</p></li>
+</ul>
+</li>
+<li><p><cite>min_good_pix_count</cite>: The minimum number of non-excluded pixels that
+must be present in a binning area for the generated binned pixel to
+be considered valid (pixels of the original frame can be excluded
+from the binning calculation using a bad pixel map). Defaults to a
+number corresponding to all the pixels in the binning area (the
+square value of the <cite>bin_size</cite> argument).</p></li>
+<li><p><cite>bad_pixel_value</cite>: The value to be written in the binned data frame
+when a pixel is invalid (too many pixels in the original inning area
+are excluded by the calculation). Defaults to <cite>MAXINT</cite> if the data to
+bin is of integer type, otherwise defaults to <cite>numpy.nan</cite>.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.is_passthrough">
+<span class="sig-name descname"><span class="pre">is_passthrough</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.is_passthrough" title="Link to this definition">#</a></dt>
+<dd><p>Whether the algorithm performs a simple passthrough operation.</p>
+<p>This function returns information on whether the algorithm performs a simple
+passthrough operation (See
+[<cite>BinningPassthrough</cite>][om.algorithms.generic.BinningPassthrough]). For this
+algorithm, the function always returns False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether the algorithm performs a simple passthrough operation.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.get_bin_size">
+<span class="sig-name descname"><span class="pre">get_bin_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.get_bin_size" title="Link to this definition">#</a></dt>
+<dd><p>Gets the size of the binning area.</p>
+<p>This function returns the size of the area in the original data that gets
+transformed in a single pixel in the binned data. Specifically, the function
+returns the length of the edge of the area: if an area of size
+<cite>bin size x bin size</cite> in the original data ends up in a single binned pixel,
+the function returns the value of <cite>bin_size</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The length of the edge of the binning area.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.get_binned_layout_info">
+<span class="sig-name descname"><span class="pre">get_binned_layout_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.get_binned_layout_info" title="Link to this definition">#</a></dt>
+<dd><p>Gets the data layout information for the binned data frame.</p>
+<p>This function returns information about the internal data layout of a binned
+frame generated by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary with the data layout information for the binned frame.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../lib/geometry.html#om.lib.geometry.DetectorLayoutInformation" title="om.lib.geometry.DetectorLayoutInformation"><em>DetectorLayoutInformation</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.bin_detector_data">
+<span class="sig-name descname"><span class="pre">bin_detector_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.bin_detector_data" title="Link to this definition">#</a></dt>
+<dd><p>Computes a binned version of the detector data frame.</p>
+<p>This function computes the binned version of a provided detector data frame.
+For each binning area in the original data frame, the function initially
+computes the average value of all pixels, excluding the ones that are must be
+ignored. It then multiplies the calculated average value by the total number of
+pixels in the binning area. The result is used to fill, in the binned frame,
+the binned pixel corresponding to the original area. If, however, the binned
+pixel is determined to be invalid (too many pixels in the original area must
+be ignored), this function uses a fallback value to fill it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em> | </em><em>int64</em><em>]</em><em>]</em>) – The detector data frame on which the binning must be performed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A binned version of the detector data frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.bin_bad_pixel_map">
+<span class="sig-name descname"><span class="pre">bin_bad_pixel_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.bin_bad_pixel_map" title="Link to this definition">#</a></dt>
+<dd><p>Computes a bad pixel map for a binned data frame.</p>
+<p>Starting from a bad pixel map designed for the original detector frame, this
+function calculates a bad pixel map that can be used with a binned data frame
+generated by the algorithm.</p>
+<p>In the bad pixel map computed by this function, only binned pixels originating
+from binning areas containing exclusively good pixels are marked as good. If
+even a single bad pixel was present in the original binning area, this function
+labels the corresponding binned pixel as bad.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mask</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>int64</em><em>]</em><em>] </em><em>| </em><em>None</em>) – <p>An array storing a bad pixel map for the original data frame.</p>
+<ul class="simple">
+<li><p>The map must be a numpy array of the same shape as the data frame on
+which the binning algorithm is applied.</p></li>
+<li><p>Each pixel in the map must have a value of either 0, meaning that
+the corresponding pixel in the data frame should be considered bad,
+or 1, meaning that the corresponding pixel should be considered good.</p></li>
+<li><p>This argument is mandatory. However, the argument can be set to None,
+in which case the function will do nothing and return None.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Either an array containing the binned map or None if the <cite>mask</cite> input
+argument is None.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>int64</em>]] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.bin_pixel_maps">
+<span class="sig-name descname"><span class="pre">bin_pixel_maps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_maps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.bin_pixel_maps" title="Link to this definition">#</a></dt>
+<dd><p>Computes pixel maps for a binned data frame.</p>
+<p>Starting from pixel maps designed for the original detector frame, this
+function calculates pixel maps that can be used with a binned data frame
+generated by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pixel_maps</strong> (<a class="reference internal" href="../lib/geometry.html#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a>) – A dictionary storing the pixel maps for the original detector
+frame.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary storing the pixel maps for the binned frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/geometry.html#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.Binning.bin_peak_positions">
+<span class="sig-name descname"><span class="pre">bin_peak_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peak_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.Binning.bin_peak_positions" title="Link to this definition">#</a></dt>
+<dd><p>Computes peaks positions for a binned data frame.</p>
+<p>Starting from a list of peaks detected in the original detector frame, this
+function calculates the coordinates of the same peaks in a binned data frame
+generated by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>peak_list</strong> (<a class="reference internal" href="common.html#om.algorithms.common.PeakList" title="om.algorithms.common.PeakList"><em>PeakList</em></a>) – An dictionary storing information about a set of peaks detected
+in the original detector frame.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary storing information about the detected peaks in the binned
+data frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="common.html#om.algorithms.common.PeakList" title="om.algorithms.common.PeakList"><em>PeakList</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BinningPassthrough</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough" title="Link to this definition">#</a></dt>
+<dd><p>Passthrough binning of detector data frames.</p>
+<p>This algorithm has the same interface as the
+[<cite>Binning</cite>][om.algorithms.generic.Binning] algorithm. All the functions,
+however, perform no operation at all, simply returning the original detector
+layout information, detector data frame, bad pixel map, or pixel maps.</p>
+<p>This algorithm exists to avoid filling the code base with if statements that
+just check if binning is required and call the Binning algorithm accordingly.</p>
+<p>After a single initial check of the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">binning_required</span><span class="p">:</span>
+    <span class="n">binning</span> <span class="o">=</span> <span class="n">Binning</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">binning</span> <span class="o">=</span> <span class="n">BinningPassthrough</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The rest of the code can avoid performing checks and simply call the methods of
+the <cite>binning</cite> instance, expecting the correct behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layout_info</strong> (<a class="reference internal" href="../lib/geometry.html#om.lib.geometry.DetectorLayoutInformation" title="om.lib.geometry.DetectorLayoutInformation"><em>DetectorLayoutInformation</em></a>) – An object storing information about the internal layout of the
+detector data frame on which the algorithm is applied (number and size
+of ASICs, etc.).</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.is_passthrough">
+<span class="sig-name descname"><span class="pre">is_passthrough</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.is_passthrough" title="Link to this definition">#</a></dt>
+<dd><p>Whether the algorithm performs a passthrough operation.</p>
+<p>This function returns information on whether the algorithm performs a simple
+passthrough operation. For this algorithm, the function always returns True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether the algorithm performs a simple passthrough operation.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.get_bin_size">
+<span class="sig-name descname"><span class="pre">get_bin_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.get_bin_size" title="Link to this definition">#</a></dt>
+<dd><p>Gets the size of the binning area.</p>
+<p>This function returns the size of the area in the original data that gets
+transformed in a single pixel in the binned data.</p>
+<p>Since the <cite>BinningPassthrough</cite> algorithm performs no binning operation at all,
+this function always returns 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The size of the edge of binning area.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.get_binned_layout_info">
+<span class="sig-name descname"><span class="pre">get_binned_layout_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.get_binned_layout_info" title="Link to this definition">#</a></dt>
+<dd><p>Gets the data layout information for the binned data frame.</p>
+<p>This function returns information about the internal data layout of a binned
+frame generated by the algorithm.</p>
+<p>Since the <cite>BinningPassthrough</cite> algorithm performs no binning operation at all,
+this function always returns the layout information initially provided to the
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary with the data layout information for the binned frame.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../lib/geometry.html#om.lib.geometry.DetectorLayoutInformation" title="om.lib.geometry.DetectorLayoutInformation"><em>DetectorLayoutInformation</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.bin_detector_data">
+<span class="sig-name descname"><span class="pre">bin_detector_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.bin_detector_data" title="Link to this definition">#</a></dt>
+<dd><p>Computes a binned version of the detector data frame.</p>
+<p>This function generates the binned version of a provided detector data frame.</p>
+<p>Since the <cite>BinningPassthrough</cite> algorithm performs no binning operation at all,
+this function always returns the detector data frame provided as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>float64</em><em> | </em><em>int64</em><em>]</em><em>]</em>) – The detector data frame on which the binning must be performed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A binned version of the detector data frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.bin_bad_pixel_map">
+<span class="sig-name descname"><span class="pre">bin_bad_pixel_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.bin_bad_pixel_map" title="Link to this definition">#</a></dt>
+<dd><p>Computes a bad pixel map for the binned data frame.</p>
+<p>Starting from a bad pixel map designed for the original detector frame, this
+function calculates a bad pixel map that can be used with a binned data frame
+generated by the algorithm.</p>
+<p>Since the <cite>BinningPassthrough</cite> algorithm performs no binning operation at all,
+this function always returns the bad pixel map provided as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mask</strong> (<em>ndarray</em><em>[</em><em>Any</em><em>, </em><em>dtype</em><em>[</em><em>int64</em><em>]</em><em>] </em><em>| </em><em>None</em>) – <p>An array storing a bad pixel map for the original data frame.</p>
+<ul class="simple">
+<li><p>The map must be a numpy array of the same shape as the data frame on
+which the binning algorithm is applied.</p></li>
+<li><p>Each pixel in the map must have a value of either 0, meaning that
+the corresponding pixel in the data frame should be considered bad,
+or 1, meaning that the corresponding pixel should be considered good.</p></li>
+<li><p>This argument is mandatory. However, the argument can be set to None,
+in which case the function will do nothing and return None.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Either an array containing the binned map or None if the <cite>mask</cite> input
+argument is None.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>int64</em>]] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.bin_pixel_maps">
+<span class="sig-name descname"><span class="pre">bin_pixel_maps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_maps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.bin_pixel_maps" title="Link to this definition">#</a></dt>
+<dd><p>Computes pixel maps for a binned data frame.</p>
+<p>Starting from pixel maps designed for the original detector frame, this
+function calculates pixel maps that can be used with a binned data frame
+generated by the algorithm.</p>
+<p>Since the <cite>BinningPassthrough</cite> algorithm performs no binning operation at all,
+this function always returns the pixel maps provided as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pixel_maps</strong> (<a class="reference internal" href="../lib/geometry.html#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a>) – A dictionary storing the pixel maps for the original detector
+frame.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary storing the pixel maps for the binned frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/geometry.html#om.lib.geometry.PixelMaps" title="om.lib.geometry.PixelMaps"><em>PixelMaps</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.algorithms.generic.BinningPassthrough.bin_peak_positions">
+<span class="sig-name descname"><span class="pre">bin_peak_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peak_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.algorithms.generic.BinningPassthrough.bin_peak_positions" title="Link to this definition">#</a></dt>
+<dd><p>Computes peaks positions for a binned data frame.</p>
+<p>Starting from a list of peaks detected in the original detector frame, this
+function calculates the coordinates of the same peaks in a binned data frame
+generated by the algorithm.</p>
+<p>Since the <cite>BinningPassthrough</cite> algorithm performs no binning operation at all,
+this function always returns the peak list provided as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>peak_list</strong> (<a class="reference internal" href="common.html#om.algorithms.common.PeakList" title="om.algorithms.common.PeakList"><em>PeakList</em></a>) – An dictionary storing information about a set of peaks detected
+in the original detector frame.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary storing information about the detected peaks in the binned
+data frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="common.html#om.algorithms.common.PeakList" title="om.algorithms.common.PeakList"><em>PeakList</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.RadialProfile"><code class="docutils literal notranslate"><span class="pre">RadialProfile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.RadialProfile.get_radial_bin_labels"><code class="docutils literal notranslate"><span class="pre">RadialProfile.get_radial_bin_labels()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.RadialProfile.get_bad_pixel_map"><code class="docutils literal notranslate"><span class="pre">RadialProfile.get_bad_pixel_map()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.RadialProfile.calculate_profile"><code class="docutils literal notranslate"><span class="pre">RadialProfile.calculate_profile()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning"><code class="docutils literal notranslate"><span class="pre">Binning</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.is_passthrough"><code class="docutils literal notranslate"><span class="pre">Binning.is_passthrough()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.get_bin_size"><code class="docutils literal notranslate"><span class="pre">Binning.get_bin_size()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.get_binned_layout_info"><code class="docutils literal notranslate"><span class="pre">Binning.get_binned_layout_info()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.bin_detector_data"><code class="docutils literal notranslate"><span class="pre">Binning.bin_detector_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.bin_bad_pixel_map"><code class="docutils literal notranslate"><span class="pre">Binning.bin_bad_pixel_map()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.bin_pixel_maps"><code class="docutils literal notranslate"><span class="pre">Binning.bin_pixel_maps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.Binning.bin_peak_positions"><code class="docutils literal notranslate"><span class="pre">Binning.bin_peak_positions()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.is_passthrough"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.is_passthrough()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.get_bin_size"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.get_bin_size()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.get_binned_layout_info"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.get_binned_layout_info()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.bin_detector_data"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.bin_detector_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.bin_bad_pixel_map"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.bin_bad_pixel_map()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.bin_pixel_maps"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.bin_pixel_maps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.algorithms.generic.BinningPassthrough.bin_peak_positions"><code class="docutils literal notranslate"><span class="pre">BinningPassthrough.bin_peak_positions()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

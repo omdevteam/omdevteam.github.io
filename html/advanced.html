@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Advanced &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'advanced';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Development Team" href="development_team.html" />
+    <link rel="prev" title="Configuration" href="configuration.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="reference/index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="reference/index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Advanced</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="advanced">
+<h1>Advanced<a class="headerlink" href="#advanced" title="Link to this heading">#</a></h1>
+<section id="what-is-om">
+<h2>What is OM?<a class="headerlink" href="#what-is-om" title="Link to this heading">#</a></h2>
+<p>OM’s focus is on real-time (or quasi-real time) processing of experimental data.
+Real-time monitoring programs retrieve data from a facility as soon as possible, often
+immediately after data has been collected, before it is saved to disk. Some fast,
+simple analysis is usually performed on the data. The goal is to provide enough
+information to take quick decisions to the people running an experiment. These
+decisions can often change the direction of the experiment itself while it is still
+running, adapting it to new conditions and circumstances.</p>
+<p>Usually, it is not necessary to process all the data being collected in order to
+provide enough information for the decision making. For example, the hit rate for a
+Serial Crystallography experiment can be computed with high accuracy by analyzing only
+a portion of the collected data. It is however crucial that the information provided is
+up to date. Because of this, OM always prioritizes the processing of <strong>recently
+collected data</strong> over the processing of all collected data. Completeness is not the
+main priority, <strong>low latency</strong> in providing the information is. Additionally, the goal
+of OM is strictly to provide quick information to the people running the experiment,
+not any long-term analysis of the data: after the information is delivered, the data is
+discarded without being saved to disk, and new data is retrieved.</p>
+<p>In order to achieve high speed in data processing, OM takes advantage of a multi-node
+parallel architecture. Several processing units (<strong>processing nodes</strong> in OM
+terminology) retrieve data events (a single frame or a collection of frames presented
+as a single unit) from a facility, and process them. A <strong>collecting node</strong> aggregates
+information from the processing nodes and performs computations over multiple events
+(averaging, etc.). The reduced data is finally presented the users in the console or
+sent to external programs for visualization.</p>
+<p>OM is mostly written using the <strong>Python</strong> programming language, however, some
+processing routines are implemented in other languages (<strong>C</strong>, <strong>C++</strong>) for performance
+reasons.</p>
+</section>
+<section id="goals-of-the-om-project">
+<h2>Goals of the OM Project<a class="headerlink" href="#goals-of-the-om-project" title="Link to this heading">#</a></h2>
+<p>The goal of the OM project is to provide users with a collection of modules that can
+can be used to easily build real-time monitoring programs. However, the project also
+aims at providing a set of stable and efficient real-time monitors for the most common
+types of x-ray imaging experiments. These programs can be used immediately without
+modifications or can be easily adapted to meet the users’ requirements. Currently, only
+one of these monitoring programs is distributed with OM, focused on Serial
+Crystallography. Several others are currently under development and will be added as
+soon as they are ready.</p>
+</section>
+<section id="the-three-layers">
+<h2>The Three Layers<a class="headerlink" href="#the-three-layers" title="Link to this heading">#</a></h2>
+<p>In the OM framework, a monitoring program is split into three cleanly separate parts
+(or <strong>Layers</strong>, in OM terminology):</p>
+<ul class="simple">
+<li><p>A part that deals with the retrieval of data from a facility and with the extraction
+of information from it. This is the <strong>Data Retrieval Layer</strong>.</p></li>
+<li><p>A part which deals with the running logic of the program (set up and finalization of
+the processing and collecting nodes, communication between the nodes, etc.). This is
+called <strong>Parallelization Layer</strong>.</p></li>
+<li><p>A part that deals with the scientific processing of the extracted data. This is
+called the <strong>Processing Layer</strong>.</p></li>
+</ul>
+<p>The first two layers are usually different for each facility or beamline. The last
+layer, however, encodes the logic of the scientific processing of the data. When the
+same type of monitor is run at different facilities, the same Processing Layer code is
+run. The interface between the Processing Layer and the other layers is very clearly
+defined, and the latter layers can be swapped for different implementations without
+affecting the former.</p>
+<p>This clean separation is the reason why a developer who wants to write a monitoring
+program for a supported facility does not need to worry how data is retrieved, or
+passed around the nodes. All he or she needs to learn is how the data can be accessed
+and manipulated in the Processing Layer. No knowledge of the other two layers is
+required. Furthermore, a monitoring program written for a facility can in most cases be
+run at other facilities just by switching to different implementations of the Data
+Retrieval and Parallelization layers, keeping the same Processing Layer.</p>
+<p>Layers are usually implemented as Python classes. All the available Processing layer
+classes can be found in the <code class="docutils literal notranslate"><span class="pre">om.processing_layer</span></code> module. All the available
+Data Retrieval layer classes can be found in the <code class="docutils literal notranslate"><span class="pre">om.data_retrieval_layer</span></code> module, and
+of course all the available Parallelization Layer classes can be found in the
+<code class="docutils literal notranslate"><span class="pre">om.parallelization_layer</span></code> module.</p>
+</section>
+<section id="om-s-workflow">
+<span id="id1"></span><h2>OM’s Workflow<a class="headerlink" href="#om-s-workflow" title="Link to this heading">#</a></h2>
+<p>When OM starts, it first initializes all the processing and collecting nodes, on a
+single or multiple machines, according to the user’s wishes. The first process to start
+on the first machine usually takes the role of the collecting node, while all the
+others become processing nodes.</p>
+<p>At start-up, each node reads the configuration file. By default, OM looks for a file
+called <code class="docutils literal notranslate"><span class="pre">monitor.yaml</span></code> in the current working directory (or a for a different file
+specified by the user via a command-line argument).</p>
+<p>Every node imports the Python classes for the Parallelization, Processing and Data
+Retrieval layers listed in the configuration file.</p>
+<p>The processing nodes start retrieving <em>data events</em> from the data source, as dictated
+by the Data Retrieval Layer After retrieving and unpacking an event, each processing
+node extracts all the data requested by the configuration file (specified in the
+<code class="docutils literal notranslate"><span class="pre">required_data</span></code> entry in the <code class="docutils literal notranslate"><span class="pre">data_retrieval_layer</span></code> parameter group). It then stores
+the retrieved data in a Python dictionary and calls the <code class="docutils literal notranslate"><span class="pre">process_data</span></code> function
+implemented in the Processing Layer, passing the dictionary as an argument.</p>
+<p>When the function finishes running and processing the data, the processing node
+transmits the returned Python tuple to the collecting node. How the nodes communicate
+with each other, and which protocol they use to do so (MPI, ZMQ, etc.) is determined by
+the Parallelization Layer.</p>
+<p>Once a processing node  has transferred the data to the collecting node, it retrieves
+the next data event and the cycle begins again.</p>
+<p>The collecting node executes the <code class="docutils literal notranslate"><span class="pre">collect_data</span></code> function, implemented in the Processing
+Layer, every time it receives data from a processing node, passing the received tuple
+as input to the function.</p>
+<p>This process continues indefinitely, or until the data stream ends. In the latter case,
+some end-of-processing functions, implemented in the Processing Layer, are called on
+all nodes. OM then shuts down.</p>
+</section>
+<section id="analyzing-data-in-the-processing-layer">
+<h2>Analyzing Data in the Processing Layer<a class="headerlink" href="#analyzing-data-in-the-processing-layer" title="Link to this heading">#</a></h2>
+<p>Writing a monitoring program consists mainly in writing a Python class (a <em>Monitor</em>
+class), that lives in the Processing Layer and implements a data analysis pipeline.
+The whole processing logic should be implemented in this class, which must be a
+subclass of the
+[<code class="docutils literal notranslate"><span class="pre">OmProcessingProtocol</span></code>][om.protocols.processing_layer.OmProcessingProtocol] abstract
+class.</p>
+<p>The Monitor class must implement all the methods that are abstract in the base class.
+A developer just needs to write the implementation for these methods, but it never
+needs to call any of them. When OM runs, the methods are automatically called
+at the right moment, according to the logic described in the
+<a class="reference internal" href="#om-s-workflow"><span class="std std-ref">Workflow section</span></a>.</p>
+<p>The methods are:</p>
+<ul>
+<li><p><strong>initialize_processing_node</strong>: This function is executed on each processing node
+when OM starts. All the initialization code for the processing node should go into
+this function: the relevant class properties should be initialized here.
+Additionally, code that loads external files (for example, a geometry file, or a
+file containing a bad pixel mask) should also be placed in this function: the
+external data should be read and stored in class properties so that the other class
+methods can access it.</p></li>
+<li><p><strong>initialize_collecting_node</strong>: This function is executed on the collecting node
+when OM starts. This is the equivalent of the previous function for the collecting
+node, and all initialization code for this type of node should be placed into this
+function. In particular, network sockets that are later used to broadcast data to
+external programs are usually opened and initialized in this function.</p></li>
+<li><p><strong>process_data</strong>: this function is executed on each processing node when data is
+retrieved from the data source. The retrieved data gets passed to this function as
+an argument.</p>
+<p>All the logic related to the processing of a single data event should be
+implemented in this method. The output of this function is transferred by OM to the
+collecting node. Ideally, data should be reduced in this function and the raw,
+unprocessed information should not be sent to the collecting node.</p>
+<p>The function must return a tuple, where the first entry is a dictionary containing
+all the data that should be sent to the collecting node for aggregation, and the
+second entry is the rank of the processing node sending the data. This allows OM to
+keep track of which node is transferring the data.</p>
+</li>
+<li><p><strong>collect_data</strong>: this function is executed on the collecting node every time data
+is received from a processing node. The data received from the processing node is
+passed to this function as an argument.</p>
+<p>This function should implement all the processing logic that involves more than one
+event (for example: averaging over many events, accumulation of events, etc.).</p>
+<p>The developer can choose what to do with the result of the aggregated data
+processing. There is no fixed path. Often the information is broadcasted to a
+graphical interface via a network socket, but this is not mandatory. The information
+could also be, for example, printed on the console.</p>
+</li>
+</ul>
+<p>There are two more methods that are not abstract in the base class, but can be
+overridden to implement some custom end-of-data-processing actions (For example:
+printing a final summary, etc.). Please note that if OM processes an endless stream of
+data (for example, most live data streams) these functions are never called.</p>
+<ul>
+<li><p><strong>end_processing_on_processing_node</strong>: this function is executed on the processing
+node when OM finishes processing all the data in the data source.</p>
+<p>The default implementation of this function just prints a message to the console
+and exits. However, a developer can provide his own implementation, with a
+different behavior.</p>
+<p>This function can optionally return data, which is transferred to the collecting
+node and processed one last time by the <code class="docutils literal notranslate"><span class="pre">collect_data</span></code> function before OM shuts
+down.</p>
+</li>
+</ul>
+<ol class="arabic" start="5">
+<li><p><strong>end_processing_on_collection_node</strong>: this function is executed on the collecting
+node when OM finishes processing all data in the data source.</p>
+<p>The default implementation of this function just prints a message to the console
+and exits, but a developer can override the default behavior. This function is
+often used to perform some clean-up task on the collecting node.</p>
+</li>
+</ol>
+<p><strong>Tips and Tricks</strong></p>
+<p>The data being processed should ideally be reduced in the <code class="docutils literal notranslate"><span class="pre">process_data</span></code> function on
+each processing node. Transferring large amount of data between the nodes is not
+efficient and should be avoided whenever possible. For example, when crystallography
+data is processed and Bragg peaks are extracted from detector frame data, only the list
+of peaks should be sent to the collecting node. Obviously, this strategy cannot be
+applied to all cases (a frame viewer GUI, for example, would need the full frame data),
+but developers should strive to perform as much data reduction as possible on the
+processing nodes.</p>
+<p>The Monitor class should be carefully designed and code should be optimized. For
+example, only variables that need to be accessed from more than one method should
+become class properties. All others can remain simple local variables. Creating class
+properties that are not accessed by other methods will clutter the namespace of the
+class, and can result in performance degradation.</p>
+</section>
+<section id="algorithms">
+<h2>Algorithms<a class="headerlink" href="#algorithms" title="Link to this heading">#</a></h2>
+<p>OM can process data using <em>Algorithms</em>. These are essentially Python classes which
+implement some data processing logic. Since they are stateful objects, algorithms can
+be used for operations that must be applied multiple times on different data, but need
+to keep track of an internal state between applications. For example, the averaging of
+detector frames can be implemented in OM as an algorithm. The algorithm can keep
+track of the internal intermediate average, storing it in its internal state, and can
+update it each time a new detector frame is processed.</p>
+<p>Algorithms should be used mainly for two types of data processing operations:</p>
+<ol class="arabic simple">
+<li><p>Operations in which an action defined by the same set of parameters is applied to
+each data item retrieved by the monitor. In this case, the internal state can be
+used to store the parameters. A good example of this case is a peak finding
+algorithm, which is initialized with some parameters and then applied to each frame
+data retrieved by the monitor. Another good example is a a dark frame correction
+algorithm, where the same dark calibration data (loaded when the algorithm is
+initialized) is applied to each retrieved detector frame.</p></li>
+<li><p>Operations in which an action applied to each data item updates the internal state.
+A good example of this case is an algorithm that computes a running average: every
+time the algorithm is applied to some new data, the current average, stored in the
+internal state, is updated.</p></li>
+</ol>
+<p>OM provides some pre-packaged algorithms for common data processing operations (peak
+finding, data accumulation, etc.) in the [<code class="docutils literal notranslate"><span class="pre">algorithms</span></code>][om.algorithms] sub-package.</p>
+<p><strong>Tips and Tricks</strong></p>
+<p>For data processing operations that don’t fall in the two cases described above, and
+do not need to keep track of an internal state, functions can often be used in place
+of algorithms. For example, the computation of an autocorrelation, the sum of the
+intensity observed in a detector frame, are both operations that do not need to store
+any persistent information when applied multiple times. They can be implemented as
+simple functions instead of algorithms.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-om">What is OM?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-of-the-om-project">Goals of the OM Project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-three-layers">The Three Layers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om-s-workflow">OM’s Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-data-in-the-processing-layer">Analyzing Data in the Processing Layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms">Algorithms</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

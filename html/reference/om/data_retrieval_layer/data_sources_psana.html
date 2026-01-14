@@ -1,0 +1,1596 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>data_sources_psana &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/om/data_retrieval_layer/data_sources_psana';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="data_sources_zmq" href="data_sources_zmq.html" />
+    <link rel="prev" title="data_sources_psana2" href="data_sources_psana2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Documentation</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">om</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">data_retrieval_layer</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">data_sources_psana</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-om.data_retrieval_layer.data_sources_psana">
+<span id="data-sources-psana"></span><h1>data_sources_psana<a class="headerlink" href="#module-om.data_retrieval_layer.data_sources_psana" title="Link to this heading">#</a></h1>
+<p>Psana-related data sources.</p>
+<p>This module contains Data Source classes that deal with data retrieved from the ASAP::O
+software framework (used at the PETRA III facility).</p>
+<p>This module contains Data Source classes that deal with data retrieved from  the psana
+software framework (used at the LCLS facility).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OmDetectorInterfacePsanaDataSourceMixin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana event identifier data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>No initialization is required to retrieve event identifiers for psana-based
+data events, so this function actually does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.RayonixPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayonixPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.RayonixPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.RayonixPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.RayonixPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves a Rayonix detector data frame from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the detector data frame associated with the
+provided event. It returns the frame as a 2D array storing pixel information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A detector data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.OpalPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OpalPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.OpalPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.OpalPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.OpalPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves an Opal camera data frame from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the camera data frame associated with the
+provided event. It returns the frame as a 2D array storing pixel information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A camera data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.Epix100aPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Epix100aPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.Epix100aPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.Epix100aPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.Epix100aPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves an Opal camera data frame from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the camera data frame associated with the
+provided event. It returns the frame as a 2D array storing pixel information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A camera data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AcqirisPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AcqirisPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AcqirisPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AcqirisPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AcqirisPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves Acqiris waveform data from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the waveform data for the provided event.
+The Acqiris data is retrieved for all of the detector’s channels at the same
+time, and returned in the form of a tuple with two entries:</p>
+<ul class="simple">
+<li><p>The first entry in the tuple is a 1D array storing information about the time
+points at which the waveform data has been digitized. The size of this array
+matches the size of each waveform in the second entry.</p></li>
+<li><p>The second entry is a 2D array that stores the waveform information from all
+the channels. The first axis of the array corresponds to the channel number,
+the second one stores, for each channel, the digitized waveform data.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple, with two entries, storing the digitized waveform data from the</dt><dd><p>Acqiris detector.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[<em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]], <em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AssembledDetectorPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves an assembled detector data frame from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the assembled detector data frame associated
+with the provided event. It returns the frame as a 2D array storing pixel
+information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An assembled detector data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Wave8TotalIntensityPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves Wave8 intensity data from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the total intensity recorded by the detector
+for the provided event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total intensity recorded by the Wave8 detector.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EpicsVariablePsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves an Epics variable’s value from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the value of the requested Epics variable
+associated with the provided event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value of the Epics variable.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Any</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DiodeTotalIntensityPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves diode intensity data from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the total intensity recorded by the diode
+for the provided event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total intensity recorded by the diode.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BeamEnergyFromEpicsVariablePsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana" title="Link to this definition">#</a></dt>
+<dd><p>Beam energy information from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of beam energy information from the psana
+software framework.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana beam energy data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function initializes the psana Detector interface for the retrieval of
+beam energy information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves beam energy information from psana using an Epics variable.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the value of the beam energy associated to
+the provided event. It calculates the beam energy from the value of the
+SIOC:SYS0:ML00:AO192 Epics variable attached to the event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The beam energy in eV.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AreaDetectorPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana event identifier data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>No initialization is required to retrieve event identifiers for psana-based
+data events, so this function actually does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves a Jungfrau 4M detector data frame from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the detector data frame associated with the
+provided event. It returns the frame as a 2D array storing pixel information.
+Data is retrieved in calibrated or non-calibrated form depending on the
+value of the <cite>{source_protocols_name}_calibration</cite> entry in OM’s
+<cite>data_retrieval_layer</cite> configuration parameter group..</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A detector data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em> | <em>int64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.CspadPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CspadPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.CspadPsana" title="Link to this definition">#</a></dt>
+<dd><p>Area data frames from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of area detector data frames from the psana
+software framework. Classes dealing with the retrieval of data frames from
+specific area detector should inherit from this base class</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>) – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.CspadPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.CspadPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana event identifier data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>No initialization is required to retrieve event identifiers for psana-based
+data events, so this function actually does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.CspadPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.CspadPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves a CSPAD detector data frame from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the detector data frame associated with the
+provided event. It returns the frame as a 2D array storing pixel information.
+Data is retrieved in calibrated or non-calibrated form depending on the
+value of the <cite>{source_protocols_name}_calibration</cite> entry in OM’s
+<cite>data_retrieval_layer</cite> configuration parameter group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A detector data frame.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em> | <em>int64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.TimestampPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TimestampPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.TimestampPsana" title="Link to this definition">#</a></dt>
+<dd><p>Timestamp information from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of timestamp information from the psana
+software framework.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.TimestampPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.TimestampPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana timestamp data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>No initialization is needed to retrieve timestamp information from psana,
+so this function actually does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.TimestampPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.TimestampPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves timestamp information from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the timestamp information for the provided
+event. Psana provides this information with nanosecond precision.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The timestamp for the data event.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>float64</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EventIdPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EventIdPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EventIdPsana" title="Link to this definition">#</a></dt>
+<dd><p>Data event identifiers from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of unique event identifiers for
+psana-based data events.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EventIdPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EventIdPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana event identifier data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>No initialization is required to retrieve event identifiers for psana-based
+data events, so this function actually does nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EventIdPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EventIdPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves an event identifier from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana a unique identifier for the provided event.
+The psana software framework provides timestamp information with
+nanosecond-level precision for each event, plus a specific fiducial string for
+more detailed identification. The identifier is generated by combining the
+timestamp and fiducial information that psana provides for the event. It has
+the following format:
+<cite>{timestamp: seconds}-{timestamp: nanoseconds}-{fiducial_string}</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A unique event identifier.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BeamEnergyPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana" title="Link to this definition">#</a></dt>
+<dd><p>Beam energy information from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of beam energy information from the psana
+software framework.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana beam energy data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function initializes the psana Detector interface for the retrieval of
+beam energy information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves beam energy information from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the beam energy information for the provided
+event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The beam energy.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EvrCodesPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EvrCodesPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana" title="Link to this definition">#</a></dt>
+<dd><p>EVR event codes from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval EVR event codes from the psana software
+framework.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana EVR event code data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function initializes the data retrieval for the EVR event code number
+specified  by the <cite>{data_source_name}_evr_code</cite> entry in OM’s
+<cite>Data Retrieval Layer</cite> configuration parameter group. The EVR event source
+to monitor for the emission of the event is instead determined by the
+<cite>psana_evr_source_name</cite> entry in the same parameter group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves EVR events code information from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function checks whether the event code attached to the Data Source has
+been emitted, for the provided event, by the monitored EVR source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the required event code has been emitted for the provided event.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EvrCodelistPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana" title="Link to this definition">#</a></dt>
+<dd><p>EVR event codes from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval EVR event codes from the psana software
+framework.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana EVR event code data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function initializes the data retrieval for the EVR event code number
+specified  by the <cite>{data_source_name}_evr_code</cite> entry in OM’s
+<cite>Data Retrieval Layer</cite> configuration parameter group. The EVR event source
+to monitor for the emission of the event is instead determined by the
+<cite>psana_evr_source_name</cite> entry in the same parameter group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves EVR events code information from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function checks whether the event code attached to the Data Source has
+been emitted, for the provided event, by the monitored EVR source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the required event code has been emitted for the provided event.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmDataExtractionError" title="om.lib.exceptions.OmDataExtractionError"><strong>OmDataExtractionError</strong></a> – Raised when data cannot be retrieved from psana.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>int64</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.LclsExtraPsana">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LclsExtraPsana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana" title="Link to this definition">#</a></dt>
+<dd><p>Additional facility-specific information from psana at the LCLS facility.</p>
+<p>This class deals with the retrieval of information that is specific to the LCLS
+facility. Due to its non-generic nature, the nature of the information that can
+be collected is limited to a few predefined types. The collected information,
+due to its specific nature, should not be processed by OM at all, but only
+saved to a storage media, or passed to a facility-specific downstream
+application.</p>
+<p>This class implements the interface described by its base Protocol class.
+Please see the documentation of that class for additional information about
+the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_name</strong> (<em>str</em>) – A name that identifies the current data source. It is
+used, for example, in communications with the user or for the retrieval
+of a sensor’s initialization parameters.</p></li>
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.DataSourceParameters" title="om.lib.parameters.DataSourceParameters"><em>DataSourceParameters</em></a>)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.initialize_data_source">
+<span class="sig-name descname"><span class="pre">initialize_data_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.initialize_data_source" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the psana LCLS-specific information data source.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function initializes the data retrieval for the LCLS-specific information
+defined by the <cite>lcls_extra</cite> entry in the OM’s <cite>data_retrieval_layer</cite>
+configuration parameter group. The entry must have the
+format of a list of tuples. Each tuple must be made up of three elements:</p>
+<ul class="simple">
+<li><p>The first entry must be a string that defines the nature of the information
+to retrieve. Currently, only the following types of information are
+supported:</p>
+<ul>
+<li><dl class="simple">
+<dt><cite>acqiris_waveform</cite>: A waveform from an Acqiris detector. For a description</dt><dd><p>of the format of the data, Please refer to the documentation of the
+[<cite>get_data</cite>][om.data_retrieval_layer.data_sources_psana.AcqirisPsana.get_data]
+function of the <cite>AcqirisPsana</cite> class.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>epics_pv</cite>: The value of an Epics variable. For a description</dt><dd><p>of the format of the data, Please refer to the documentation of the
+[<cite>get_data</cite>][om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana.get_data]
+function of the <cite>EpicsVariablePsana</cite> class.</p>
+</dd>
+</dl>
+</li>
+<li><p><cite>wave8_total_intensity</cite>: The total intensity recorded by a Wave8 detector
+(expressed as a float number).</p></li>
+<li><dl class="simple">
+<dt><cite>opal_camera</cite>: An data frame collected by an Opal camera. For a description</dt><dd><p>of the format of the data, Please refer to the documentation of the
+[<cite>get_data</cite>][om.data_retrieval_layer.data_sources_psana.OpalPsana.get_data]
+function of the <cite>OpalPsana</cite> class.</p>
+</dd>
+</dl>
+</li>
+<li><p><cite>assembled_detector_data</cite>: A detector data frame with geometry applied, as
+generated by the psana software framework. The data must have the format
+of a 2D array storing pixel information.</p></li>
+</ul>
+</li>
+<li><p>The second entry must be a string identifying the source of the retrieved
+information.</p>
+<ul>
+<li><p>This is the name, in the psana software framework, of the detector
+generating the data to be retrieved.</p></li>
+<li><p>For the <cite>epics_pv</cite> data type, this is the Epics name of the variable to
+retrieve.</p></li>
+</ul>
+</li>
+<li><p>The third entry is string that assigns an identifying name to data. This is
+only used by OM, and only within the set of retrieved LCLS-specific data.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../lib/exceptions.html#om.lib.exceptions.OmWrongParameterTypeError" title="om.lib.exceptions.OmWrongParameterTypeError"><strong>OmWrongParameterTypeError</strong></a> – Raised when the <cite>lcls_extra</cite> entry in OM’s
+    configuration parameters is not formatted correctly, or it requests
+    data that is not supported yet.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves LCLS-specific information from psana.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<p>This function retrieves from psana the LCLS-specific information associated
+with the provided event. It returns the data in the format of a dictionary.</p>
+<ul class="simple">
+<li><p>The keys in the dictionary match the OM identifiers assigned to each data
+entry.</p></li>
+<li><p>The corresponding dictionary values the retrieved information for each
+required data element.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – A dictionary storing the event data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary storing the retrieved LCLS-specific information for the
+provided event.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin"><code class="docutils literal notranslate"><span class="pre">OmDetectorInterfacePsanaDataSourceMixin</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.OmDetectorInterfacePsanaDataSourceMixin.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">OmDetectorInterfacePsanaDataSourceMixin.initialize_data_source()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.RayonixPsana"><code class="docutils literal notranslate"><span class="pre">RayonixPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.RayonixPsana.get_data"><code class="docutils literal notranslate"><span class="pre">RayonixPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.OpalPsana"><code class="docutils literal notranslate"><span class="pre">OpalPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.OpalPsana.get_data"><code class="docutils literal notranslate"><span class="pre">OpalPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.Epix100aPsana"><code class="docutils literal notranslate"><span class="pre">Epix100aPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.Epix100aPsana.get_data"><code class="docutils literal notranslate"><span class="pre">Epix100aPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AcqirisPsana"><code class="docutils literal notranslate"><span class="pre">AcqirisPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AcqirisPsana.get_data"><code class="docutils literal notranslate"><span class="pre">AcqirisPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana"><code class="docutils literal notranslate"><span class="pre">AssembledDetectorPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AssembledDetectorPsana.get_data"><code class="docutils literal notranslate"><span class="pre">AssembledDetectorPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana"><code class="docutils literal notranslate"><span class="pre">Wave8TotalIntensityPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.Wave8TotalIntensityPsana.get_data"><code class="docutils literal notranslate"><span class="pre">Wave8TotalIntensityPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana"><code class="docutils literal notranslate"><span class="pre">EpicsVariablePsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EpicsVariablePsana.get_data"><code class="docutils literal notranslate"><span class="pre">EpicsVariablePsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana"><code class="docutils literal notranslate"><span class="pre">DiodeTotalIntensityPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.DiodeTotalIntensityPsana.get_data"><code class="docutils literal notranslate"><span class="pre">DiodeTotalIntensityPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana"><code class="docutils literal notranslate"><span class="pre">BeamEnergyFromEpicsVariablePsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">BeamEnergyFromEpicsVariablePsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyFromEpicsVariablePsana.get_data"><code class="docutils literal notranslate"><span class="pre">BeamEnergyFromEpicsVariablePsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana"><code class="docutils literal notranslate"><span class="pre">AreaDetectorPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">AreaDetectorPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.AreaDetectorPsana.get_data"><code class="docutils literal notranslate"><span class="pre">AreaDetectorPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.CspadPsana"><code class="docutils literal notranslate"><span class="pre">CspadPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.CspadPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">CspadPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.CspadPsana.get_data"><code class="docutils literal notranslate"><span class="pre">CspadPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.TimestampPsana"><code class="docutils literal notranslate"><span class="pre">TimestampPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.TimestampPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">TimestampPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.TimestampPsana.get_data"><code class="docutils literal notranslate"><span class="pre">TimestampPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EventIdPsana"><code class="docutils literal notranslate"><span class="pre">EventIdPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EventIdPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">EventIdPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EventIdPsana.get_data"><code class="docutils literal notranslate"><span class="pre">EventIdPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana"><code class="docutils literal notranslate"><span class="pre">BeamEnergyPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">BeamEnergyPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.BeamEnergyPsana.get_data"><code class="docutils literal notranslate"><span class="pre">BeamEnergyPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana"><code class="docutils literal notranslate"><span class="pre">EvrCodesPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">EvrCodesPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EvrCodesPsana.get_data"><code class="docutils literal notranslate"><span class="pre">EvrCodesPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana"><code class="docutils literal notranslate"><span class="pre">EvrCodelistPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">EvrCodelistPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.EvrCodelistPsana.get_data"><code class="docutils literal notranslate"><span class="pre">EvrCodelistPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana"><code class="docutils literal notranslate"><span class="pre">LclsExtraPsana</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.initialize_data_source"><code class="docutils literal notranslate"><span class="pre">LclsExtraPsana.initialize_data_source()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.data_retrieval_layer.data_sources_psana.LclsExtraPsana.get_data"><code class="docutils literal notranslate"><span class="pre">LclsExtraPsana.get_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

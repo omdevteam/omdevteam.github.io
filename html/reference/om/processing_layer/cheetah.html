@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cheetah &#8212; OM 23.8.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.min.css?v=6e7d0de0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/pointer.css?v=c97663ff" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=7b61d2a3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=3ec624b9"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js?v=12818e64"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/om/processing_layer/cheetah';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="crystallography" href="crystallography.html" />
+    <link rel="prev" title="processing_layer" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">OM: Online Monitor</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../configuration.html">
+    Configuration
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../advanced.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../development_team.html">
+    Development Team
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    API Documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">API Documentation</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">om</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">processing_layer</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">cheetah</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-om.processing_layer.cheetah">
+<span id="cheetah"></span><h1>cheetah<a class="headerlink" href="#module-om.processing_layer.cheetah" title="Link to this heading">#</a></h1>
+<p>Cheetah</p>
+<p>This module contains Cheetah, a data-processing program for Serial X-ray
+Crystallography, based on OM but not designed to be run in real time.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.OmCheetahMixin">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OmCheetahMixin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.OmCheetahMixin" title="Link to this definition">#</a></dt>
+<dd><p>Cheetah.</p>
+<p>This Processing class implements the Cheetah software package. This program
+processes detector data frames, detecting Bragg peaks in each frame using the
+[<cite>Peakfinder8PeakDetection</cite>][om.algorithms.crystallography.Peakfinder8PeakDetection]
+algorithm. It retrieves information about the location, size, intensity, SNR
+and maximum pixel value of each peak, and then saves the calibrated and
+corrected detector data, plus all the information retrieved from the facility
+or extracted from the data, in multi-event HDF5 files. Cheetah can also
+compute, and write to HDF5 sum files, sums of detector data frames, together
+with their corresponding virtual powder patterns. Separate sums are computed
+for hit and non-hit frames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.MonitorParameters" title="om.lib.parameters.MonitorParameters"><em>MonitorParameters</em></a>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.OmCheetahMixin.common_process_data">
+<span class="sig-name descname"><span class="pre">common_process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.OmCheetahMixin.common_process_data" title="Link to this definition">#</a></dt>
+<dd><p>Processes a detector data frame.</p>
+<p>This function processes retrieved data events, extracting the Bragg peak
+information. It also prepares the reduced data (and optionally, the detector
+frame data) to be transmitted to the collecting node.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+<li><p><strong>data</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – <p>A dictionary containing the data that OM retrieved for the detector
+data frame being processed.</p>
+<ul>
+<li><p>The dictionary keys describe the Data Sources for which OM has
+retrieved data. The keys must match the source names listed in the
+<cite>required_data</cite> entry of OM’s <cite>om</cite> configuration parameter group.</p></li>
+<li><p>The corresponding dictionary values must store the the data that OM
+retrieved for each of the Data Sources.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple with two entries. The first entry is a dictionary storing the</dt><dd><p>processed data that should be sent to the collecting node. The second
+entry is the OM rank number of the node that processed the information.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[<em>ndarray</em>[<em>Any</em>, <em>dtype</em>[<em>float64</em> | <em>int64</em>]], <a class="reference internal" href="../algorithms/common.html#om.algorithms.common.PeakList" title="om.algorithms.common.PeakList"><em>PeakList</em></a>, bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CheetahProcessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing" title="Link to this definition">#</a></dt>
+<dd><p>Cheetah.</p>
+<p>This Processing class implements the Cheetah software package. This program
+processes detector data frames, detecting Bragg peaks in each frame using the
+[<cite>Peakfinder8PeakDetection</cite>][om.algorithms.crystallography.Peakfinder8PeakDetection]
+algorithm. It retrieves information about the location, size, intensity, SNR
+and maximum pixel value of each peak, and then saves the calibrated and
+corrected detector data, plus all the information retrieved from the facility
+or extracted from the data, in multi-event HDF5 files. Cheetah can also
+compute, and write to HDF5 sum files, sums of detector data frames, together
+with their corresponding virtual powder patterns. Separate sums are computed
+for hit and non-hit frames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.MonitorParameters" title="om.lib.parameters.MonitorParameters"><em>MonitorParameters</em></a>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.initialize_processing_node">
+<span class="sig-name descname"><span class="pre">initialize_processing_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.initialize_processing_node" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the processing nodes for Cheetah.</p>
+<p>This function initializes all the required algorithms (peak finding, binning,
+etc.), plus some internal counters.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.initialize_collecting_node">
+<span class="sig-name descname"><span class="pre">initialize_collecting_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.initialize_collecting_node" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the collecting node for Cheetah.</p>
+<p>This function initializes the data accumulation algorithms, the storage buffers
+used to compute statistics on the processed data, and some internal counters.
+Additionally, it prepares all the file writers.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.process_data">
+<span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.process_data" title="Link to this definition">#</a></dt>
+<dd><p>Processes a detector data frame and saves the extracted data to HDF5 file.</p>
+<p>This function processes retrieved data events, extracting the Bragg peak
+information. It saves the frame-related processed data in an output HDF5 file,
+if a frame is identified as a hit. Finally, it prepares the reduced data
+(and optionally, the detector frame data) for transmission to the collecting
+node.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+<li><p><strong>data</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – <p>A dictionary containing the data that OM retrieved for the detector
+data frame being processed.</p>
+<ul>
+<li><p>The dictionary keys describe the Data Sources for which OM has
+retrieved data. The keys must match the source names listed in the
+<cite>required_data</cite> entry of OM’s <cite>om</cite> configuration parameter group.</p></li>
+<li><p>The corresponding dictionary values must store the the data that OM
+retrieved for each of the Data Sources.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple with two entries. The first entry is a dictionary storing the</dt><dd><p>processed data that should be sent to the collecting node. The second
+entry is the OM rank number of the node that processed the information.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[str, <em>Any</em>], int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.wait_for_data">
+<span class="sig-name descname"><span class="pre">wait_for_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.wait_for_data" title="Link to this definition">#</a></dt>
+<dd><p>Receives and handles requests from external programs.</p>
+<p>This function is not used in Cheetah, and therefore does nothing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.collect_data">
+<span class="sig-name descname"><span class="pre">collect_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processed_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.collect_data" title="Link to this definition">#</a></dt>
+<dd><p>Computes statistics on aggregated data and saves them to files.</p>
+<p>This function collects and accumulates frame- and peak-related information
+received from the processing nodes.  Optionally, it computes the sums of hit
+and non-hit detector frames and the corresponding virtual powder patterns, and
+saves them to file. Additionally, this function writes information about the
+processing statistics (number of processed events, number of found hits and the
+elapsed time) to a status file at regular intervals. External programs can
+inspect the file to determine the advancement of the data processing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+<li><p><strong>processed_data</strong> (<em>tuple</em><em>[</em><em>dict</em><em>, </em><em>int</em><em>]</em>) – A tuple whose first entry is a
+dictionary storing the data received from a processing node, and whose
+second entry is the OM rank number of the node that processed the
+information.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, dict[str, <em>Any</em>]] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.end_processing_on_processing_node">
+<span class="sig-name descname"><span class="pre">end_processing_on_processing_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.end_processing_on_processing_node" title="Link to this definition">#</a></dt>
+<dd><p>Ends processing on the processing nodes for Cheetah.</p>
+<p>This function prints a message on the console, closes the output HDF5 files
+and ends the processing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Usually nothing. Optionally, a dictionary storing information to be sent to</dt><dd><p>the processing node.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, <em>Any</em>] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.CheetahProcessing.end_processing_on_collecting_node">
+<span class="sig-name descname"><span class="pre">end_processing_on_collecting_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.CheetahProcessing.end_processing_on_collecting_node" title="Link to this definition">#</a></dt>
+<dd><p>Ends processing on the collecting node for Cheetah.</p>
+<p>This function prints a message on the console, writes the final information in
+the sum and status files, closes the files and ends the processing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StreamingCheetahProcessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing" title="Link to this definition">#</a></dt>
+<dd><p>Cheetah.</p>
+<p>This Processing class implements the Cheetah software package. This program
+processes detector data frames, detecting Bragg peaks in each frame using the
+[<cite>Peakfinder8PeakDetection</cite>][om.algorithms.crystallography.Peakfinder8PeakDetection]
+algorithm. It retrieves information about the location, size, intensity, SNR
+and maximum pixel value of each peak, and then saves the calibrated and
+corrected detector data, plus all the information retrieved from the facility
+or extracted from the data, in multi-event HDF5 files. Cheetah can also
+compute, and write to HDF5 sum files, sums of detector data frames, together
+with their corresponding virtual powder patterns. Separate sums are computed
+for hit and non-hit frames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitor_parameters</strong> – An object storing OM’s configuration parameters.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="../lib/parameters.html#om.lib.parameters.MonitorParameters" title="om.lib.parameters.MonitorParameters"><em>MonitorParameters</em></a>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_processing_node">
+<span class="sig-name descname"><span class="pre">initialize_processing_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_processing_node" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the processing nodes for Cheetah.</p>
+<p>This function initializes all the required algorithms (peak finding, binning,
+etc.), plus some internal counters.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_collecting_node">
+<span class="sig-name descname"><span class="pre">initialize_collecting_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_collecting_node" title="Link to this definition">#</a></dt>
+<dd><p>Initializes the collecting node for Cheetah.</p>
+<p>This function initializes the data accumulation algorithms, the storage buffers
+used to compute aggregated statistics on the processed data, and some internal
+counters. Additionally, it prepares all the necessary network sockets.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.process_data">
+<span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.process_data" title="Link to this definition">#</a></dt>
+<dd><p>Processes a detector data frame.</p>
+<p>This function processes retrieved data events, extracting the Bragg peak
+information. It also prepares the reduced data (and optionally, the detector
+frame data) to be transmitted to the collecting node.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+<li><p><strong>data</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – <p>A dictionary containing the data that OM retrieved for the detector
+data frame being processed.</p>
+<ul>
+<li><p>The dictionary keys describe the Data Sources for which OM has
+retrieved data. The keys must match the source names listed in the
+<cite>required_data</cite> entry of OM’s <cite>om</cite> configuration parameter group.</p></li>
+<li><p>The corresponding dictionary values must store the the data that OM
+retrieved for each of the Data Sources.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple with two entries. The first entry is a dictionary storing the</dt><dd><p>processed data that should be sent to the collecting node. The second
+entry is the OM rank number of the node that processed the information.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[dict[str, <em>Any</em>], int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.wait_for_data">
+<span class="sig-name descname"><span class="pre">wait_for_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.wait_for_data" title="Link to this definition">#</a></dt>
+<dd><p>Receives and handles requests from external programs.</p>
+<p>This function receives requests from external programs over a network socket
+and reacts according to the nature of the request, sending data back to the
+source of the request or modifying the internal behavior of Cheetah Streaming.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.collect_data">
+<span class="sig-name descname"><span class="pre">collect_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">processed_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.collect_data" title="Link to this definition">#</a></dt>
+<dd><p>Computes statistics on aggregated data and broadcasts data to external programs.</p>
+<p>This function collects and accumulates frame- and peak-related information
+received from the processing nodes, and streams it to external programs.
+Optionally, it computes the sums of hit and non-hit detector frames and the
+corresponding virtual powder patterns, and saves them to files. Additionally,
+this function writes information about the processing statistics (number of
+processed events, number of found hits and the elapsed time) to a status file
+at regular intervals. External programs can inspect the file to determine the
+advancement of the data processing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+<li><p><strong>processed_data</strong> (<em>tuple</em><em>[</em><em>dict</em><em>, </em><em>int</em><em>]</em>) – A tuple whose first entry is a
+dictionary storing the data received from a processing node, and whose
+second entry is the OM rank number of the node that processed the
+information.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, dict[str, <em>Any</em>]] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_processing_node">
+<span class="sig-name descname"><span class="pre">end_processing_on_processing_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_processing_node" title="Link to this definition">#</a></dt>
+<dd><p>Ends processing on the processing nodes for Cheetah Streaming.</p>
+<p>This function prints a message on the console and ends the processing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Usually nothing. Optionally, a dictionary storing information to be sent to</dt><dd><p>the processing node.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict[str, <em>Any</em>] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_collecting_node">
+<span class="sig-name descname"><span class="pre">end_processing_on_collecting_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_rank</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_pool_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_collecting_node" title="Link to this definition">#</a></dt>
+<dd><p>Ends processing on the collecting node for Cheetah Streaming.</p>
+<p>This function prints a message on the console, writes the final information in
+the sum and status files, closes the files and ends the processing.</p>
+<p>Please see the documentation of the base Protocol class for additional
+information about this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_rank</strong> (<em>int</em>) – The OM rank of the current node, which is an integer that
+unambiguously identifies the current node in the OM node pool.</p></li>
+<li><p><strong>node_pool_size</strong> (<em>int</em>) – The total number of nodes in the OM pool, including all the
+processing nodes and the collecting node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.OmCheetahMixin"><code class="docutils literal notranslate"><span class="pre">OmCheetahMixin</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.OmCheetahMixin.common_process_data"><code class="docutils literal notranslate"><span class="pre">OmCheetahMixin.common_process_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.initialize_processing_node"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.initialize_processing_node()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.initialize_collecting_node"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.initialize_collecting_node()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.process_data"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.process_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.wait_for_data"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.wait_for_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.collect_data"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.collect_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.end_processing_on_processing_node"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.end_processing_on_processing_node()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.CheetahProcessing.end_processing_on_collecting_node"><code class="docutils literal notranslate"><span class="pre">CheetahProcessing.end_processing_on_collecting_node()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_processing_node"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.initialize_processing_node()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.initialize_collecting_node"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.initialize_collecting_node()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.process_data"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.process_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.wait_for_data"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.wait_for_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.collect_data"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.collect_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_processing_node"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.end_processing_on_processing_node()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#om.processing_layer.cheetah.StreamingCheetahProcessing.end_processing_on_collecting_node"><code class="docutils literal notranslate"><span class="pre">StreamingCheetahProcessing.end_processing_on_collecting_node()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, OM Development Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
